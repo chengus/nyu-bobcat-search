@@ -8,3 +8,9 @@ wheels/
 
 # Virtual environments
 .venv
+
+# Environment variables
+.env
+
+# Old SQLite database (if migrating to Turso)
+*.db

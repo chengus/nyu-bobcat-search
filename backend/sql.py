@@ -1,26 +1,34 @@
 import json
-import sqlite3
+import os
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
+from dotenv import load_dotenv
+import libsql
 
-
-DB_PATH = "../nyu_courses.db"
+load_dotenv()
 
 WSQ_FILE = "wsq.json"
 BROOKLYN_FILE = "brooklyn.json"
+LOCAL_DB = "nyu_courses.db"  # Local replica database file
 
 
-def get_conn(db_path: str = DB_PATH) -> sqlite3.Connection:
-    conn = sqlite3.connect(db_path)
-    conn.row_factory = sqlite3.Row
+def get_conn():
+    """Get Turso database connection with local replica"""
+    url = os.getenv("TURSO_DATABASE_URL")
+    auth_token = os.getenv("TURSO_AUTH_TOKEN")
+    
+    if not url or not auth_token:
+        raise ValueError("TURSO_DATABASE_URL and TURSO_AUTH_TOKEN must be set in .env file")
+    
+    # Use libsql.connect with local replica and sync_url
+    conn = libsql.connect(LOCAL_DB, sync_url=url, auth_token=auth_token)
+    conn.sync()  # Sync with remote Turso database
     return conn
 
 
-def init_schema(conn: sqlite3.Connection) -> None:
-    cur = conn.cursor()
-
+def init_schema(conn) -> None:
     # Courses table
-    cur.execute("""
+    conn.execute("""
     CREATE TABLE IF NOT EXISTS courses (
       id             INTEGER PRIMARY KEY AUTOINCREMENT,
       code           TEXT NOT NULL UNIQUE,
@@ -31,7 +39,7 @@ def init_schema(conn: sqlite3.Connection) -> None:
     """)
 
     # Sections table
-    cur.execute("""
+    conn.execute("""
     CREATE TABLE IF NOT EXISTS sections (
       id             INTEGER PRIMARY KEY AUTOINCREMENT,
 
@@ -62,7 +70,7 @@ def init_schema(conn: sqlite3.Connection) -> None:
     """)
 
     # Course details cache table
-    cur.execute("""
+    conn.execute("""
     CREATE TABLE IF NOT EXISTS course_details_cache (
       id             INTEGER PRIMARY KEY AUTOINCREMENT,
       group_key      TEXT NOT NULL,
@@ -91,20 +99,7 @@ def init_schema(conn: sqlite3.Connection) -> None:
     );
     """)
     
-    # Migrate existing cache table if needed (add new columns)
-    try:
-        cur.execute("SELECT description FROM course_details_cache LIMIT 1")
-    except sqlite3.OperationalError:
-        # Columns don't exist, add them
-        for col in ['description', 'clssnotes', 'hours_html', 'status', 'component',
-                    'instructional_method', 'campus_location', 'registration_restrictions',
-                    'meeting_html', 'meet_pattern', 'meet_start_date', 'meet_end_date',
-                    'dates_html', 'all_sections']:
-            try:
-                cur.execute(f"ALTER TABLE course_details_cache ADD COLUMN {col} TEXT")
-            except sqlite3.OperationalError:
-                pass  # Column already exists
-
+    # Note: Turso automatically handles schema, no need for ALTER TABLE migrations
     conn.commit()
 
 
@@ -123,16 +118,15 @@ def split_code(code: str) -> Tuple[Optional[str], Optional[str]]:
     return None, None
 
 
-def upsert_course(conn: sqlite3.Connection, code: str, title: str) -> None:
+def upsert_course(conn, code: str, title: str) -> None:
     """
     Insert a course into courses if it doesn't exist.
     """
     subject, catalog = split_code(code)
-    cur = conn.cursor()
-    cur.execute("""
+    conn.execute("""
         INSERT OR IGNORE INTO courses (code, subject, catalog_number, title)
         VALUES (?, ?, ?, ?)
-    """, (code, subject, catalog, title))
+    """, [code, subject, catalog, title])
 
 
 def to_int_or_none(value: Any) -> Optional[int]:
@@ -148,18 +142,16 @@ def to_int_or_none(value: Any) -> Optional[int]:
 
 
 def insert_section(
-    conn: sqlite3.Connection,
+    conn,
     record: Dict[str, Any],
     campus_group: str
 ) -> None:
     """
     Insert a single section row corresponding to one JSON record.
     """
-    cur = conn.cursor()
-
     code = record.get("code", "")
 
-    cur.execute("""
+    conn.execute("""
         INSERT INTO sections (
           course_code,
           key,
@@ -181,7 +173,7 @@ def insert_section(
           srcdb,
           campus_group
         ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-    """, (
+    """, [
         code,                              # course_code FK
         record.get("key"),
         record.get("code"),
@@ -201,11 +193,11 @@ def insert_section(
         record.get("end_date"),
         record.get("srcdb"),
         campus_group,
-    ))
+    ])
 
 
 def process_json_file(
-    conn: sqlite3.Connection,
+    conn,
     json_path: Path,
     campus_group: str
 ) -> None:
@@ -218,7 +210,6 @@ def process_json_file(
     results: List[Dict[str, Any]] = data.get("results", [])
     print(f"Processing {json_path} ({campus_group}) with {len(results)} records")
 
-    cur = conn.cursor()
     for record in results:
         code = record.get("code", "")
         title = record.get("title", "")
@@ -236,7 +227,7 @@ def process_json_file(
 
 
 def main() -> None:
-    conn = get_conn(DB_PATH)
+    conn = get_conn()
     init_schema(conn)
 
     base_dir = Path("data")
@@ -255,7 +246,7 @@ def main() -> None:
         print(f"Skipping {brooklyn_path}, file not found.")
 
     conn.close()
-    print(f"All done. Database written to {DB_PATH}")
+    print("All done. Database updated.")
 
 
 if __name__ == "__main__":

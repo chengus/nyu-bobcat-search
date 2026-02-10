@@ -7,15 +7,12 @@ import re
 import os
 from datetime import datetime, timedelta
 
-import sqlite3
 from fastapi import FastAPI, HTTPException, Query, Body
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
 import scraper
 import sql
-
-DB_PATH = "../nyu_courses.db"
 
 
 def parse_meeting_html(meeting_html: str) -> tuple[str, str, str]:
@@ -60,8 +57,7 @@ app.add_middleware(
 
 
 def get_db():
-    conn = sqlite3.connect(DB_PATH)
-    conn.row_factory = sqlite3.Row
+    conn = sql.get_conn()
     try:
         yield conn
     finally:
@@ -147,20 +143,19 @@ async def get_course_details(request: CourseDetailsRequest = Body(...)):
     conn = None
     try:
         # Get database connection
-        conn = sql.get_conn(DB_PATH)
+        conn = sql.get_conn()
         sql.init_schema(conn)  # Ensure schema exists
         
-        cur = conn.cursor()
-        cur.execute(
+        results = conn.execute(
             """SELECT description, clssnotes, hours_html, status, component,
                       instructional_method, campus_location, registration_restrictions,
                       meeting_html, meet_pattern, meet_start_date, meet_end_date,
                       dates_html, all_sections, details_json
                FROM course_details_cache 
                WHERE group_key = ? AND crn_key = ? AND srcdb = ?""",
-            (request.group, request.key, request.srcdb)
+            [request.group, request.key, request.srcdb]
         )
-        cached = cur.fetchone()
+        cached = results.fetchone()
         
         if cached:
             # Return cached data with parsed fields
@@ -226,17 +221,17 @@ async def get_course_details(request: CourseDetailsRequest = Body(...)):
         meet_pattern, meet_start_date, meet_end_date = parse_meeting_html(meeting_html)
         
         # Cache the result with parsed fields
-        cur.execute(
+        conn.execute(
             """INSERT OR REPLACE INTO course_details_cache 
                (group_key, crn_key, srcdb, description, clssnotes, hours_html, status,
                 component, instructional_method, campus_location, registration_restrictions,
                 meeting_html, meet_pattern, meet_start_date, meet_end_date,
                 dates_html, all_sections, details_json)
                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
-            (request.group, request.key, request.srcdb, description, clssnotes, hours_html,
+            [request.group, request.key, request.srcdb, description, clssnotes, hours_html,
              status, component, instructional_method, campus_location, registration_restrictions,
              meeting_html, meet_pattern, meet_start_date, meet_end_date,
-             dates_html, all_sections, json.dumps(result))
+             dates_html, all_sections, json.dumps(result)]
         )
         conn.commit()
         
@@ -288,20 +283,8 @@ async def update_database(request: UpdateRequest = None):
     if request is None:
         request = UpdateRequest()
     
-    # Check if database file exists and is less than 1 day old
-    db_file_path = Path(DB_PATH)
-    if db_file_path.exists():
-        db_mod_time = datetime.fromtimestamp(os.path.getmtime(db_file_path))
-        time_since_update = datetime.now() - db_mod_time
-        
-        if time_since_update < timedelta(days=1):
-            hours_old = time_since_update.total_seconds() / 3600
-            return UpdateResponse(
-                status="skipped",
-                message=f"Database was updated {hours_old:.1f} hours ago. Try again later.",
-                files_downloaded=[],
-                records_processed=0
-            )
+    # For Turso, check last scrape time from a metadata table or skip time check
+    # Since Turso is remote, file-based checking doesn't apply
     
     try:
         files_downloaded = []
@@ -325,24 +308,22 @@ async def update_database(request: UpdateRequest = None):
                     campus_group = "WSQ"
                 
                 # Process the JSON file and update database
-                conn = sql.get_conn(DB_PATH)
+                conn = sql.get_conn()
                 try:
                     sql.init_schema(conn)
                     
                     # Clear existing data for this campus group and srcdb to prevent duplicates
-                    cur = conn.cursor()
-                    cur.execute(
+                    conn.execute(
                         "DELETE FROM sections WHERE campus_group = ? AND srcdb = ?",
-                        (campus_group, request.srcdb)
+                        [campus_group, request.srcdb]
                     )
                     conn.commit()
                     
                     sql.process_json_file(conn, file_path, campus_group)
                     
                     # Count records from this file
-                    cur = conn.cursor()
-                    cur.execute("SELECT COUNT(*) FROM sections WHERE campus_group = ?", (campus_group,))
-                    count = cur.fetchone()[0]
+                    results = conn.execute("SELECT COUNT(*) FROM sections WHERE campus_group = ?", [campus_group])
+                    count = results.fetchone()[0]
                     total_records = count
                     
                 finally:
@@ -383,19 +364,17 @@ def get_database_status():
     """
     try:
         for conn in get_db():
-            cur = conn.cursor()
-            
             # Count courses
-            cur.execute("SELECT COUNT(*) FROM courses")
-            total_courses = cur.fetchone()[0]
+            results = conn.execute("SELECT COUNT(*) FROM courses")
+            total_courses = results.fetchone()[0]
             
             # Count sections
-            cur.execute("SELECT COUNT(*) FROM sections")
-            total_sections = cur.fetchone()[0]
+            results = conn.execute("SELECT COUNT(*) FROM sections")
+            total_sections = results.fetchone()[0]
             
             # Count by campus group
-            cur.execute("SELECT campus_group, COUNT(*) FROM sections GROUP BY campus_group")
-            campus_groups = {row[0]: row[1] for row in cur.fetchall()}
+            results = conn.execute("SELECT campus_group, COUNT(*) FROM sections GROUP BY campus_group")
+            campus_groups = {row[0]: row[1] for row in results.fetchall()}
             
             return DatabaseStatus(
                 total_courses=total_courses,
@@ -491,11 +470,33 @@ def search_sections(
 
     results: List[SectionResult] = []
     for conn in get_db():
-        cur = conn.cursor()
-        cur.execute(sql, params)
-        rows = cur.fetchall()
+        result_set = conn.execute(sql, params)
+        rows = result_set.fetchall()
         for row in rows:
-            results.append(SectionResult(**dict(row)))
+            # Convert row tuple to dict manually (Turso doesn't have row_factory)
+            results.append(SectionResult(
+                section_id=row[0],
+                course_code=row[1],
+                course_title=row[2],
+                key=row[3],
+                code=row[4],
+                title=row[5],
+                hide=row[6],
+                crn=row[7],
+                no=row[8],
+                total=row[9],
+                schd=row[10],
+                stat=row[11],
+                isCancelled=row[12],
+                meets=row[13],
+                mpkey=row[14],
+                meetingTimes=row[15],
+                instr=row[16],
+                start_date=row[17],
+                end_date=row[18],
+                srcdb=row[19],
+                campus_group=row[20]
+            ))
         break  # exit generator loop after one use
 
     return results
