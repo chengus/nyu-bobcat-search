@@ -111,7 +111,7 @@ def save_json(data: dict, out_dir: str, srcdb: str, career: str, camp: str) -> P
     return full_path
 
 
-def scrape_and_save(srcdb: str, career: str, camp: str, out_dir: str = "data/raw") -> Path:
+def scrape_and_save(srcdb: str, career: str, camp: str, out_dir: str = "../data/raw") -> Path:
     """
     High-level helper: fetch raw JSON for given parameters and save to disk.
     Returns the path of the saved file.

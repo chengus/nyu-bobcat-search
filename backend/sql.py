@@ -4,7 +4,7 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
 
-DB_PATH = "nyu_courses.db"
+DB_PATH = "../nyu_courses.db"
 
 WSQ_FILE = "wsq.json"
 BROOKLYN_FILE = "brooklyn.json"

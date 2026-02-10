@@ -14,16 +14,17 @@ pip install --upgrade pip
 pip install fastapi pydantic requests "uvicorn[standard]"
 ```
 
-2. Run the API:
+2. Run the API from the project root:
 
 ```bash
-# Recommended: FastAPI CLI with auto-reload
-fastapi run backend.py
+# Recommended: uvicorn from project root
+uvicorn backend.backend:app --reload --port 8000
 
-# Alternative: uvicorn
-uvicorn backend:app --reload
+# Alternative: FastAPI CLI from project root
+fastapi run backend/backend.py
 
-# Or run directly
+# Or run directly from backend directory
+cd backend
 python backend.py
 ```
 

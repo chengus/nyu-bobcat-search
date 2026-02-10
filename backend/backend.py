@@ -4,6 +4,8 @@ from pathlib import Path
 import requests
 import json
 import re
+import os
+from datetime import datetime, timedelta
 
 import sqlite3
 from fastapi import FastAPI, HTTPException, Query, Body
@@ -13,7 +15,7 @@ from pydantic import BaseModel
 import scraper
 import sql
 
-DB_PATH = "nyu_courses.db"
+DB_PATH = "../nyu_courses.db"
 
 
 def parse_meeting_html(meeting_html: str) -> tuple[str, str, str]:
@@ -276,6 +278,7 @@ async def get_course_details(request: CourseDetailsRequest = Body(...)):
 async def update_database(request: UpdateRequest = None):
     """
     Scrape course data from NYU's API and update the database.
+    Only updates if the database is more than 1 day old.
     
     Parameters:
     - srcdb: Term code (e.g., "1264" for Spring 2026)
@@ -284,6 +287,21 @@ async def update_database(request: UpdateRequest = None):
     """
     if request is None:
         request = UpdateRequest()
+    
+    # Check if database file exists and is less than 1 day old
+    db_file_path = Path(DB_PATH)
+    if db_file_path.exists():
+        db_mod_time = datetime.fromtimestamp(os.path.getmtime(db_file_path))
+        time_since_update = datetime.now() - db_mod_time
+        
+        if time_since_update < timedelta(days=1):
+            hours_old = time_since_update.total_seconds() / 3600
+            return UpdateResponse(
+                status="skipped",
+                message=f"Database was updated {hours_old:.1f} hours ago. Try again later.",
+                files_downloaded=[],
+                records_processed=0
+            )
     
     try:
         files_downloaded = []
@@ -485,12 +503,13 @@ def search_sections(
 
 if __name__ == "__main__":
     # Run with: python backend.py (for quick local testing)
-    # Or use: fastapi run backend.py (FastAPI CLI with auto-reload)
-    # Or use: uvicorn backend:app --reload --port 8000
+    # Or use: fastapi run backend/backend.py (FastAPI CLI with auto-reload from project root)
+    # Or use: uvicorn backend.backend:app --reload --port 8000 (from project root)
     try:
         import uvicorn
 
         uvicorn.run("backend:app", host="127.0.0.1", port=8000, reload=True)
     except Exception:
         # uvicorn not installed; fallback to direct import (FastAPI requires ASGI server)
-        print("Start the API with: fastapi run backend.py")
+        print("Start the API with: cd backend && python backend.py")
+        print("Or from project root: uvicorn backend.backend:app --reload --port 8000")

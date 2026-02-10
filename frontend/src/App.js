@@ -154,10 +154,28 @@ const parseMeetsString = (course) => {
 
 function App() {
     const [courses, setCourses] = useState([]);
-    const [stagedCourses, setStagedCourses] = useState([]);
+    const [stagedCourses, setStagedCourses] = useState(() => {
+        // Load staged courses from localStorage on initial mount
+        try {
+            const saved = localStorage.getItem('stagedCourses');
+            return saved ? JSON.parse(saved) : [];
+        } catch (error) {
+            console.error('Failed to load staged courses from localStorage:', error);
+            return [];
+        }
+    });
     const [selectedCourse, setSelectedCourse] = useState(null);
     const [courseDetails, setCourseDetails] = useState(null);
-    const [courseDetailsCache, setCourseDetailsCache] = useState({}); // Cache details by course_code
+    const [courseDetailsCache, setCourseDetailsCache] = useState(() => {
+        // Load course details cache from localStorage on initial mount
+        try {
+            const saved = localStorage.getItem('courseDetailsCache');
+            return saved ? JSON.parse(saved) : {};
+        } catch (error) {
+            console.error('Failed to load course details cache from localStorage:', error);
+            return {};
+        }
+    });
     const [loadingDetails, setLoadingDetails] = useState(false);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
@@ -166,6 +184,24 @@ function App() {
     const [updateMessage, setUpdateMessage] = useState(null);
     const [currentView, setCurrentView] = useState('week');
     const [currentDate, setCurrentDate] = useState(new Date());
+
+    // Save staged courses to localStorage whenever they change
+    useEffect(() => {
+        try {
+            localStorage.setItem('stagedCourses', JSON.stringify(stagedCourses));
+        } catch (error) {
+            console.error('Failed to save staged courses to localStorage:', error);
+        }
+    }, [stagedCourses]);
+
+    // Save course details cache to localStorage whenever it changes
+    useEffect(() => {
+        try {
+            localStorage.setItem('courseDetailsCache', JSON.stringify(courseDetailsCache));
+        } catch (error) {
+            console.error('Failed to save course details cache to localStorage:', error);
+        }
+    }, [courseDetailsCache]);
 
     const handleSearch = async (filters) => {
         setLoading(true);
@@ -212,13 +248,27 @@ function App() {
         setUpdateMessage(null);
         try {
             const result = await updateDatabase();
-            setUpdateMessage(`✓ Database updated successfully! Processed ${result.records_processed} records.`);
+            if (result.status === 'skipped') {
+                setUpdateMessage(`ℹ ${result.message}`);
+            } else {
+                setUpdateMessage(`✓ Database updated successfully! Processed ${result.records_processed} records.`);
+            }
             setTimeout(() => setUpdateMessage(null), 5000);
         } catch (err) {
             setUpdateMessage(`✗ Update failed: ${err.message}`);
             setTimeout(() => setUpdateMessage(null), 5000);
         } finally {
             setUpdating(false);
+        }
+    };
+
+    const handleClearSchedule = () => {
+        if (stagedCourses.length === 0) return;
+        
+        if (window.confirm(`Clear all ${stagedCourses.length} staged courses from your schedule?`)) {
+            setStagedCourses([]);
+            setSelectedCourse(null);
+            setCourseDetails(null);
         }
     };
 
@@ -380,6 +430,13 @@ function App() {
                         {updating ? 'Updating...' : '↻ Update Database'}
                     </button>
                     <button 
+                        className="clear-schedule-btn" 
+                        onClick={handleClearSchedule}
+                        disabled={stagedCourses.length === 0}
+                    >
+                        🗑️ Clear Schedule
+                    </button>
+                    <button 
                         className="toggle-calendar-btn" 
                         onClick={() => setShowCalendar(!showCalendar)}
                     >
@@ -388,7 +445,7 @@ function App() {
                 </div>
             </header>
             {updateMessage && (
-                <div className={`update-message ${updateMessage.startsWith('✓') ? 'success' : 'error'}`}>
+                <div className={`update-message ${updateMessage.startsWith('✓') ? 'success' : updateMessage.startsWith('ℹ') ? 'info' : 'error'}`}>
                     {updateMessage}
                 </div>
             )}
