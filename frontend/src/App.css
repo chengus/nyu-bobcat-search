@@ -30,12 +30,33 @@ code {
     align-items: center;
 }
 
+.header-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    min-width: 0;
+}
+
 .App-header h1 {
     margin: 0;
     font-size: 1.8em;
     font-weight: 500;
-    flex-grow: 1;
+    flex-shrink: 0;
     letter-spacing: 0.5px;
+}
+
+.disclaimer-badge {
+    background-color: #fff3cd;
+    color: #7a5d00;
+    border: 1px solid #ffe69c;
+    border-radius: 999px;
+    padding: 4px 10px;
+    font-size: 0.75em;
+    font-weight: 600;
+    line-height: 1.2;
+    white-space: nowrap;
 }
 
 .header-buttons {

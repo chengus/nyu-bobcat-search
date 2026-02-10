@@ -420,7 +420,12 @@ function App() {
     return (
         <div className="App">
             <header className="App-header">
-                <h1>NYU Course Search</h1>
+                <div className="header-title">
+                    <h1>NYU Course Search</h1>
+                    <span className="disclaimer-badge">
+                        Unofficial. Please double check with Albert.
+                    </span>
+                </div>
                 <div className="header-buttons">
                     <button 
                         className="update-db-btn" 
