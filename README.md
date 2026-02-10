@@ -12,8 +12,6 @@ uv run fastapi run backend.py
 
 Frontend (React)
 
-1. Install and start the dev server:
-
 ```bash
 cd frontend
 npm install

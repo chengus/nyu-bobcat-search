@@ -7,8 +7,8 @@ from fastapi import FastAPI, HTTPException, Query, Body
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
-from backend import scraper
-from backend import sql
+import scraper
+import sql
 
 
 def parse_meeting_html(meeting_html: str) -> tuple[str, str, str]:
@@ -50,6 +50,21 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+@app.get("/")
+async def root():
+    """API root - returns basic information about the API"""
+    return {
+        "name": "NYU Course Search API",
+        "version": "1.0",
+        "endpoints": {
+            "search": "/search",
+            "course_details": "/course-details",
+            "database_status": "/database-status",
+            "update_database": "/update-database"
+        }
+    }
+
 
 
 def get_db():
@@ -496,7 +511,6 @@ def search_sections(
         break  # exit generator loop after one use
 
     return results
-
 
 if __name__ == "__main__":
     # Run with: python backend.py (for quick local testing)

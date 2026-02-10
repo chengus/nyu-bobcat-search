@@ -3,7 +3,6 @@ import './App.css';
 import CourseSearchForm from './CourseSearchForm';
 import CourseList from './CourseList';
 import { searchCourses, updateDatabase, getCourseDetails } from './api';
-import { Analytics } from "@vercel/analytics/react"
 
 import { Calendar, momentLocalizer } from 'react-big-calendar';
 import moment from 'moment';
@@ -675,7 +674,6 @@ function App() {
                     </div>
                 </div>
             )}
-            <Analytics />
         </div>
     );
 }
