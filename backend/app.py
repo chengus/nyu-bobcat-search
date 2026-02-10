@@ -4,6 +4,7 @@ import json
 import re
 from pathlib import Path
 from datetime import datetime, timedelta
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 from fastapi import FastAPI, HTTPException, Query, Body
 from fastapi.middleware.cors import CORSMiddleware
@@ -292,7 +293,7 @@ async def get_course_details(request: CourseDetailsRequest = Body(...)):
 
 
 @app.post("/update-database", response_model=UpdateResponse)
-async def update_database(request: UpdateRequest = None, force: bool = Query(False, description="Force update even if less than 1 day old")):
+async def update_database(request: UpdateRequest = None, force: bool = Query(True, description="Force update even if less than 1 day old")):
     """
     Scrape course data from NYU's API and update the database.
     Only updates if the database is more than 1 day old (unless force=True).
@@ -306,109 +307,78 @@ async def update_database(request: UpdateRequest = None, force: bool = Query(Fal
     """
     if request is None:
         request = UpdateRequest()
-    
-    # Check last update time
-    conn = None
+
+    # Ingest locally into SQLite only
+    conn = sql.get_conn()
     try:
-        conn = sql.get_conn()
         sql.init_schema(conn)
-        
+        sql.optimize_for_bulk_load(conn)
+
         last_update = sql.get_last_update_time(conn)
-        
         if last_update and not force:
-            # Parse the last update time (SQLite datetime format)
             last_update_dt = datetime.fromisoformat(last_update.replace('Z', '+00:00'))
-            time_since_update = datetime.now() - last_update_dt.replace(tzinfo=None)
-            
+            # SQLite datetime('now') is UTC; use utcnow for consistent comparison
+            time_since_update = datetime.utcnow() - last_update_dt.replace(tzinfo=None)
+            # Guard against negative drift if clocks differ
+            hours_since = max(time_since_update.total_seconds() / 3600, 0)
+            hours_left = max(24 - hours_since, 0)
             if time_since_update < timedelta(days=1):
-                hours_left = 24 - (time_since_update.total_seconds() / 3600)
                 return UpdateResponse(
                     status="skipped",
-                    message=f"Database was updated {time_since_update.total_seconds() / 3600:.1f} hours ago. Will update in {hours_left:.1f} hours. Use force=true to update now.",
+                    message=f"Database was updated {hours_since:.1f} hours ago. Will update in {hours_left:.1f} hours. Use force=true to update now.",
                     files_downloaded=[],
                     records_processed=0
                 )
-        
-        # Delete all existing data for fresh update
+
         print("Clearing all existing data...")
         sql.clear_all_data(conn)
-        
-    except Exception as e:
-        if conn:
-            conn.close()
-        raise HTTPException(
-            status_code=500,
-            detail=f"Failed to check update status: {str(e)}"
-        )
-    finally:
-        if conn:
-            conn.close()
-    
-    try:
-        files_downloaded = []
+
+        files_downloaded: List[str] = []
         total_records = 0
-        
-        # Scrape data for each campus
-        for camp in request.camps:
-            try:
-                # Fetch and save raw JSON data
-                file_path = scraper.scrape_and_save(
-                    srcdb=request.srcdb,
-                    career=request.career,
-                    camp=camp
-                )
+
+        def scrape_campus(camp: str) -> tuple[str, Path]:
+            path = scraper.scrape_and_save(
+                srcdb=request.srcdb,
+                career=request.career,
+                camp=camp
+            )
+            return camp, path
+
+        scrape_results: List[tuple[str, Path]] = []
+        with ThreadPoolExecutor(max_workers=min(4, max(1, len(request.camps)))) as pool:
+            futures = {pool.submit(scrape_campus, camp): camp for camp in request.camps}
+            for future in as_completed(futures):
+                camp, file_path = future.result()
                 files_downloaded.append(str(file_path))
-                
-                # Determine campus group name for database
-                if "BRKLN" in camp or "INDUS" in camp:
-                    campus_group = "BROOKLYN"
-                else:
-                    campus_group = "WSQ"
-                
-                # Prepare data from JSON file (no DB operations yet)
-                courses_data, sections_data = sql.prepare_json_data(file_path, campus_group)
-                
-                # Update Turso database with prepared data
-                conn = sql.get_conn()
-                try:
-                    sql.init_schema(conn)
-                    sql.insert_prepared_data(conn, courses_data, sections_data)
-                    
-                    # Count records from this file
-                    results = conn.execute("SELECT COUNT(*) FROM sections WHERE campus_group = ?", [campus_group])
-                    count = results.fetchone()[0]
-                    total_records += count
-                    
-                finally:
-                    conn.close()
-                    
-            except Exception as e:
-                return UpdateResponse(
-                    status="error",
-                    message=f"Failed to process campus {camp}: {str(e)}",
-                    files_downloaded=files_downloaded,
-                    records_processed=total_records
-                )
-        
-        # Update last update timestamp
-        conn = sql.get_conn()
+                scrape_results.append((camp, file_path))
+
         try:
+            conn.execute("BEGIN")
+            for camp, file_path in scrape_results:
+                campus_group = "BROOKLYN" if ("BRKLN" in camp or "INDUS" in camp) else "WSQ"
+                courses_data, sections_data = sql.prepare_json_data(file_path, campus_group)
+                sql.insert_prepared_data(conn, courses_data, sections_data, commit=False)
+                total_records += len(sections_data)
             sql.set_last_update_time(conn)
-        finally:
-            conn.close()
-        
+            conn.commit()
+        except Exception:
+            conn.rollback()
+            raise
+
         return UpdateResponse(
             status="success",
             message=f"Successfully updated database with {total_records} records from {len(files_downloaded)} campus groups",
             files_downloaded=files_downloaded,
             records_processed=total_records
         )
-        
+
     except Exception as e:
         raise HTTPException(
             status_code=500,
             detail=f"Database update failed: {str(e)}"
         )
+    finally:
+        conn.close()
 
 
 class DatabaseStatus(BaseModel):

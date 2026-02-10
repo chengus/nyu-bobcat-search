@@ -9,24 +9,12 @@ load_dotenv()
 
 WSQ_FILE = "wsq.json"
 BROOKLYN_FILE = "brooklyn.json"
-LOCAL_DB = "nyu_courses.db"  # Local replica database file
+LOCAL_DB = "nyu-courses.db"  # Local SQLite database file
 
 
 def get_conn():
-    """Get database connection - uses Turso if credentials available, otherwise local SQLite"""
-    url = os.getenv("TURSO_DATABASE_URL")
-    auth_token = os.getenv("TURSO_AUTH_TOKEN")
-    
-    if url and auth_token:
-        # Use libsql with Turso sync
-        conn = libsql.connect(LOCAL_DB, sync_url=url, auth_token=auth_token)
-        conn.sync()  # Sync with remote Turso database
-        return conn
-    else:
-        # Fallback to local SQLite only
-        print("Warning: TURSO credentials not found, using local SQLite database only")
-        conn = libsql.connect(LOCAL_DB)
-        return conn
+    """Get a local SQLite connection (no remote sync)."""
+    return libsql.connect(LOCAL_DB)
 
 
 def init_schema(conn) -> None:
@@ -115,6 +103,14 @@ def init_schema(conn) -> None:
     conn.commit()
 
 
+def optimize_for_bulk_load(conn) -> None:
+    """Speed up large inserts on the local replica."""
+    # These pragmas apply to the local SQLite replica used by libsql.
+    # They trade durability for throughput during bulk writes.
+    conn.execute("PRAGMA journal_mode=WAL")
+    conn.execute("PRAGMA synchronous=OFF")
+
+
 def get_last_update_time(conn) -> Optional[str]:
     """Get the last update timestamp from metadata table"""
     result = conn.execute(
@@ -136,6 +132,7 @@ def clear_all_data(conn) -> None:
     """Delete all courses and sections data for a fresh update"""
     conn.execute("DELETE FROM sections")
     conn.execute("DELETE FROM courses")
+    conn.execute("DELETE FROM course_details_cache")
     conn.commit()
 
 
@@ -294,7 +291,9 @@ def prepare_json_data(
 def insert_prepared_data(
     conn,
     courses_data: List[Tuple],
-    sections_data: List[List]
+    sections_data: List[List],
+    *,
+    commit: bool = True,
 ) -> None:
     """
     Insert prepared course and section data into the database.
@@ -306,7 +305,7 @@ def insert_prepared_data(
         INSERT OR IGNORE INTO courses (code, subject, catalog_number, title)
         VALUES (?, ?, ?, ?)
     """, courses_data)
-    
+
     # Bulk insert sections
     print(f"  Inserting {len(sections_data)} sections...", flush=True)
     conn.executemany("""
@@ -317,7 +316,8 @@ def insert_prepared_data(
         ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     """, sections_data)
     
-    conn.commit()
+    if commit:
+        conn.commit()
     print(f"  Database insert complete")
 
 

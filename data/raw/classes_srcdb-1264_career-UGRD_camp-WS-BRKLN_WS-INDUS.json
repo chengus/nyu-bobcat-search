@@ -41,7 +41,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12789",
+      "key": "12786",
       "code": "BMS-UY 1001",
       "title": "Introduction to Cell and Molecular Biology Laboratory",
       "hide": "",
@@ -60,7 +60,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12790",
+      "key": "12787",
       "code": "BMS-UY 1001",
       "title": "Introduction to Cell and Molecular Biology Laboratory",
       "hide": "",
@@ -79,7 +79,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12791",
+      "key": "12788",
       "code": "BMS-UY 1001",
       "title": "Introduction to Cell and Molecular Biology Laboratory",
       "hide": "",
@@ -136,7 +136,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12792",
+      "key": "12789",
       "code": "BMS-UY 2001",
       "title": "Introduction to Physiology Laboratory",
       "hide": "",
@@ -155,7 +155,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12793",
+      "key": "12790",
       "code": "BMS-UY 2001",
       "title": "Introduction to Physiology Laboratory",
       "hide": "",
@@ -174,7 +174,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12794",
+      "key": "12791",
       "code": "BMS-UY 2001",
       "title": "Introduction to Physiology Laboratory",
       "hide": "",
@@ -193,7 +193,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12795",
+      "key": "12792",
       "code": "BMS-UY 2001",
       "title": "Introduction to Physiology Laboratory",
       "hide": "",
@@ -231,7 +231,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12560",
+      "key": "12557",
       "code": "BMS-UY 2713",
       "title": "Biostatistics",
       "hide": "",
@@ -250,7 +250,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "13202",
+      "key": "13199",
       "code": "BMS-UY 3711",
       "title": "Advanced Cell Biology Laboratory",
       "hide": "",
@@ -269,7 +269,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "13203",
+      "key": "13200",
       "code": "BMS-UY 3711",
       "title": "Advanced Cell Biology Laboratory",
       "hide": "",
@@ -288,7 +288,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "13204",
+      "key": "13201",
       "code": "BMS-UY 3711",
       "title": "Advanced Cell Biology Laboratory",
       "hide": "",
@@ -307,7 +307,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12561",
+      "key": "12558",
       "code": "BMS-UY 3713",
       "title": "Advanced Cell Biology",
       "hide": "",
@@ -326,7 +326,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "13205",
+      "key": "13202",
       "code": "BMS-UY 3812",
       "title": "Epigenetics in Health and Disease",
       "hide": "",
@@ -345,7 +345,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "14432",
+      "key": "14428",
       "code": "BMS-UY 4424",
       "title": "Introduction to Tissue Engineering and Biomaterials",
       "hide": "",
@@ -459,7 +459,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12007",
+      "key": "12004",
       "code": "BMS-UY 4812",
       "title": "Topics in Biology: The Human Microbiome",
       "hide": "",
@@ -478,7 +478,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12008",
+      "key": "12005",
       "code": "BMS-UY 4813",
       "title": "Topics in Biology: Microbiology",
       "hide": "",
@@ -687,7 +687,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10425",
+      "key": "10422",
       "code": "CAM-UY 2204",
       "title": "Disability Studies",
       "hide": "",
@@ -706,7 +706,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10426",
+      "key": "10423",
       "code": "CAM-UY 2204",
       "title": "Disability Studies",
       "hide": "",
@@ -725,7 +725,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "13356",
+      "key": "13353",
       "code": "CAM-UY 2304",
       "title": "Disability & Theatre",
       "hide": "",
@@ -744,7 +744,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "13357",
+      "key": "13354",
       "code": "CAM-UY 2304",
       "title": "Disability & Theatre",
       "hide": "",
@@ -763,7 +763,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10470",
+      "key": "10467",
       "code": "CAM-UY 3004",
       "title": "Special Topics in Culture, Arts and Media: Art History and Media Studies Through Museums",
       "hide": "",
@@ -782,7 +782,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12763",
+      "key": "12760",
       "code": "CAM-UY 4504",
       "title": "Advanced Seminar in Culture, Arts and Media: Asian American Women Writers",
       "hide": "",
@@ -801,7 +801,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12765",
+      "key": "12762",
       "code": "CAM-UY 4504",
       "title": "Advanced Seminar in Culture, Arts and Media: Environment in Literature",
       "hide": "",
@@ -820,7 +820,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12762",
+      "key": "12759",
       "code": "CAM-UY 4504",
       "title": "Advanced Seminar in Culture, Arts and Media: Invention and Imagination",
       "hide": "",
@@ -839,7 +839,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12760",
+      "key": "12757",
       "code": "CAM-UY 4504",
       "title": "Advanced Seminar in Culture, Arts and Media: Literary Classics for Techies",
       "hide": "",
@@ -858,7 +858,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12761",
+      "key": "12758",
       "code": "CAM-UY 4504",
       "title": "Advanced Seminar in Culture, Arts and Media: Machines Made of Words",
       "hide": "",
@@ -877,7 +877,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12766",
+      "key": "12763",
       "code": "CAM-UY 4504",
       "title": "Advanced Seminar in Culture, Arts and Media: STEM/Theatre/and You",
       "hide": "",
@@ -896,7 +896,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12764",
+      "key": "12761",
       "code": "CAM-UY 4504",
       "title": "Advanced Seminar in Culture, Arts and Media: Whose Tech Is It?: Colonialism and Technology",
       "hide": "",
@@ -934,7 +934,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "13573",
+      "key": "13570",
       "code": "CBE-UY 2233",
       "title": "Chemical Engineering Computation",
       "hide": "",
@@ -1029,7 +1029,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12750",
+      "key": "12747",
       "code": "CBE-UY 3474",
       "title": "Introduction to Modern Optics and Photonics",
       "hide": "",
@@ -1105,7 +1105,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "13558",
+      "key": "13555",
       "code": "CBE-UY 4223",
       "title": "Biochemical Engineering",
       "hide": "",
@@ -2131,7 +2131,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "14431",
+      "key": "14427",
       "code": "CBE-UY REC",
       "title": "CBE Recitation (including BMS, CBE, CM subject areas): CBE-UY 3153 CBE Thermodynamics",
       "hide": "",
@@ -2150,7 +2150,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "14429",
+      "key": "14425",
       "code": "CBE-UY REC",
       "title": "CBE Recitation (including BMS, CBE, CM subject areas): CBE-UY 3233 CBE Separations",
       "hide": "",
@@ -2169,7 +2169,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "14430",
+      "key": "14426",
       "code": "CBE-UY REC",
       "title": "CBE Recitation (including BMS, CBE, CM subject areas): CBE-UY 3323 Fluid Mechanics",
       "hide": "",
@@ -2264,7 +2264,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "14216",
+      "key": "14213",
       "code": "CE-UY 2112",
       "title": "Structural Statics",
       "hide": "",
@@ -2283,7 +2283,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "14217",
+      "key": "14214",
       "code": "CE-UY 2122",
       "title": "Strength of Materials",
       "hide": "",
@@ -2302,7 +2302,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "14218",
+      "key": "14215",
       "code": "CE-UY 2122",
       "title": "Strength of Materials",
       "hide": "",
@@ -2321,7 +2321,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12480",
+      "key": "12477",
       "code": "CE-UY 2143",
       "title": "Analysis of Determinate Structures",
       "hide": "",
@@ -2340,7 +2340,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12481",
+      "key": "12478",
       "code": "CE-UY 2143",
       "title": "Analysis of Determinate Structures",
       "hide": "",
@@ -2416,7 +2416,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10430",
+      "key": "10427",
       "code": "CE-UY 2343",
       "title": "Transportation Engineering",
       "hide": "",
@@ -2454,7 +2454,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12482",
+      "key": "12479",
       "code": "CE-UY 2533",
       "title": "Construction Project Management",
       "hide": "",
@@ -2473,7 +2473,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12479",
+      "key": "12476",
       "code": "CE-UY 3013",
       "title": "Computing in Civil Engineering",
       "hide": "",
@@ -2625,7 +2625,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12483",
+      "key": "12480",
       "code": "CE-UY 3183",
       "title": "Structural Engineering",
       "hide": "",
@@ -2644,7 +2644,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12484",
+      "key": "12481",
       "code": "CE-UY 3183",
       "title": "Structural Engineering",
       "hide": "",
@@ -2720,7 +2720,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12413",
+      "key": "12410",
       "code": "CE-UY 3233",
       "title": "Environmental Engineering Process Design",
       "hide": "",
@@ -2986,7 +2986,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "13193",
+      "key": "13190",
       "code": "CE-UY 4813",
       "title": "Structural Engineering Capstone",
       "hide": "",
@@ -3024,7 +3024,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12488",
+      "key": "12485",
       "code": "CE-UY 4911",
       "title": "Civil Engineering Internship I: Management",
       "hide": "",
@@ -3043,7 +3043,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12489",
+      "key": "12486",
       "code": "CE-UY 4911",
       "title": "Civil Engineering Internship I: Management",
       "hide": "",
@@ -3062,7 +3062,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12490",
+      "key": "12487",
       "code": "CE-UY 4921",
       "title": "Civil Engineering Internship II: Ethics",
       "hide": "",
@@ -3081,7 +3081,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12491",
+      "key": "12488",
       "code": "CE-UY 4921",
       "title": "Civil Engineering Internship II: Ethics",
       "hide": "",
@@ -3100,7 +3100,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12492",
+      "key": "12489",
       "code": "CE-UY 4931",
       "title": "Civil Engineering Internship III: Leadership",
       "hide": "",
@@ -3119,7 +3119,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12493",
+      "key": "12490",
       "code": "CE-UY 4931",
       "title": "Civil Engineering Internship III: Leadership",
       "hide": "",
@@ -3138,7 +3138,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12478",
+      "key": "12475",
       "code": "CE-UY 496X",
       "title": "Undergraduate Research Project in Civil and Urban Engineering",
       "hide": "",
@@ -3176,7 +3176,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10708",
+      "key": "10705",
       "code": "CE-UY 4990",
       "title": "Fundamentals of Engineering Exam Registration for CUE",
       "hide": "",
@@ -3195,7 +3195,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "13112",
+      "key": "13109",
       "code": "CM-UY 1001",
       "title": "General Chemistry for Engineers Laboratory",
       "hide": "",
@@ -3214,7 +3214,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "13113",
+      "key": "13110",
       "code": "CM-UY 1001",
       "title": "General Chemistry for Engineers Laboratory",
       "hide": "",
@@ -3233,7 +3233,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "13114",
+      "key": "13111",
       "code": "CM-UY 1001",
       "title": "General Chemistry for Engineers Laboratory",
       "hide": "",
@@ -3252,7 +3252,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "13115",
+      "key": "13112",
       "code": "CM-UY 1001",
       "title": "General Chemistry for Engineers Laboratory",
       "hide": "",
@@ -3271,7 +3271,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "13116",
+      "key": "13113",
       "code": "CM-UY 1001",
       "title": "General Chemistry for Engineers Laboratory",
       "hide": "",
@@ -3290,7 +3290,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "13117",
+      "key": "13114",
       "code": "CM-UY 1001",
       "title": "General Chemistry for Engineers Laboratory",
       "hide": "",
@@ -3309,7 +3309,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "13118",
+      "key": "13115",
       "code": "CM-UY 1001",
       "title": "General Chemistry for Engineers Laboratory",
       "hide": "",
@@ -3328,7 +3328,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "13119",
+      "key": "13116",
       "code": "CM-UY 1001",
       "title": "General Chemistry for Engineers Laboratory",
       "hide": "",
@@ -3366,7 +3366,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "13120",
+      "key": "13117",
       "code": "CM-UY 1021",
       "title": "General Chemistry Laboratory II",
       "hide": "",
@@ -3385,7 +3385,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "13121",
+      "key": "13118",
       "code": "CM-UY 1021",
       "title": "General Chemistry Laboratory II",
       "hide": "",
@@ -3404,7 +3404,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "13122",
+      "key": "13119",
       "code": "CM-UY 1021",
       "title": "General Chemistry Laboratory II",
       "hide": "",
@@ -3423,7 +3423,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "13123",
+      "key": "13120",
       "code": "CM-UY 1021",
       "title": "General Chemistry Laboratory II",
       "hide": "",
@@ -3442,7 +3442,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "13124",
+      "key": "13121",
       "code": "CM-UY 1021",
       "title": "General Chemistry Laboratory II",
       "hide": "",
@@ -3461,7 +3461,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "13125",
+      "key": "13122",
       "code": "CM-UY 1021",
       "title": "General Chemistry Laboratory II",
       "hide": "",
@@ -3480,7 +3480,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "13126",
+      "key": "13123",
       "code": "CM-UY 1021",
       "title": "General Chemistry Laboratory II",
       "hide": "",
@@ -3499,7 +3499,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "13127",
+      "key": "13124",
       "code": "CM-UY 1021",
       "title": "General Chemistry Laboratory II",
       "hide": "",
@@ -3518,7 +3518,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "8412",
+      "key": "8410",
       "code": "CM-UY 1023",
       "title": "General Chemistry II",
       "hide": "",
@@ -3632,7 +3632,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12599",
+      "key": "12596",
       "code": "CM-UY 3323",
       "title": "Biochemistry II",
       "hide": "",
@@ -3784,7 +3784,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12311",
+      "key": "12308",
       "code": "CP-UY 2013",
       "title": "Undergraduate Internship I",
       "hide": "",
@@ -3803,7 +3803,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12312",
+      "key": "12309",
       "code": "CP-UY 2013",
       "title": "Undergraduate Internship I",
       "hide": "",
@@ -3822,7 +3822,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12313",
+      "key": "12310",
       "code": "CP-UY 2013",
       "title": "Undergraduate Internship I",
       "hide": "",
@@ -3841,7 +3841,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12314",
+      "key": "12311",
       "code": "CP-UY 2013",
       "title": "Undergraduate Internship I",
       "hide": "",
@@ -3860,7 +3860,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12315",
+      "key": "12312",
       "code": "CP-UY 2013",
       "title": "Undergraduate Internship I",
       "hide": "",
@@ -3879,7 +3879,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12316",
+      "key": "12313",
       "code": "CP-UY 2013",
       "title": "Undergraduate Internship I",
       "hide": "",
@@ -3898,7 +3898,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12317",
+      "key": "12314",
       "code": "CP-UY 2013",
       "title": "Undergraduate Internship I",
       "hide": "",
@@ -3917,7 +3917,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12318",
+      "key": "12315",
       "code": "CP-UY 2013",
       "title": "Undergraduate Internship I",
       "hide": "",
@@ -3936,7 +3936,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12319",
+      "key": "12316",
       "code": "CP-UY 2013",
       "title": "Undergraduate Internship I",
       "hide": "",
@@ -4031,7 +4031,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12320",
+      "key": "12317",
       "code": "CP-UY 2023",
       "title": "Undergraduate Internship II",
       "hide": "",
@@ -4050,7 +4050,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12321",
+      "key": "12318",
       "code": "CP-UY 2023",
       "title": "Undergraduate Internship II",
       "hide": "",
@@ -4069,7 +4069,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12322",
+      "key": "12319",
       "code": "CP-UY 2023",
       "title": "Undergraduate Internship II",
       "hide": "",
@@ -4088,7 +4088,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12323",
+      "key": "12320",
       "code": "CP-UY 2023",
       "title": "Undergraduate Internship II",
       "hide": "",
@@ -4107,7 +4107,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12324",
+      "key": "12321",
       "code": "CP-UY 2023",
       "title": "Undergraduate Internship II",
       "hide": "",
@@ -4126,7 +4126,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12325",
+      "key": "12322",
       "code": "CP-UY 2023",
       "title": "Undergraduate Internship II",
       "hide": "",
@@ -4145,7 +4145,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12326",
+      "key": "12323",
       "code": "CP-UY 2023",
       "title": "Undergraduate Internship II",
       "hide": "",
@@ -4164,7 +4164,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12914",
+      "key": "12911",
       "code": "CS-UY 1113",
       "title": "Problem Solving and Programming I",
       "hide": "",
@@ -4183,7 +4183,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12915",
+      "key": "12912",
       "code": "CS-UY 1113",
       "title": "Problem Solving and Programming I",
       "hide": "",
@@ -4202,7 +4202,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12916",
+      "key": "12913",
       "code": "CS-UY 1113",
       "title": "Problem Solving and Programming I",
       "hide": "",
@@ -4221,7 +4221,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12917",
+      "key": "12914",
       "code": "CS-UY 1113",
       "title": "Problem Solving and Programming I",
       "hide": "",
@@ -4240,7 +4240,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12918",
+      "key": "12915",
       "code": "CS-UY 1113",
       "title": "Problem Solving and Programming I",
       "hide": "",
@@ -4259,7 +4259,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12919",
+      "key": "12916",
       "code": "CS-UY 1113",
       "title": "Problem Solving and Programming I",
       "hide": "",
@@ -4278,7 +4278,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12920",
+      "key": "12917",
       "code": "CS-UY 1113",
       "title": "Problem Solving and Programming I",
       "hide": "",
@@ -4297,7 +4297,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12921",
+      "key": "12918",
       "code": "CS-UY 1113",
       "title": "Problem Solving and Programming I",
       "hide": "",
@@ -4316,7 +4316,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12922",
+      "key": "12919",
       "code": "CS-UY 1113",
       "title": "Problem Solving and Programming I",
       "hide": "",
@@ -4525,7 +4525,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "11332",
+      "key": "11329",
       "code": "CS-UY 1134",
       "title": "Data Structures and Algorithms",
       "hide": "",
@@ -4544,7 +4544,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "11333",
+      "key": "11330",
       "code": "CS-UY 1134",
       "title": "Data Structures and Algorithms",
       "hide": "",
@@ -4563,7 +4563,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "11334",
+      "key": "11331",
       "code": "CS-UY 1134",
       "title": "Data Structures and Algorithms",
       "hide": "",
@@ -4582,7 +4582,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "11335",
+      "key": "11332",
       "code": "CS-UY 1134",
       "title": "Data Structures and Algorithms",
       "hide": "",
@@ -4601,7 +4601,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "11336",
+      "key": "11333",
       "code": "CS-UY 1134",
       "title": "Data Structures and Algorithms",
       "hide": "",
@@ -4620,7 +4620,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "11337",
+      "key": "11334",
       "code": "CS-UY 1134",
       "title": "Data Structures and Algorithms",
       "hide": "",
@@ -4639,7 +4639,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "11338",
+      "key": "11335",
       "code": "CS-UY 1134",
       "title": "Data Structures and Algorithms",
       "hide": "",
@@ -4658,7 +4658,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "11339",
+      "key": "11336",
       "code": "CS-UY 1134",
       "title": "Data Structures and Algorithms",
       "hide": "",
@@ -4677,7 +4677,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "11340",
+      "key": "11337",
       "code": "CS-UY 1134",
       "title": "Data Structures and Algorithms",
       "hide": "",
@@ -4696,7 +4696,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "11341",
+      "key": "11338",
       "code": "CS-UY 1134",
       "title": "Data Structures and Algorithms",
       "hide": "",
@@ -4715,7 +4715,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "11448",
+      "key": "11445",
       "code": "CS-UY 2124",
       "title": "Object Oriented Programming",
       "hide": "",
@@ -4734,7 +4734,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "11449",
+      "key": "11446",
       "code": "CS-UY 2124",
       "title": "Object Oriented Programming",
       "hide": "",
@@ -4753,7 +4753,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "11450",
+      "key": "11447",
       "code": "CS-UY 2124",
       "title": "Object Oriented Programming",
       "hide": "",
@@ -4772,7 +4772,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "11451",
+      "key": "11448",
       "code": "CS-UY 2124",
       "title": "Object Oriented Programming",
       "hide": "",
@@ -4791,7 +4791,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "11452",
+      "key": "11449",
       "code": "CS-UY 2124",
       "title": "Object Oriented Programming",
       "hide": "",
@@ -4810,7 +4810,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "11453",
+      "key": "11450",
       "code": "CS-UY 2124",
       "title": "Object Oriented Programming",
       "hide": "",
@@ -4829,7 +4829,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "11454",
+      "key": "11451",
       "code": "CS-UY 2124",
       "title": "Object Oriented Programming",
       "hide": "",
@@ -4848,7 +4848,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "11455",
+      "key": "11452",
       "code": "CS-UY 2124",
       "title": "Object Oriented Programming",
       "hide": "",
@@ -4867,7 +4867,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "11456",
+      "key": "11453",
       "code": "CS-UY 2124",
       "title": "Object Oriented Programming",
       "hide": "",
@@ -5152,7 +5152,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "8415",
+      "key": "8413",
       "code": "CS-UY 3083",
       "title": "Introduction to Databases",
       "hide": "",
@@ -5171,7 +5171,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "8416",
+      "key": "8414",
       "code": "CS-UY 3083",
       "title": "Introduction to Databases",
       "hide": "",
@@ -5209,7 +5209,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "8419",
+      "key": "8417",
       "code": "CS-UY 3224",
       "title": "Intro to Operating Systm",
       "hide": "",
@@ -5228,7 +5228,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "8414",
+      "key": "8412",
       "code": "CS-UY 3393",
       "title": "UNIX System Programming",
       "hide": "",
@@ -5247,7 +5247,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "8417",
+      "key": "8415",
       "code": "CS-UY 3913",
       "title": "Applied Java Programming",
       "hide": "",
@@ -5266,7 +5266,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "8418",
+      "key": "8416",
       "code": "CS-UY 3933",
       "title": "Network Security",
       "hide": "",
@@ -5285,7 +5285,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10855",
+      "key": "10852",
       "code": "CS-UY 3943",
       "title": "Special Topics in Computer Science: Algorithmic Machine Learning and Data Science",
       "hide": "",
@@ -5304,7 +5304,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10853",
+      "key": "10850",
       "code": "CS-UY 3943",
       "title": "Special Topics in Computer Science: Artificial Intelligence Games",
       "hide": "",
@@ -5323,7 +5323,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10858",
+      "key": "10855",
       "code": "CS-UY 3943",
       "title": "Special Topics in Computer Science: Foundations of Data Science",
       "hide": "",
@@ -5342,7 +5342,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10854",
+      "key": "10851",
       "code": "CS-UY 3943",
       "title": "Special Topics in Computer Science: Intro to Blockchain & Distributed Ledger Tech (Dlt",
       "hide": "",
@@ -5361,7 +5361,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10856",
+      "key": "10853",
       "code": "CS-UY 3943",
       "title": "Special Topics in Computer Science: Neuroinformatics",
       "hide": "",
@@ -5380,7 +5380,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10857",
+      "key": "10854",
       "code": "CS-UY 3943",
       "title": "Special Topics in Computer Science: Open Source/Professional Software Development",
       "hide": "",
@@ -5399,7 +5399,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10862",
+      "key": "10859",
       "code": "CS-UY 3943",
       "title": "Special Topics in Computer Science: Post-Quantum Cryptography",
       "hide": "",
@@ -5418,7 +5418,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10860",
+      "key": "10857",
       "code": "CS-UY 3943",
       "title": "Special Topics in Computer Science: Privacy in the Electronic Society",
       "hide": "",
@@ -5437,7 +5437,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10859",
+      "key": "10856",
       "code": "CS-UY 3943",
       "title": "Special Topics in Computer Science: Search-Based Software Engineering",
       "hide": "",
@@ -5456,7 +5456,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10861",
+      "key": "10858",
       "code": "CS-UY 3943",
       "title": "Special Topics in Computer Science: Trust and Safety",
       "hide": "",
@@ -5475,7 +5475,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12329",
+      "key": "12326",
       "code": "CS-UY 410X",
       "title": "Undergraduate Guided Studies in Computer Science",
       "hide": "",
@@ -5494,7 +5494,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12330",
+      "key": "12327",
       "code": "CS-UY 410X",
       "title": "Undergraduate Guided Studies in Computer Science",
       "hide": "",
@@ -5513,7 +5513,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12331",
+      "key": "12328",
       "code": "CS-UY 410X",
       "title": "Undergraduate Guided Studies in Computer Science",
       "hide": "",
@@ -5532,7 +5532,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12332",
+      "key": "12329",
       "code": "CS-UY 410X",
       "title": "Undergraduate Guided Studies in Computer Science",
       "hide": "",
@@ -5551,7 +5551,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12333",
+      "key": "12330",
       "code": "CS-UY 410X",
       "title": "Undergraduate Guided Studies in Computer Science",
       "hide": "",
@@ -5570,7 +5570,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12334",
+      "key": "12331",
       "code": "CS-UY 410X",
       "title": "Undergraduate Guided Studies in Computer Science",
       "hide": "",
@@ -5589,7 +5589,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12335",
+      "key": "12332",
       "code": "CS-UY 410X",
       "title": "Undergraduate Guided Studies in Computer Science",
       "hide": "",
@@ -5608,7 +5608,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12336",
+      "key": "12333",
       "code": "CS-UY 410X",
       "title": "Undergraduate Guided Studies in Computer Science",
       "hide": "",
@@ -5627,7 +5627,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12337",
+      "key": "12334",
       "code": "CS-UY 410X",
       "title": "Undergraduate Guided Studies in Computer Science",
       "hide": "",
@@ -5646,7 +5646,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12338",
+      "key": "12335",
       "code": "CS-UY 410X",
       "title": "Undergraduate Guided Studies in Computer Science",
       "hide": "",
@@ -5665,7 +5665,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12339",
+      "key": "12336",
       "code": "CS-UY 420X",
       "title": "Undergraduate Research in Computer Science",
       "hide": "",
@@ -5684,7 +5684,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12340",
+      "key": "12337",
       "code": "CS-UY 420X",
       "title": "Undergraduate Research in Computer Science",
       "hide": "",
@@ -5703,7 +5703,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12341",
+      "key": "12338",
       "code": "CS-UY 420X",
       "title": "Undergraduate Research in Computer Science",
       "hide": "",
@@ -5722,7 +5722,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12342",
+      "key": "12339",
       "code": "CS-UY 420X",
       "title": "Undergraduate Research in Computer Science",
       "hide": "",
@@ -5741,7 +5741,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12343",
+      "key": "12340",
       "code": "CS-UY 420X",
       "title": "Undergraduate Research in Computer Science",
       "hide": "",
@@ -5760,7 +5760,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12344",
+      "key": "12341",
       "code": "CS-UY 420X",
       "title": "Undergraduate Research in Computer Science",
       "hide": "",
@@ -5779,7 +5779,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12345",
+      "key": "12342",
       "code": "CS-UY 420X",
       "title": "Undergraduate Research in Computer Science",
       "hide": "",
@@ -5798,7 +5798,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12346",
+      "key": "12343",
       "code": "CS-UY 420X",
       "title": "Undergraduate Research in Computer Science",
       "hide": "",
@@ -5817,7 +5817,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12347",
+      "key": "12344",
       "code": "CS-UY 420X",
       "title": "Undergraduate Research in Computer Science",
       "hide": "",
@@ -5836,7 +5836,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12348",
+      "key": "12345",
       "code": "CS-UY 420X",
       "title": "Undergraduate Research in Computer Science",
       "hide": "",
@@ -5950,7 +5950,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10543",
+      "key": "10540",
       "code": "CS-UY 4533",
       "title": "Interactive Computer Graphics",
       "hide": "",
@@ -5969,7 +5969,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10553",
+      "key": "10550",
       "code": "CS-UY 4543",
       "title": "Human Computer Interaction",
       "hide": "",
@@ -5988,7 +5988,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10554",
+      "key": "10551",
       "code": "CS-UY 4543",
       "title": "Human Computer Interaction",
       "hide": "",
@@ -6007,7 +6007,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10552",
+      "key": "10549",
       "code": "CS-UY 4553",
       "title": "Game Design",
       "hide": "",
@@ -6026,7 +6026,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "11714",
+      "key": "11711",
       "code": "CS-UY 4563",
       "title": "Introduction to Machine Learning",
       "hide": "",
@@ -6045,7 +6045,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "11715",
+      "key": "11712",
       "code": "CS-UY 4563",
       "title": "Introduction to Machine Learning",
       "hide": "",
@@ -6064,7 +6064,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10544",
+      "key": "10541",
       "code": "CS-UY 4613",
       "title": "Artificial Intelligence",
       "hide": "",
@@ -6083,7 +6083,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10545",
+      "key": "10542",
       "code": "CS-UY 4753",
       "title": "Application Security",
       "hide": "",
@@ -6102,7 +6102,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10546",
+      "key": "10543",
       "code": "CS-UY 4773",
       "title": "Penetration Testing and Vulnerability Analysis",
       "hide": "",
@@ -6121,7 +6121,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10547",
+      "key": "10544",
       "code": "CS-UY 4783",
       "title": "Applied Cryptography",
       "hide": "",
@@ -6140,7 +6140,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10548",
+      "key": "10545",
       "code": "CS-UY 4793",
       "title": "Computer Networking",
       "hide": "",
@@ -6273,7 +6273,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10431",
+      "key": "10428",
       "code": "DM-UY 1133",
       "title": "Creative Coding",
       "hide": "",
@@ -6292,7 +6292,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10432",
+      "key": "10429",
       "code": "DM-UY 1133",
       "title": "Creative Coding",
       "hide": "",
@@ -6311,7 +6311,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10433",
+      "key": "10430",
       "code": "DM-UY 1143",
       "title": "Ideation & Prototyping",
       "hide": "",
@@ -6330,7 +6330,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10434",
+      "key": "10431",
       "code": "DM-UY 1143",
       "title": "Ideation & Prototyping",
       "hide": "",
@@ -6406,7 +6406,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10437",
+      "key": "10434",
       "code": "DM-UY 2173",
       "title": "Motion Graphics Studio",
       "hide": "",
@@ -6482,7 +6482,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "11136",
+      "key": "11133",
       "code": "DM-UY 2213",
       "title": "User Experience Design (UX)",
       "hide": "",
@@ -6501,7 +6501,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10435",
+      "key": "10432",
       "code": "DM-UY 2263",
       "title": "Still and Moving Images",
       "hide": "",
@@ -6520,7 +6520,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10436",
+      "key": "10433",
       "code": "DM-UY 2263",
       "title": "Still and Moving Images",
       "hide": "",
@@ -6653,7 +6653,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10438",
+      "key": "10435",
       "code": "DM-UY 4173",
       "title": "Professional Practices for Creatives",
       "hide": "",
@@ -6672,7 +6672,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10439",
+      "key": "10436",
       "code": "DM-UY 4173",
       "title": "Professional Practices for Creatives",
       "hide": "",
@@ -6691,7 +6691,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10440",
+      "key": "10437",
       "code": "DM-UY 4173",
       "title": "Professional Practices for Creatives",
       "hide": "",
@@ -7166,7 +7166,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "8545",
+      "key": "8543",
       "code": "ECE-UY 3064",
       "title": "Feedback Control",
       "hide": "",
@@ -7185,7 +7185,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "8546",
+      "key": "8544",
       "code": "ECE-UY 3064",
       "title": "Feedback Control",
       "hide": "",
@@ -7204,7 +7204,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "8547",
+      "key": "8545",
       "code": "ECE-UY 3064",
       "title": "Feedback Control",
       "hide": "",
@@ -7223,7 +7223,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "8548",
+      "key": "8546",
       "code": "ECE-UY 3064",
       "title": "Feedback Control",
       "hide": "",
@@ -7242,7 +7242,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "8549",
+      "key": "8547",
       "code": "ECE-UY 3064",
       "title": "Feedback Control",
       "hide": "",
@@ -7527,7 +7527,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "8550",
+      "key": "8548",
       "code": "ECE-UY 3404",
       "title": "Fundamentals of Communication Theory",
       "hide": "",
@@ -7546,7 +7546,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "8551",
+      "key": "8549",
       "code": "ECE-UY 3404",
       "title": "Fundamentals of Communication Theory",
       "hide": "",
@@ -7565,7 +7565,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "13428",
+      "key": "13425",
       "code": "ECE-UY 345X",
       "title": "Undergraduate Research in Electrical and Computer Engineering",
       "hide": "",
@@ -7584,7 +7584,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "13429",
+      "key": "13426",
       "code": "ECE-UY 345X",
       "title": "Undergraduate Research in Electrical and Computer Engineering",
       "hide": "",
@@ -7603,7 +7603,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "13430",
+      "key": "13427",
       "code": "ECE-UY 345X",
       "title": "Undergraduate Research in Electrical and Computer Engineering",
       "hide": "",
@@ -7622,7 +7622,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10709",
+      "key": "10706",
       "code": "ECE-UY 3474",
       "title": "Introduction to Modern Optics and Photonics",
       "hide": "",
@@ -7641,7 +7641,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "8552",
+      "key": "8550",
       "code": "ECE-UY 3604",
       "title": "Electromagnetic Waves",
       "hide": "",
@@ -7660,7 +7660,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "8553",
+      "key": "8551",
       "code": "ECE-UY 3604",
       "title": "Electromagnetic Waves",
       "hide": "",
@@ -7679,7 +7679,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "8554",
+      "key": "8552",
       "code": "ECE-UY 3604",
       "title": "Electromagnetic Waves",
       "hide": "",
@@ -7698,7 +7698,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "8555",
+      "key": "8553",
       "code": "ECE-UY 3604",
       "title": "Electromagnetic Waves",
       "hide": "",
@@ -7717,7 +7717,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "8556",
+      "key": "8554",
       "code": "ECE-UY 3604",
       "title": "Electromagnetic Waves",
       "hide": "",
@@ -7755,7 +7755,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "8560",
+      "key": "8558",
       "code": "ECE-UY 373",
       "title": "Guided Studies In EE",
       "hide": "",
@@ -7774,7 +7774,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "8561",
+      "key": "8559",
       "code": "ECE-UY 373",
       "title": "Guided Studies In EE",
       "hide": "",
@@ -7793,7 +7793,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "8562",
+      "key": "8560",
       "code": "ECE-UY 373",
       "title": "Guided Studies In EE",
       "hide": "",
@@ -7812,7 +7812,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "8563",
+      "key": "8561",
       "code": "ECE-UY 374",
       "title": "Guided Studies In EE",
       "hide": "",
@@ -7831,7 +7831,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "13933",
+      "key": "13930",
       "code": "ECE-UY 378X",
       "title": "Guided Studies in Electrical and Computer Engineering",
       "hide": "",
@@ -7850,7 +7850,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "13934",
+      "key": "13931",
       "code": "ECE-UY 378X",
       "title": "Guided Studies in Electrical and Computer Engineering",
       "hide": "",
@@ -7869,7 +7869,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "13935",
+      "key": "13932",
       "code": "ECE-UY 378X",
       "title": "Guided Studies in Electrical and Computer Engineering",
       "hide": "",
@@ -7888,7 +7888,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "13936",
+      "key": "13933",
       "code": "ECE-UY 378X",
       "title": "Guided Studies in Electrical and Computer Engineering",
       "hide": "",
@@ -8116,7 +8116,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "8557",
+      "key": "8555",
       "code": "ECE-UY 4193",
       "title": "Electrical and Computer Engineering Design Project I",
       "hide": "",
@@ -8135,7 +8135,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "8558",
+      "key": "8556",
       "code": "ECE-UY 4193",
       "title": "Electrical and Computer Engineering Design Project I",
       "hide": "",
@@ -8154,7 +8154,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "8559",
+      "key": "8557",
       "code": "ECE-UY 4193",
       "title": "Electrical and Computer Engineering Design Project I",
       "hide": "",
@@ -8173,7 +8173,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10710",
+      "key": "10707",
       "code": "ECE-UY 4283",
       "title": "Wireless Information Systems Laboratory II",
       "hide": "",
@@ -8192,7 +8192,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10711",
+      "key": "10708",
       "code": "ECE-UY 4283",
       "title": "Wireless Information Systems Laboratory II",
       "hide": "",
@@ -8382,7 +8382,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "11266",
+      "key": "11263",
       "code": "ECE-UY 4423",
       "title": "Special Topics in Electrical Engineering: Impact Innovation Lab 2",
       "hide": "",
@@ -8401,7 +8401,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "11267",
+      "key": "11264",
       "code": "ECE-UY 4423",
       "title": "Special Topics in Electrical Engineering: PCB Design for Embedded Systems",
       "hide": "",
@@ -8420,7 +8420,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "8564",
+      "key": "8562",
       "code": "ECE-UY 4993",
       "title": "Senior Thesis",
       "hide": "",
@@ -8439,7 +8439,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "8565",
+      "key": "8563",
       "code": "ECE-UY 4993",
       "title": "Senior Thesis",
       "hide": "",
@@ -9883,7 +9883,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "8566",
+      "key": "8564",
       "code": "EX-UY 1",
       "title": "Examination Hour",
       "hide": "",
@@ -9902,7 +9902,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "5105",
+      "key": "5104",
       "code": "EXPOS-UY 1",
       "title": "Writing as Inquiry",
       "hide": "",
@@ -9921,7 +9921,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "5106",
+      "key": "5105",
       "code": "EXPOS-UY 1",
       "title": "Writing as Inquiry",
       "hide": "",
@@ -9940,7 +9940,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "5107",
+      "key": "5106",
       "code": "EXPOS-UY 1",
       "title": "Writing as Inquiry",
       "hide": "",
@@ -9959,7 +9959,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "5108",
+      "key": "5107",
       "code": "EXPOS-UY 1",
       "title": "Writing as Inquiry",
       "hide": "",
@@ -9978,7 +9978,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "5109",
+      "key": "5108",
       "code": "EXPOS-UY 1",
       "title": "Writing as Inquiry",
       "hide": "",
@@ -9997,7 +9997,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "5110",
+      "key": "5109",
       "code": "EXPOS-UY 1",
       "title": "Writing as Inquiry",
       "hide": "",
@@ -10016,7 +10016,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "5111",
+      "key": "5110",
       "code": "EXPOS-UY 1",
       "title": "Writing as Inquiry",
       "hide": "",
@@ -10035,7 +10035,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "5112",
+      "key": "5111",
       "code": "EXPOS-UY 1",
       "title": "Writing as Inquiry",
       "hide": "",
@@ -10054,7 +10054,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "5113",
+      "key": "5112",
       "code": "EXPOS-UY 1",
       "title": "Writing as Inquiry",
       "hide": "",
@@ -10073,7 +10073,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "5114",
+      "key": "5113",
       "code": "EXPOS-UY 1",
       "title": "Writing as Inquiry",
       "hide": "",
@@ -10092,7 +10092,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "5115",
+      "key": "5114",
       "code": "EXPOS-UY 1",
       "title": "Writing as Inquiry",
       "hide": "",
@@ -10111,7 +10111,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12512",
+      "key": "12509",
       "code": "EXPOS-UY 22",
       "title": "Advanced Writing for Engineers",
       "hide": "",
@@ -10130,7 +10130,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12513",
+      "key": "12510",
       "code": "EXPOS-UY 22",
       "title": "Advanced Writing for Engineers",
       "hide": "",
@@ -10149,7 +10149,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12514",
+      "key": "12511",
       "code": "EXPOS-UY 22",
       "title": "Advanced Writing for Engineers",
       "hide": "",
@@ -10168,7 +10168,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12515",
+      "key": "12512",
       "code": "EXPOS-UY 22",
       "title": "Advanced Writing for Engineers",
       "hide": "",
@@ -10187,7 +10187,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12516",
+      "key": "12513",
       "code": "EXPOS-UY 22",
       "title": "Advanced Writing for Engineers",
       "hide": "",
@@ -10206,7 +10206,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12517",
+      "key": "12514",
       "code": "EXPOS-UY 22",
       "title": "Advanced Writing for Engineers",
       "hide": "",
@@ -10225,7 +10225,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12518",
+      "key": "12515",
       "code": "EXPOS-UY 22",
       "title": "Advanced Writing for Engineers",
       "hide": "",
@@ -10244,7 +10244,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12519",
+      "key": "12516",
       "code": "EXPOS-UY 22",
       "title": "Advanced Writing for Engineers",
       "hide": "",
@@ -10263,7 +10263,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12520",
+      "key": "12517",
       "code": "EXPOS-UY 22",
       "title": "Advanced Writing for Engineers",
       "hide": "",
@@ -10282,7 +10282,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12521",
+      "key": "12518",
       "code": "EXPOS-UY 22",
       "title": "Advanced Writing for Engineers",
       "hide": "",
@@ -10301,7 +10301,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12522",
+      "key": "12519",
       "code": "EXPOS-UY 22",
       "title": "Advanced Writing for Engineers",
       "hide": "",
@@ -10320,7 +10320,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12523",
+      "key": "12520",
       "code": "EXPOS-UY 22",
       "title": "Advanced Writing for Engineers",
       "hide": "",
@@ -10339,7 +10339,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12524",
+      "key": "12521",
       "code": "EXPOS-UY 22",
       "title": "Advanced Writing for Engineers",
       "hide": "",
@@ -10358,7 +10358,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12525",
+      "key": "12522",
       "code": "EXPOS-UY 22",
       "title": "Advanced Writing for Engineers",
       "hide": "",
@@ -10377,7 +10377,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12526",
+      "key": "12523",
       "code": "EXPOS-UY 22",
       "title": "Advanced Writing for Engineers",
       "hide": "",
@@ -10396,7 +10396,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12527",
+      "key": "12524",
       "code": "EXPOS-UY 22",
       "title": "Advanced Writing for Engineers",
       "hide": "",
@@ -10415,7 +10415,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12528",
+      "key": "12525",
       "code": "EXPOS-UY 22",
       "title": "Advanced Writing for Engineers",
       "hide": "",
@@ -10434,7 +10434,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12529",
+      "key": "12526",
       "code": "EXPOS-UY 22",
       "title": "Advanced Writing for Engineers",
       "hide": "",
@@ -10453,7 +10453,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12530",
+      "key": "12527",
       "code": "EXPOS-UY 22",
       "title": "Advanced Writing for Engineers",
       "hide": "",
@@ -10472,7 +10472,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12531",
+      "key": "12528",
       "code": "EXPOS-UY 22",
       "title": "Advanced Writing for Engineers",
       "hide": "",
@@ -10491,7 +10491,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12532",
+      "key": "12529",
       "code": "EXPOS-UY 22",
       "title": "Advanced Writing for Engineers",
       "hide": "",
@@ -10510,7 +10510,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12533",
+      "key": "12530",
       "code": "EXPOS-UY 22",
       "title": "Advanced Writing for Engineers",
       "hide": "",
@@ -10529,7 +10529,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12534",
+      "key": "12531",
       "code": "EXPOS-UY 22",
       "title": "Advanced Writing for Engineers",
       "hide": "",
@@ -10548,7 +10548,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12535",
+      "key": "12532",
       "code": "EXPOS-UY 22",
       "title": "Advanced Writing for Engineers",
       "hide": "",
@@ -10567,7 +10567,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12536",
+      "key": "12533",
       "code": "EXPOS-UY 22",
       "title": "Advanced Writing for Engineers",
       "hide": "",
@@ -10586,7 +10586,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12537",
+      "key": "12534",
       "code": "EXPOS-UY 22",
       "title": "Advanced Writing for Engineers",
       "hide": "",
@@ -10605,7 +10605,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12538",
+      "key": "12535",
       "code": "EXPOS-UY 22",
       "title": "Advanced Writing for Engineers",
       "hide": "",
@@ -10624,7 +10624,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12539",
+      "key": "12536",
       "code": "EXPOS-UY 22",
       "title": "Advanced Writing for Engineers",
       "hide": "",
@@ -10643,7 +10643,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12540",
+      "key": "12537",
       "code": "EXPOS-UY 22",
       "title": "Advanced Writing for Engineers",
       "hide": "",
@@ -10662,7 +10662,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12541",
+      "key": "12538",
       "code": "EXPOS-UY 22",
       "title": "Advanced Writing for Engineers",
       "hide": "",
@@ -10681,7 +10681,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12542",
+      "key": "12539",
       "code": "EXPOS-UY 22",
       "title": "Advanced Writing for Engineers",
       "hide": "",
@@ -10700,7 +10700,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12543",
+      "key": "12540",
       "code": "EXPOS-UY 22",
       "title": "Advanced Writing for Engineers",
       "hide": "",
@@ -10719,7 +10719,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12544",
+      "key": "12541",
       "code": "EXPOS-UY 22",
       "title": "Advanced Writing for Engineers",
       "hide": "",
@@ -10738,7 +10738,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12545",
+      "key": "12542",
       "code": "EXPOS-UY 22",
       "title": "Advanced Writing for Engineers",
       "hide": "",
@@ -10757,7 +10757,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12546",
+      "key": "12543",
       "code": "EXPOS-UY 22",
       "title": "Advanced Writing for Engineers",
       "hide": "",
@@ -10776,7 +10776,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12547",
+      "key": "12544",
       "code": "EXPOS-UY 22",
       "title": "Advanced Writing for Engineers",
       "hide": "",
@@ -10795,7 +10795,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12548",
+      "key": "12545",
       "code": "EXPOS-UY 22",
       "title": "Advanced Writing for Engineers",
       "hide": "",
@@ -10814,7 +10814,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "5021",
+      "key": "5020",
       "code": "EXPOS-UY 4",
       "title": "International Writing Workshop I",
       "hide": "",
@@ -10833,7 +10833,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "5022",
+      "key": "5021",
       "code": "EXPOS-UY 4",
       "title": "International Writing Workshop I",
       "hide": "",
@@ -10852,7 +10852,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "5023",
+      "key": "5022",
       "code": "EXPOS-UY 4",
       "title": "International Writing Workshop I",
       "hide": "",
@@ -10871,7 +10871,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "5024",
+      "key": "5023",
       "code": "EXPOS-UY 4",
       "title": "International Writing Workshop I",
       "hide": "",
@@ -10890,7 +10890,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "5025",
+      "key": "5024",
       "code": "EXPOS-UY 4",
       "title": "International Writing Workshop I",
       "hide": "",
@@ -10909,7 +10909,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "5026",
+      "key": "5025",
       "code": "EXPOS-UY 4",
       "title": "International Writing Workshop I",
       "hide": "",
@@ -10928,7 +10928,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "5045",
+      "key": "5044",
       "code": "EXPOS-UY 9",
       "title": "International Writing Workshop II",
       "hide": "",
@@ -10947,7 +10947,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "5046",
+      "key": "5045",
       "code": "EXPOS-UY 9",
       "title": "International Writing Workshop II",
       "hide": "",
@@ -10966,7 +10966,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "5047",
+      "key": "5046",
       "code": "EXPOS-UY 9",
       "title": "International Writing Workshop II",
       "hide": "",
@@ -10985,7 +10985,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "5048",
+      "key": "5047",
       "code": "EXPOS-UY 9",
       "title": "International Writing Workshop II",
       "hide": "",
@@ -11004,7 +11004,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "5049",
+      "key": "5048",
       "code": "EXPOS-UY 9",
       "title": "International Writing Workshop II",
       "hide": "",
@@ -11023,7 +11023,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "5050",
+      "key": "5049",
       "code": "EXPOS-UY 9",
       "title": "International Writing Workshop II",
       "hide": "",
@@ -11042,7 +11042,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "5051",
+      "key": "5050",
       "code": "EXPOS-UY 9",
       "title": "International Writing Workshop II",
       "hide": "",
@@ -11061,7 +11061,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "5052",
+      "key": "5051",
       "code": "EXPOS-UY 9",
       "title": "International Writing Workshop II",
       "hide": "",
@@ -11080,7 +11080,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "5053",
+      "key": "5052",
       "code": "EXPOS-UY 9",
       "title": "International Writing Workshop II",
       "hide": "",
@@ -11099,7 +11099,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "5054",
+      "key": "5053",
       "code": "EXPOS-UY 9",
       "title": "International Writing Workshop II",
       "hide": "",
@@ -11118,7 +11118,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "5055",
+      "key": "5054",
       "code": "EXPOS-UY 9",
       "title": "International Writing Workshop II",
       "hide": "",
@@ -11270,7 +11270,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "3591",
+      "key": "3592",
       "code": "FMTV-UT 51",
       "title": "Sight & Sound:  Studio",
       "hide": "",
@@ -11289,7 +11289,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "3592",
+      "key": "3593",
       "code": "FMTV-UT 51",
       "title": "Sight & Sound:  Studio",
       "hide": "",
@@ -11308,7 +11308,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "3593",
+      "key": "3594",
       "code": "FMTV-UT 51",
       "title": "Sight & Sound:  Studio",
       "hide": "",
@@ -11327,7 +11327,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "3594",
+      "key": "3595",
       "code": "FMTV-UT 51",
       "title": "Sight & Sound:  Studio",
       "hide": "",
@@ -11346,7 +11346,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "11033",
+      "key": "11030",
       "code": "GAMES-UT 1000",
       "title": "Capstone",
       "hide": "",
@@ -11365,7 +11365,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10628",
+      "key": "10625",
       "code": "GAMES-UT 110",
       "title": "Intro to Game Studies",
       "hide": "",
@@ -11384,7 +11384,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10629",
+      "key": "10626",
       "code": "GAMES-UT 110",
       "title": "Intro to Game Studies",
       "hide": "",
@@ -11403,7 +11403,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10630",
+      "key": "10627",
       "code": "GAMES-UT 110",
       "title": "Intro to Game Studies",
       "hide": "",
@@ -11422,7 +11422,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10981",
+      "key": "10978",
       "code": "GAMES-UT 112",
       "title": "Tackling Representation in Games",
       "hide": "",
@@ -11441,7 +11441,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10897",
+      "key": "10894",
       "code": "GAMES-UT 120",
       "title": "Intro to Game Development",
       "hide": "",
@@ -11460,7 +11460,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10898",
+      "key": "10895",
       "code": "GAMES-UT 120",
       "title": "Intro to Game Development",
       "hide": "",
@@ -11479,7 +11479,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10899",
+      "key": "10896",
       "code": "GAMES-UT 120",
       "title": "Intro to Game Development",
       "hide": "",
@@ -11498,7 +11498,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10900",
+      "key": "10897",
       "code": "GAMES-UT 120",
       "title": "Intro to Game Development",
       "hide": "",
@@ -11517,7 +11517,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10631",
+      "key": "10628",
       "code": "GAMES-UT 121",
       "title": "Intermediate Game Development",
       "hide": "",
@@ -11536,7 +11536,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "11823",
+      "key": "11820",
       "code": "GAMES-UT 128",
       "title": "Physics Game Studio",
       "hide": "",
@@ -11555,7 +11555,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10632",
+      "key": "10629",
       "code": "GAMES-UT 150",
       "title": "Intro to Game Design",
       "hide": "",
@@ -11574,7 +11574,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10653",
+      "key": "10650",
       "code": "GAMES-UT 151",
       "title": "Intermediate Game Design",
       "hide": "",
@@ -11593,7 +11593,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10654",
+      "key": "10651",
       "code": "GAMES-UT 151",
       "title": "Intermediate Game Design",
       "hide": "",
@@ -11612,7 +11612,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10655",
+      "key": "10652",
       "code": "GAMES-UT 151",
       "title": "Intermediate Game Design",
       "hide": "",
@@ -11631,7 +11631,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10656",
+      "key": "10653",
       "code": "GAMES-UT 151",
       "title": "Intermediate Game Design",
       "hide": "",
@@ -11650,7 +11650,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10657",
+      "key": "10654",
       "code": "GAMES-UT 151",
       "title": "Intermediate Game Design",
       "hide": "",
@@ -11669,7 +11669,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10633",
+      "key": "10630",
       "code": "GAMES-UT 152",
       "title": "Game Design: Professional Practice",
       "hide": "",
@@ -11688,7 +11688,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "11826",
+      "key": "11823",
       "code": "GAMES-UT 162",
       "title": "Level Design Studio",
       "hide": "",
@@ -11707,7 +11707,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10895",
+      "key": "10892",
       "code": "GAMES-UT 180",
       "title": "Intro to Programming for Games",
       "hide": "",
@@ -11726,7 +11726,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10896",
+      "key": "10893",
       "code": "GAMES-UT 180",
       "title": "Intro to Programming for Games",
       "hide": "",
@@ -11745,7 +11745,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "11500",
+      "key": "11497",
       "code": "GAMES-UT 181",
       "title": "Intermediate Programming for G",
       "hide": "",
@@ -11764,7 +11764,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10901",
+      "key": "10898",
       "code": "GAMES-UT 201",
       "title": "Intro to Visual Communication",
       "hide": "",
@@ -11783,7 +11783,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10902",
+      "key": "10899",
       "code": "GAMES-UT 201",
       "title": "Intro to Visual Communication",
       "hide": "",
@@ -11802,7 +11802,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12936",
+      "key": "12933",
       "code": "GAMES-UT 203",
       "title": "2D Art for Games",
       "hide": "",
@@ -11821,7 +11821,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12180",
+      "key": "12177",
       "code": "GAMES-UT 207",
       "title": "Intro to 3D Game Animation",
       "hide": "",
@@ -11840,7 +11840,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "11970",
+      "key": "11967",
       "code": "GAMES-UT 209",
       "title": "Art Direction for Games",
       "hide": "",
@@ -11859,7 +11859,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12219",
+      "key": "12216",
       "code": "GAMES-UT 213",
       "title": "Music and Gameplay",
       "hide": "",
@@ -11878,7 +11878,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12473",
+      "key": "12470",
       "code": "GAMES-UT 244",
       "title": "Economics for Game Designers",
       "hide": "",
@@ -11897,7 +11897,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "11445",
+      "key": "11442",
       "code": "GAMES-UT 312",
       "title": "Games and Players",
       "hide": "",
@@ -11916,7 +11916,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "13346",
+      "key": "13343",
       "code": "GAMES-UT 325",
       "title": "3D Game Studio: Unity",
       "hide": "",
@@ -11935,7 +11935,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "14707",
+      "key": "14703",
       "code": "GAMES-UT 327",
       "title": "Game Engines: Godot",
       "hide": "",
@@ -11954,7 +11954,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12495",
+      "key": "12492",
       "code": "GAMES-UT 329",
       "title": "Project Studio",
       "hide": "",
@@ -11973,7 +11973,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10757",
+      "key": "10754",
       "code": "GAMES-UT 404",
       "title": "Modern Tabletop Games Literacy",
       "hide": "",
@@ -11992,7 +11992,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "11468",
+      "key": "11465",
       "code": "GAMES-UT 407",
       "title": "Traditional Card Game Literacy and Design",
       "hide": "",
@@ -12011,7 +12011,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12438",
+      "key": "12435",
       "code": "GAMES-UT 412",
       "title": "Horror Games",
       "hide": "",
@@ -12030,7 +12030,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12223",
+      "key": "12220",
       "code": "GAMES-UT 413",
       "title": "Let's Play: Video Games on Video",
       "hide": "",
@@ -12049,7 +12049,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10982",
+      "key": "10979",
       "code": "GAMES-UT 501",
       "title": "Principles of Game Feel",
       "hide": "",
@@ -12068,7 +12068,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12731",
+      "key": "12728",
       "code": "GAMES-UT 503",
       "title": "Business of Video Games",
       "hide": "",
@@ -12087,7 +12087,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "11174",
+      "key": "11171",
       "code": "GAMES-UT 504",
       "title": "Game Production Practicum",
       "hide": "",
@@ -12106,7 +12106,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12661",
+      "key": "12658",
       "code": "GAMES-UT 602",
       "title": "Major Studio: Spring",
       "hide": "",
@@ -12125,7 +12125,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "11711",
+      "key": "11708",
       "code": "GAMES-UT 900",
       "title": "Internship",
       "hide": "",
@@ -12144,7 +12144,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10942",
+      "key": "10939",
       "code": "GAMES-UT 999",
       "title": "Independent Study",
       "hide": "",
@@ -12163,7 +12163,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10943",
+      "key": "10940",
       "code": "GAMES-UT 999",
       "title": "Independent Study",
       "hide": "",
@@ -12182,7 +12182,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "11982",
+      "key": "11979",
       "code": "IMNY-UT 101",
       "title": "Creative Computing",
       "hide": "",
@@ -12201,7 +12201,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "11980",
+      "key": "11977",
       "code": "IMNY-UT 102",
       "title": "Communications Lab",
       "hide": "",
@@ -12220,7 +12220,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "13472",
+      "key": "13469",
       "code": "IMNY-UT 206",
       "title": "Critical Experiences",
       "hide": "",
@@ -12239,7 +12239,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12704",
+      "key": "12701",
       "code": "IMNY-UT 220",
       "title": "Topics in Computation and Data: Shared Minds",
       "hide": "",
@@ -12258,7 +12258,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12705",
+      "key": "12702",
       "code": "IMNY-UT 220",
       "title": "Topics in Computation and Data: The Nature of Code: Motion",
       "hide": "",
@@ -12277,7 +12277,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12206",
+      "key": "12203",
       "code": "IMNY-UT 222",
       "title": "The Code of Music",
       "hide": "",
@@ -12296,7 +12296,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12207",
+      "key": "12204",
       "code": "IMNY-UT 223",
       "title": "Networked Media",
       "hide": "",
@@ -12315,7 +12315,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "13471",
+      "key": "13468",
       "code": "IMNY-UT 232",
       "title": "Experimental Photography",
       "hide": "",
@@ -12334,7 +12334,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "13470",
+      "key": "13467",
       "code": "IMNY-UT 233",
       "title": "Chatbots for Art's Sake",
       "hide": "",
@@ -12353,7 +12353,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12837",
+      "key": "12834",
       "code": "IMNY-UT 240",
       "title": "Topics in Physical Computing: DIY Energy",
       "hide": "",
@@ -12372,7 +12372,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12836",
+      "key": "12833",
       "code": "IMNY-UT 240",
       "title": "Topics in Physical Computing: Intro To Wearables: Adorning the Head and Face for",
       "hide": "",
@@ -12391,7 +12391,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12208",
+      "key": "12205",
       "code": "IMNY-UT 241",
       "title": "Introduction to Assistive Technology",
       "hide": "",
@@ -12410,7 +12410,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12209",
+      "key": "12206",
       "code": "IMNY-UT 242",
       "title": "Introduction to Fabrication",
       "hide": "",
@@ -12429,7 +12429,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12210",
+      "key": "12207",
       "code": "IMNY-UT 242",
       "title": "Introduction to Fabrication",
       "hide": "",
@@ -12448,7 +12448,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12211",
+      "key": "12208",
       "code": "IMNY-UT 243",
       "title": "Designing Interfaces for Live Performance",
       "hide": "",
@@ -12467,7 +12467,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "13292",
+      "key": "13289",
       "code": "IMNY-UT 245",
       "title": "Physical Computing",
       "hide": "",
@@ -12486,7 +12486,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "13293",
+      "key": "13290",
       "code": "IMNY-UT 245",
       "title": "Physical Computing",
       "hide": "",
@@ -12505,7 +12505,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12838",
+      "key": "12835",
       "code": "IMNY-UT 251",
       "title": "Topics in Fabrication: Re-Plasticing",
       "hide": "",
@@ -12524,7 +12524,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "13473",
+      "key": "13470",
       "code": "IMNY-UT 252",
       "title": "Introduction to Digital Fabrication",
       "hide": "",
@@ -12543,7 +12543,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "14209",
+      "key": "14206",
       "code": "IMNY-UT 253",
       "title": "Interaction as Art Medium",
       "hide": "",
@@ -12562,7 +12562,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "13094",
+      "key": "13091",
       "code": "IMNY-UT 260",
       "title": "Topics in Media Art: Big Ideas in the History and Future of Technology",
       "hide": "",
@@ -12581,7 +12581,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "13095",
+      "key": "13092",
       "code": "IMNY-UT 260",
       "title": "Topics in Media Art: Design Skills for Responsible Media",
       "hide": "",
@@ -12600,7 +12600,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "13098",
+      "key": "13095",
       "code": "IMNY-UT 260",
       "title": "Topics in Media Art: Digital Bodies",
       "hide": "",
@@ -12619,7 +12619,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "13097",
+      "key": "13094",
       "code": "IMNY-UT 260",
       "title": "Topics in Media Art: Digital Creatures",
       "hide": "",
@@ -12638,7 +12638,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "13093",
+      "key": "13090",
       "code": "IMNY-UT 260",
       "title": "Topics in Media Art: Living Archives: Finding Stories of Peoples, Plant",
       "hide": "",
@@ -12657,7 +12657,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "13096",
+      "key": "13093",
       "code": "IMNY-UT 260",
       "title": "Topics in Media Art: Open Call",
       "hide": "",
@@ -12676,7 +12676,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "13092",
+      "key": "13089",
       "code": "IMNY-UT 260",
       "title": "Topics in Media Art: Video Art",
       "hide": "",
@@ -12695,7 +12695,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12477",
+      "key": "12474",
       "code": "IMNY-UT 261",
       "title": "Design Fundamentals",
       "hide": "",
@@ -12714,7 +12714,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12692",
+      "key": "12689",
       "code": "IMNY-UT 262",
       "title": "User Experience Design",
       "hide": "",
@@ -12733,7 +12733,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12854",
+      "key": "12851",
       "code": "IMNY-UT 270",
       "title": "Topics in Design: Information Design",
       "hide": "",
@@ -12752,7 +12752,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "14157",
+      "key": "14154",
       "code": "IMNY-UT 272",
       "title": "Useless Machines",
       "hide": "",
@@ -12771,7 +12771,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "13451",
+      "key": "13448",
       "code": "IMNY-UT 281",
       "title": "Topics in Media Art: 3D in the Browser",
       "hide": "",
@@ -12790,7 +12790,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "13450",
+      "key": "13447",
       "code": "IMNY-UT 281",
       "title": "Topics in Media Art: Caring for Media Arts",
       "hide": "",
@@ -12809,7 +12809,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "13452",
+      "key": "13449",
       "code": "IMNY-UT 281",
       "title": "Topics in Media Art: Comics",
       "hide": "",
@@ -12828,7 +12828,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12212",
+      "key": "12209",
       "code": "IMNY-UT 282",
       "title": "Immersive Experiences",
       "hide": "",
@@ -12847,7 +12847,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "13294",
+      "key": "13291",
       "code": "IMNY-UT 288",
       "title": "Animation: Methods of Motion",
       "hide": "",
@@ -12866,7 +12866,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "14208",
+      "key": "14205",
       "code": "IMNY-UT 291",
       "title": "Non-Linear Storytelling Structures",
       "hide": "",
@@ -12885,7 +12885,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "14379",
+      "key": "14375",
       "code": "IMNY-UT 297",
       "title": "Alter Egos",
       "hide": "",
@@ -12904,7 +12904,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12693",
+      "key": "12690",
       "code": "IMNY-UT 400",
       "title": "Capstone",
       "hide": "",
@@ -12923,7 +12923,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12694",
+      "key": "12691",
       "code": "IMNY-UT 400",
       "title": "Capstone",
       "hide": "",
@@ -12942,7 +12942,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12695",
+      "key": "12692",
       "code": "IMNY-UT 400",
       "title": "Capstone",
       "hide": "",
@@ -12961,7 +12961,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12696",
+      "key": "12693",
       "code": "IMNY-UT 400",
       "title": "Capstone",
       "hide": "",
@@ -13094,7 +13094,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "11641",
+      "key": "11638",
       "code": "MA-UY 1044",
       "title": "Linear Algebra",
       "hide": "",
@@ -13113,7 +13113,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "11642",
+      "key": "11639",
       "code": "MA-UY 1044",
       "title": "Linear Algebra",
       "hide": "",
@@ -13322,7 +13322,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10363",
+      "key": "10360",
       "code": "MA-UY 2034",
       "title": "Linear Algebra and Differential Equations",
       "hide": "",
@@ -13341,7 +13341,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10364",
+      "key": "10361",
       "code": "MA-UY 2034",
       "title": "Linear Algebra and Differential Equations",
       "hide": "",
@@ -13360,7 +13360,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10365",
+      "key": "10362",
       "code": "MA-UY 2034",
       "title": "Linear Algebra and Differential Equations",
       "hide": "",
@@ -13379,7 +13379,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10366",
+      "key": "10363",
       "code": "MA-UY 2034",
       "title": "Linear Algebra and Differential Equations",
       "hide": "",
@@ -13398,7 +13398,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10367",
+      "key": "10364",
       "code": "MA-UY 2034",
       "title": "Linear Algebra and Differential Equations",
       "hide": "",
@@ -13417,7 +13417,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10368",
+      "key": "10365",
       "code": "MA-UY 2114",
       "title": "Calculus III: Multi-Dimensional Calculus",
       "hide": "",
@@ -13436,7 +13436,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10369",
+      "key": "10366",
       "code": "MA-UY 2114",
       "title": "Calculus III: Multi-Dimensional Calculus",
       "hide": "",
@@ -13455,7 +13455,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10370",
+      "key": "10367",
       "code": "MA-UY 2114",
       "title": "Calculus III: Multi-Dimensional Calculus",
       "hide": "",
@@ -13474,7 +13474,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10371",
+      "key": "10368",
       "code": "MA-UY 2114",
       "title": "Calculus III: Multi-Dimensional Calculus",
       "hide": "",
@@ -13493,7 +13493,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10372",
+      "key": "10369",
       "code": "MA-UY 2114",
       "title": "Calculus III: Multi-Dimensional Calculus",
       "hide": "",
@@ -13512,7 +13512,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10373",
+      "key": "10370",
       "code": "MA-UY 2114",
       "title": "Calculus III: Multi-Dimensional Calculus",
       "hide": "",
@@ -13531,7 +13531,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10374",
+      "key": "10371",
       "code": "MA-UY 2114",
       "title": "Calculus III: Multi-Dimensional Calculus",
       "hide": "",
@@ -13550,7 +13550,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10375",
+      "key": "10372",
       "code": "MA-UY 2224",
       "title": "Probability and Statistics for Engineers",
       "hide": "",
@@ -13569,7 +13569,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10376",
+      "key": "10373",
       "code": "MA-UY 2224",
       "title": "Probability and Statistics for Engineers",
       "hide": "",
@@ -13588,7 +13588,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10377",
+      "key": "10374",
       "code": "MA-UY 2224",
       "title": "Probability and Statistics for Engineers",
       "hide": "",
@@ -13607,7 +13607,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10378",
+      "key": "10375",
       "code": "MA-UY 2224",
       "title": "Probability and Statistics for Engineers",
       "hide": "",
@@ -13626,7 +13626,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10379",
+      "key": "10376",
       "code": "MA-UY 2224",
       "title": "Probability and Statistics for Engineers",
       "hide": "",
@@ -13645,7 +13645,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10380",
+      "key": "10377",
       "code": "MA-UY 2224",
       "title": "Probability and Statistics for Engineers",
       "hide": "",
@@ -13664,7 +13664,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10538",
+      "key": "10535",
       "code": "MA-UY 2314",
       "title": "Discrete Mathematics",
       "hide": "",
@@ -13683,7 +13683,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10539",
+      "key": "10536",
       "code": "MA-UY 2314",
       "title": "Discrete Mathematics",
       "hide": "",
@@ -13702,7 +13702,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10540",
+      "key": "10537",
       "code": "MA-UY 2314",
       "title": "Discrete Mathematics",
       "hide": "",
@@ -13721,7 +13721,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10541",
+      "key": "10538",
       "code": "MA-UY 2314",
       "title": "Discrete Mathematics",
       "hide": "",
@@ -13740,7 +13740,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10542",
+      "key": "10539",
       "code": "MA-UY 2314",
       "title": "Discrete Mathematics",
       "hide": "",
@@ -13759,7 +13759,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "11955",
+      "key": "11952",
       "code": "MA-UY 3014",
       "title": "Theory of Probability",
       "hide": "",
@@ -13778,7 +13778,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "11956",
+      "key": "11953",
       "code": "MA-UY 3014",
       "title": "Theory of Probability",
       "hide": "",
@@ -13797,7 +13797,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "11652",
+      "key": "11649",
       "code": "MA-UY 4014",
       "title": "Theory of Numbers",
       "hide": "",
@@ -13816,7 +13816,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "11653",
+      "key": "11650",
       "code": "MA-UY 4014",
       "title": "Theory of Numbers",
       "hide": "",
@@ -13835,7 +13835,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "8806",
+      "key": "8804",
       "code": "MA-UY 4114",
       "title": "Applied Statistics",
       "hide": "",
@@ -13854,7 +13854,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "8807",
+      "key": "8805",
       "code": "MA-UY 4114",
       "title": "Applied Statistics",
       "hide": "",
@@ -13911,7 +13911,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "8810",
+      "key": "8808",
       "code": "MA-UY 4424",
       "title": "Numerical Analysis",
       "hide": "",
@@ -13930,7 +13930,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "8811",
+      "key": "8809",
       "code": "MA-UY 4424",
       "title": "Numerical Analysis",
       "hide": "",
@@ -13949,7 +13949,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "8812",
+      "key": "8810",
       "code": "MA-UY 4424",
       "title": "Numerical Analysis",
       "hide": "",
@@ -13968,7 +13968,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "8803",
+      "key": "8801",
       "code": "MA-UY 4434",
       "title": "Functions of a Complex Variable",
       "hide": "",
@@ -13987,7 +13987,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "8804",
+      "key": "8802",
       "code": "MA-UY 4434",
       "title": "Functions of a Complex Variable",
       "hide": "",
@@ -14006,7 +14006,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "8805",
+      "key": "8803",
       "code": "MA-UY 4434",
       "title": "Functions of a Complex Variable",
       "hide": "",
@@ -14177,7 +14177,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "5920",
+      "key": "5919",
       "code": "MATH-UA 140",
       "title": "Linear Algebra",
       "hide": "",
@@ -14196,7 +14196,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "5958",
+      "key": "5957",
       "code": "MATH-UA 248",
       "title": "Theory of Numbers",
       "hide": "",
@@ -14215,7 +14215,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "5959",
+      "key": "5958",
       "code": "MATH-UA 248",
       "title": "Theory of Numbers",
       "hide": "",
@@ -14234,7 +14234,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "5990",
+      "key": "5989",
       "code": "MATH-UA 263",
       "title": "Partial Differential Equations",
       "hide": "",
@@ -14253,7 +14253,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "5991",
+      "key": "5990",
       "code": "MATH-UA 263",
       "title": "Partial Differential Equations",
       "hide": "",
@@ -14272,7 +14272,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "5941",
+      "key": "5940",
       "code": "MATH-UA 333",
       "title": "Theory of Probability",
       "hide": "",
@@ -14291,7 +14291,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "5942",
+      "key": "5941",
       "code": "MATH-UA 333",
       "title": "Theory of Probability",
       "hide": "",
@@ -14310,7 +14310,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "5973",
+      "key": "5972",
       "code": "MATH-UA 352",
       "title": "Numerical Analysis",
       "hide": "",
@@ -14329,7 +14329,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "5974",
+      "key": "5973",
       "code": "MATH-UA 352",
       "title": "Numerical Analysis",
       "hide": "",
@@ -14367,7 +14367,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "9026",
+      "key": "9024",
       "code": "MCC-UE 1026",
       "title": "Disability, Technology and media",
       "hide": "",
@@ -14386,7 +14386,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "7716",
+      "key": "7714",
       "code": "MCC-UE 3",
       "title": "History of Media & Comm",
       "hide": "",
@@ -14405,7 +14405,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10441",
+      "key": "10438",
       "code": "MD-UY 2314",
       "title": "Interactive Narrative",
       "hide": "",
@@ -14424,7 +14424,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10442",
+      "key": "10439",
       "code": "MD-UY 2314",
       "title": "Interactive Narrative",
       "hide": "",
@@ -14462,7 +14462,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "13926",
+      "key": "13923",
       "code": "ME-UY 2123",
       "title": "Engineering Design Methods",
       "hide": "",
@@ -14481,7 +14481,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "13927",
+      "key": "13924",
       "code": "ME-UY 2123",
       "title": "Engineering Design Methods",
       "hide": "",
@@ -14614,7 +14614,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "13928",
+      "key": "13925",
       "code": "ME-UY 3231",
       "title": "Structures Practicum",
       "hide": "",
@@ -14633,7 +14633,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "13929",
+      "key": "13926",
       "code": "ME-UY 3231",
       "title": "Structures Practicum",
       "hide": "",
@@ -14671,7 +14671,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "13814",
+      "key": "13811",
       "code": "ME-UY 3243",
       "title": "Vibration Fundamentals & Design",
       "hide": "",
@@ -14690,7 +14690,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "14602",
+      "key": "14598",
       "code": "ME-UY 3253",
       "title": "Automotive Engineering",
       "hide": "",
@@ -15089,7 +15089,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "13930",
+      "key": "13927",
       "code": "ME-UY 4312",
       "title": "Thermo-Fluids Practicum",
       "hide": "",
@@ -15108,7 +15108,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "13931",
+      "key": "13928",
       "code": "ME-UY 4312",
       "title": "Thermo-Fluids Practicum",
       "hide": "",
@@ -15127,7 +15127,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "13932",
+      "key": "13929",
       "code": "ME-UY 4312",
       "title": "Thermo-Fluids Practicum",
       "hide": "",
@@ -15260,7 +15260,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "13206",
+      "key": "13203",
       "code": "MG-UY 2024",
       "title": "Management of Business Information Systems and Data Technology",
       "hide": "",
@@ -15355,7 +15355,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "14172",
+      "key": "14169",
       "code": "MG-UY 2624",
       "title": "Business Economics",
       "hide": "",
@@ -15374,7 +15374,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "14173",
+      "key": "14170",
       "code": "MG-UY 2701",
       "title": "Fundamentals in Design Thinking",
       "hide": "",
@@ -15393,7 +15393,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "14746",
+      "key": "14742",
       "code": "MG-UY 2804",
       "title": "Seminar in Applied ML & AI Tools for Technology Management",
       "hide": "",
@@ -15564,7 +15564,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12935",
+      "key": "12932",
       "code": "MG-UY 3714",
       "title": "Design Strategies",
       "hide": "",
@@ -15640,7 +15640,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12925",
+      "key": "12922",
       "code": "MG-UY 444X",
       "title": "Guided Studies in Business and Technology Management",
       "hide": "",
@@ -15659,7 +15659,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12926",
+      "key": "12923",
       "code": "MG-UY 444X",
       "title": "Guided Studies in Business and Technology Management",
       "hide": "",
@@ -15678,7 +15678,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12927",
+      "key": "12924",
       "code": "MG-UY 444X",
       "title": "Guided Studies in Business and Technology Management",
       "hide": "",
@@ -15697,7 +15697,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12928",
+      "key": "12925",
       "code": "MG-UY 444X",
       "title": "Guided Studies in Business and Technology Management",
       "hide": "",
@@ -15716,7 +15716,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12929",
+      "key": "12926",
       "code": "MG-UY 444X",
       "title": "Guided Studies in Business and Technology Management",
       "hide": "",
@@ -15735,7 +15735,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12930",
+      "key": "12927",
       "code": "MG-UY 444X",
       "title": "Guided Studies in Business and Technology Management",
       "hide": "",
@@ -15754,7 +15754,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12931",
+      "key": "12928",
       "code": "MG-UY 444X",
       "title": "Guided Studies in Business and Technology Management",
       "hide": "",
@@ -15773,7 +15773,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12932",
+      "key": "12929",
       "code": "MG-UY 444X",
       "title": "Guided Studies in Business and Technology Management",
       "hide": "",
@@ -15792,7 +15792,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12933",
+      "key": "12930",
       "code": "MG-UY 444X",
       "title": "Guided Studies in Business and Technology Management",
       "hide": "",
@@ -15811,7 +15811,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12934",
+      "key": "12931",
       "code": "MG-UY 444X",
       "title": "Guided Studies in Business and Technology Management",
       "hide": "",
@@ -15906,7 +15906,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "11478",
+      "key": "11475",
       "code": "OPSC-UZ 247",
       "title": "Mechanics for Engineers NCC",
       "hide": "",
@@ -15925,7 +15925,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "11531",
+      "key": "11528",
       "code": "OPSC-UZ 250",
       "title": "Data Structures & Algorithms for Engineers NCC",
       "hide": "",
@@ -16001,7 +16001,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "9285",
+      "key": "9282",
       "code": "OPSC-UZ 652",
       "title": "Topics in Writing NCC",
       "hide": "",
@@ -16020,7 +16020,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "9288",
+      "key": "9285",
       "code": "OPSC-UZ 652",
       "title": "Topics in Writing NCC",
       "hide": "",
@@ -16039,7 +16039,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "9282",
+      "key": "9279",
       "code": "OPSC-UZ 664",
       "title": "Calculus II NCC",
       "hide": "",
@@ -16058,7 +16058,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "9283",
+      "key": "9280",
       "code": "OPSC-UZ 665",
       "title": "Calculus III for Engineers NCC",
       "hide": "",
@@ -16077,7 +16077,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10588",
+      "key": "10585",
       "code": "OPSC-UZ 690",
       "title": "Intro to Programming & Problem Solving for Engineers NCC",
       "hide": "",
@@ -16096,7 +16096,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10589",
+      "key": "10586",
       "code": "OPSC-UZ 691",
       "title": "General Chemistry for Engineers NCC",
       "hide": "",
@@ -16115,7 +16115,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "11834",
+      "key": "11831",
       "code": "OPSC-UZ 702",
       "title": "Linear Algebra & Differential Equations for Engineers NCC",
       "hide": "",
@@ -16134,7 +16134,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12396",
+      "key": "12393",
       "code": "OPSC-UZ 705",
       "title": "Discrete Mathematics NCC",
       "hide": "",
@@ -16761,7 +16761,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "14090",
+      "key": "14087",
       "code": "PH-UY 2002",
       "title": "Introduction to Quantum Science",
       "hide": "",
@@ -17616,7 +17616,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "8904",
+      "key": "8902",
       "code": "PH-UY 2344",
       "title": "Introduction to Modern and Solid State Physics",
       "hide": "",
@@ -17673,7 +17673,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "8906",
+      "key": "8904",
       "code": "PH-UY 3234",
       "title": "Electricity and Magnetism",
       "hide": "",
@@ -17692,7 +17692,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "8907",
+      "key": "8905",
       "code": "PH-UY 3474",
       "title": "Introduction to Modern Optics and Photonics",
       "hide": "",
@@ -17825,7 +17825,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "8905",
+      "key": "8903",
       "code": "PH-UY 4124",
       "title": "Thermodynamics and Statistical Physics",
       "hide": "",
@@ -17844,7 +17844,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "14104",
+      "key": "14101",
       "code": "PH-UY 4553",
       "title": "Introduction to the Physics of Quantum Computing",
       "hide": "",
@@ -18034,7 +18034,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "11704",
+      "key": "11701",
       "code": "PH-UY 4994",
       "title": "Bachelor's Thesis in Physics",
       "hide": "",
@@ -18053,7 +18053,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12349",
+      "key": "12346",
       "code": "PHP-UY 4000",
       "title": "Preparations for a Health Professional School",
       "hide": "",
@@ -18072,7 +18072,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "11218",
+      "key": "11215",
       "code": "PHTI-UT 1018",
       "title": "Emerging Media Studio:: Digital Bodies",
       "hide": "",
@@ -18091,7 +18091,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "7130",
+      "key": "7129",
       "code": "REMU-UT 1004",
       "title": "Producing The Record: Side B",
       "hide": "",
@@ -18110,7 +18110,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "7131",
+      "key": "7130",
       "code": "REMU-UT 1004",
       "title": "Producing The Record: Side B",
       "hide": "",
@@ -18129,7 +18129,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "7132",
+      "key": "7131",
       "code": "REMU-UT 1004",
       "title": "Producing The Record: Side B",
       "hide": "",
@@ -18148,7 +18148,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "7133",
+      "key": "7132",
       "code": "REMU-UT 1004",
       "title": "Producing The Record: Side B",
       "hide": "",
@@ -18167,7 +18167,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "7134",
+      "key": "7133",
       "code": "REMU-UT 1004",
       "title": "Producing The Record: Side B",
       "hide": "",
@@ -18186,7 +18186,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "7135",
+      "key": "7134",
       "code": "REMU-UT 1004",
       "title": "Producing The Record: Side B",
       "hide": "",
@@ -18205,7 +18205,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "7136",
+      "key": "7135",
       "code": "REMU-UT 1004",
       "title": "Producing The Record: Side B",
       "hide": "",
@@ -18224,7 +18224,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "3908",
+      "key": "3909",
       "code": "REMU-UT 1010",
       "title": "Content Development for Performers, Producers, & Songwriters",
       "hide": "",
@@ -18243,7 +18243,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10935",
+      "key": "10932",
       "code": "REMU-UT 1017",
       "title": "The Virtual Producer: Live Performance with Laptops & Software",
       "hide": "",
@@ -18262,7 +18262,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "3909",
+      "key": "3910",
       "code": "REMU-UT 1021",
       "title": "Digital Audio Workstations: Logic",
       "hide": "",
@@ -18281,7 +18281,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "3910",
+      "key": "3911",
       "code": "REMU-UT 1021",
       "title": "Digital Audio Workstations: Logic",
       "hide": "",
@@ -18300,7 +18300,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "3911",
+      "key": "3912",
       "code": "REMU-UT 1021",
       "title": "Digital Audio Workstations: Logic",
       "hide": "",
@@ -18319,7 +18319,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "3912",
+      "key": "3913",
       "code": "REMU-UT 1021",
       "title": "Digital Audio Workstations: Logic",
       "hide": "",
@@ -18338,7 +18338,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "3913",
+      "key": "3914",
       "code": "REMU-UT 1021",
       "title": "Digital Audio Workstations: Logic",
       "hide": "",
@@ -18357,7 +18357,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "3914",
+      "key": "3915",
       "code": "REMU-UT 1021",
       "title": "Digital Audio Workstations: Logic",
       "hide": "",
@@ -18376,7 +18376,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "14702",
+      "key": "14698",
       "code": "REMU-UT 1024",
       "title": "Synthesis and Sound Design in Popular Music I: 1960 - 1983",
       "hide": "",
@@ -18395,7 +18395,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "14706",
+      "key": "14702",
       "code": "REMU-UT 1025",
       "title": "Advanced Ableton Live for Music Production & Sound Design",
       "hide": "",
@@ -18414,7 +18414,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "3915",
+      "key": "3916",
       "code": "REMU-UT 1037",
       "title": "Professional Development: Internship",
       "hide": "",
@@ -18433,7 +18433,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "3916",
+      "key": "3917",
       "code": "REMU-UT 1037",
       "title": "Professional Development: Internship",
       "hide": "",
@@ -18452,7 +18452,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "7137",
+      "key": "7136",
       "code": "REMU-UT 1041",
       "title": "Engineering The Record II",
       "hide": "",
@@ -18471,7 +18471,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "7138",
+      "key": "7137",
       "code": "REMU-UT 1041",
       "title": "Engineering The Record II",
       "hide": "",
@@ -18490,7 +18490,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "7139",
+      "key": "7138",
       "code": "REMU-UT 1041",
       "title": "Engineering The Record II",
       "hide": "",
@@ -18509,7 +18509,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "7140",
+      "key": "7139",
       "code": "REMU-UT 1041",
       "title": "Engineering The Record II",
       "hide": "",
@@ -18528,7 +18528,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "7141",
+      "key": "7140",
       "code": "REMU-UT 1041",
       "title": "Engineering The Record II",
       "hide": "",
@@ -18547,7 +18547,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "7142",
+      "key": "7141",
       "code": "REMU-UT 1041",
       "title": "Engineering The Record II",
       "hide": "",
@@ -18566,7 +18566,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "7143",
+      "key": "7142",
       "code": "REMU-UT 1041",
       "title": "Engineering The Record II",
       "hide": "",
@@ -18585,7 +18585,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "7144",
+      "key": "7143",
       "code": "REMU-UT 1041",
       "title": "Engineering The Record II",
       "hide": "",
@@ -18604,7 +18604,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "7145",
+      "key": "7144",
       "code": "REMU-UT 1041",
       "title": "Engineering The Record II",
       "hide": "",
@@ -18623,7 +18623,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "7146",
+      "key": "7145",
       "code": "REMU-UT 1041",
       "title": "Engineering The Record II",
       "hide": "",
@@ -18642,7 +18642,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "3917",
+      "key": "3918",
       "code": "REMU-UT 1052",
       "title": "Mix Intensive",
       "hide": "",
@@ -18661,7 +18661,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "3918",
+      "key": "3919",
       "code": "REMU-UT 1052",
       "title": "Mix Intensive",
       "hide": "",
@@ -18680,7 +18680,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "9628",
+      "key": "9625",
       "code": "REMU-UT 1070",
       "title": "Classic Drum Breaks: Sampling and Recording",
       "hide": "",
@@ -18699,7 +18699,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "14571",
+      "key": "14567",
       "code": "REMU-UT 1084",
       "title": "Words Matter: Lyrics In History & Practice",
       "hide": "",
@@ -18718,7 +18718,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "14510",
+      "key": "14506",
       "code": "REMU-UT 1085",
       "title": "Max Martin: The Musical Architecture of the Number Ones",
       "hide": "",
@@ -18737,7 +18737,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "11365",
+      "key": "11362",
       "code": "REMU-UT 1091",
       "title": "Adv Musicianship:Small Group Instrumental/Music Theory Application Instruction: Composition",
       "hide": "",
@@ -18756,7 +18756,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "11364",
+      "key": "11361",
       "code": "REMU-UT 1091",
       "title": "Adv Musicianship:Small Group Instrumental/Music Theory Application Instruction: Production",
       "hide": "",
@@ -18775,7 +18775,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10634",
+      "key": "10631",
       "code": "REMU-UT 1093",
       "title": "Advanced Songwriting Workshop",
       "hide": "",
@@ -18794,7 +18794,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10635",
+      "key": "10632",
       "code": "REMU-UT 1093",
       "title": "Advanced Songwriting Workshop",
       "hide": "",
@@ -18813,7 +18813,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "3919",
+      "key": "3920",
       "code": "REMU-UT 1102",
       "title": "Critical Listening for the Recording Studio",
       "hide": "",
@@ -18832,7 +18832,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "3920",
+      "key": "3921",
       "code": "REMU-UT 1102",
       "title": "Critical Listening for the Recording Studio",
       "hide": "",
@@ -18851,7 +18851,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "3921",
+      "key": "3922",
       "code": "REMU-UT 1102",
       "title": "Critical Listening for the Recording Studio",
       "hide": "",
@@ -18870,7 +18870,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "3922",
+      "key": "3923",
       "code": "REMU-UT 1102",
       "title": "Critical Listening for the Recording Studio",
       "hide": "",
@@ -18889,7 +18889,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "3923",
+      "key": "3924",
       "code": "REMU-UT 1111",
       "title": "Topics in Recorded Music: Miles Davis",
       "hide": "",
@@ -18908,7 +18908,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "13503",
+      "key": "13500",
       "code": "REMU-UT 1176",
       "title": "Music and Spirituality Across the World",
       "hide": "",
@@ -18927,7 +18927,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "13937",
+      "key": "13934",
       "code": "REMU-UT 1179",
       "title": "Topics in Recorded Music: The Reggaeton Revolution",
       "hide": "",
@@ -18946,7 +18946,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "14460",
+      "key": "14456",
       "code": "REMU-UT 1183",
       "title": "Topics in Recorded Music: Quincy Jones",
       "hide": "",
@@ -18965,7 +18965,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "14461",
+      "key": "14457",
       "code": "REMU-UT 1184",
       "title": "Topics in Recorded Music: Beyonce",
       "hide": "",
@@ -18984,7 +18984,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "3925",
+      "key": "3926",
       "code": "REMU-UT 1196",
       "title": "Mastering the Emergent Media Landscape:Professionalizing Your Writing & Storytelling Skills",
       "hide": "",
@@ -19003,7 +19003,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "3926",
+      "key": "3927",
       "code": "REMU-UT 1196",
       "title": "Mastering the Emergent Media Landscape:Professionalizing Your Writing & Storytelling Skills",
       "hide": "",
@@ -19022,7 +19022,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "3927",
+      "key": "3928",
       "code": "REMU-UT 1200",
       "title": "Writing & Reporting Music",
       "hide": "",
@@ -19041,7 +19041,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "3928",
+      "key": "3929",
       "code": "REMU-UT 1200",
       "title": "Writing & Reporting Music",
       "hide": "",
@@ -19060,7 +19060,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "3929",
+      "key": "3930",
       "code": "REMU-UT 1200",
       "title": "Writing & Reporting Music",
       "hide": "",
@@ -19079,7 +19079,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "3930",
+      "key": "3931",
       "code": "REMU-UT 1201",
       "title": "Creative Music Entrepreneurs in Historical Context",
       "hide": "",
@@ -19098,7 +19098,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "3931",
+      "key": "3932",
       "code": "REMU-UT 1202",
       "title": "How the Contemporary Music Business Works",
       "hide": "",
@@ -19117,7 +19117,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "3932",
+      "key": "3933",
       "code": "REMU-UT 1202",
       "title": "How the Contemporary Music Business Works",
       "hide": "",
@@ -19136,7 +19136,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "3933",
+      "key": "3934",
       "code": "REMU-UT 1203",
       "title": "Artists & Audiences in Historical Context",
       "hide": "",
@@ -19155,7 +19155,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "3934",
+      "key": "3935",
       "code": "REMU-UT 1205",
       "title": "How Music Marketing Works: Building Your Audience, Clients, and Customer Base",
       "hide": "",
@@ -19174,7 +19174,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "3935",
+      "key": "3936",
       "code": "REMU-UT 1205",
       "title": "How Music Marketing Works: Building Your Audience, Clients, and Customer Base",
       "hide": "",
@@ -19193,7 +19193,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "3936",
+      "key": "3937",
       "code": "REMU-UT 1205",
       "title": "How Music Marketing Works: Building Your Audience, Clients, and Customer Base",
       "hide": "",
@@ -19212,7 +19212,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "9426",
+      "key": "9423",
       "code": "REMU-UT 1207",
       "title": "Independent Project Management",
       "hide": "",
@@ -19231,7 +19231,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "9427",
+      "key": "9424",
       "code": "REMU-UT 1207",
       "title": "Independent Project Management",
       "hide": "",
@@ -19250,7 +19250,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "9428",
+      "key": "9425",
       "code": "REMU-UT 1207",
       "title": "Independent Project Management",
       "hide": "",
@@ -19269,7 +19269,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12842",
+      "key": "12839",
       "code": "REMU-UT 1219",
       "title": "Professional Development: Global Engagement",
       "hide": "",
@@ -19288,7 +19288,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10384",
+      "key": "10381",
       "code": "REMU-UT 1231",
       "title": "The Future of the Music Streaming Economy",
       "hide": "",
@@ -19307,7 +19307,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "11135",
+      "key": "11132",
       "code": "REMU-UT 1234",
       "title": "3D Printing & the Music Industry",
       "hide": "",
@@ -19326,7 +19326,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12425",
+      "key": "12422",
       "code": "REMU-UT 1262",
       "title": "Basics of Artist Management",
       "hide": "",
@@ -19345,7 +19345,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "3937",
+      "key": "3938",
       "code": "REMU-UT 1272",
       "title": "Developing A Business Plan For Your Music Venture",
       "hide": "",
@@ -19364,7 +19364,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10383",
+      "key": "10380",
       "code": "REMU-UT 1301",
       "title": "Studio Performance Workshop: Songwriting, Arranging, Production & Performance",
       "hide": "",
@@ -19383,7 +19383,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "8161",
+      "key": "8159",
       "code": "REMU-UT 1310",
       "title": "Creating a Compelling Live Performance:: From Concept to Concert",
       "hide": "",
@@ -19402,7 +19402,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12133",
+      "key": "12130",
       "code": "REMU-UT 1311",
       "title": "The Body & the Stage",
       "hide": "",
@@ -19421,7 +19421,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "14552",
+      "key": "14548",
       "code": "REMU-UT 1323",
       "title": "The Business of Touring & Live Events",
       "hide": "",
@@ -19440,7 +19440,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10718",
+      "key": "10715",
       "code": "REMU-UT 1326",
       "title": "Performance Essentials: Vocal Techniques",
       "hide": "",
@@ -19459,7 +19459,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10936",
+      "key": "10933",
       "code": "REMU-UT 1327",
       "title": "Performance Essentials: Stagecraft",
       "hide": "",
@@ -19478,7 +19478,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "10937",
+      "key": "10934",
       "code": "REMU-UT 1327",
       "title": "Performance Essentials: Stagecraft",
       "hide": "",
@@ -19497,7 +19497,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12119",
+      "key": "12116",
       "code": "REMU-UT 1331",
       "title": "Vocal Coaching: Private Instruction",
       "hide": "",
@@ -19516,7 +19516,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12120",
+      "key": "12117",
       "code": "REMU-UT 1331",
       "title": "Vocal Coaching: Private Instruction",
       "hide": "",
@@ -19535,7 +19535,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12121",
+      "key": "12118",
       "code": "REMU-UT 1331",
       "title": "Vocal Coaching: Private Instruction",
       "hide": "",
@@ -19554,7 +19554,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12122",
+      "key": "12119",
       "code": "REMU-UT 1331",
       "title": "Vocal Coaching: Private Instruction",
       "hide": "",
@@ -19573,7 +19573,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12123",
+      "key": "12120",
       "code": "REMU-UT 1331",
       "title": "Vocal Coaching: Private Instruction",
       "hide": "",
@@ -19592,7 +19592,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12124",
+      "key": "12121",
       "code": "REMU-UT 1331",
       "title": "Vocal Coaching: Private Instruction",
       "hide": "",
@@ -19611,7 +19611,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12125",
+      "key": "12122",
       "code": "REMU-UT 1331",
       "title": "Vocal Coaching: Private Instruction",
       "hide": "",
@@ -19630,7 +19630,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12126",
+      "key": "12123",
       "code": "REMU-UT 1331",
       "title": "Vocal Coaching: Private Instruction",
       "hide": "",
@@ -19649,7 +19649,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12127",
+      "key": "12124",
       "code": "REMU-UT 1331",
       "title": "Vocal Coaching: Private Instruction",
       "hide": "",
@@ -19668,7 +19668,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12128",
+      "key": "12125",
       "code": "REMU-UT 1331",
       "title": "Vocal Coaching: Private Instruction",
       "hide": "",
@@ -19687,7 +19687,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12129",
+      "key": "12126",
       "code": "REMU-UT 1331",
       "title": "Vocal Coaching: Private Instruction",
       "hide": "",
@@ -19706,7 +19706,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12130",
+      "key": "12127",
       "code": "REMU-UT 1331",
       "title": "Vocal Coaching: Private Instruction",
       "hide": "",
@@ -19725,7 +19725,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12131",
+      "key": "12128",
       "code": "REMU-UT 1331",
       "title": "Vocal Coaching: Private Instruction",
       "hide": "",
@@ -19744,7 +19744,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12132",
+      "key": "12129",
       "code": "REMU-UT 1331",
       "title": "Vocal Coaching: Private Instruction",
       "hide": "",
@@ -19763,7 +19763,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "7733",
+      "key": "7731",
       "code": "REMU-UT 1401",
       "title": "Professional Development: Preparing Your Post-Graduate Plan",
       "hide": "",
@@ -19782,7 +19782,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "3938",
+      "key": "3939",
       "code": "REMU-UT 1402",
       "title": "Professional Development: Pursuing Your Post-Graduate Plan",
       "hide": "",
@@ -19801,7 +19801,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "3939",
+      "key": "3940",
       "code": "REMU-UT 1500",
       "title": "Independent Study",
       "hide": "",
@@ -19820,7 +19820,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12861",
+      "key": "12858",
       "code": "ROB-UY 2004",
       "title": "Robotic Manipulation and Locomotion",
       "hide": "",
@@ -19839,7 +19839,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12862",
+      "key": "12859",
       "code": "ROB-UY 2004",
       "title": "Robotic Manipulation and Locomotion",
       "hide": "",
@@ -19858,7 +19858,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12863",
+      "key": "12860",
       "code": "ROB-UY 2004",
       "title": "Robotic Manipulation and Locomotion",
       "hide": "",
@@ -19877,7 +19877,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12864",
+      "key": "12861",
       "code": "ROB-UY 2004",
       "title": "Robotic Manipulation and Locomotion",
       "hide": "",
@@ -19896,7 +19896,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12865",
+      "key": "12862",
       "code": "ROB-UY 3203",
       "title": "Robot Vision",
       "hide": "",
@@ -19915,7 +19915,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "14711",
+      "key": "14707",
       "code": "RSRCH-UG 1004",
       "title": "Applied Research to Solve Urban Problems",
       "hide": "",
@@ -19934,7 +19934,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "8909",
+      "key": "8907",
       "code": "SL-UY 1020",
       "title": "Academic Skills Seminar",
       "hide": "",
@@ -19953,7 +19953,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "8910",
+      "key": "8908",
       "code": "SL-UY 1020",
       "title": "Academic Skills Seminar",
       "hide": "",
@@ -20010,7 +20010,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "8794",
+      "key": "8792",
       "code": "STS-UY 2144",
       "title": "Ethics and Technology",
       "hide": "",
@@ -20029,7 +20029,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "8795",
+      "key": "8793",
       "code": "STS-UY 2144",
       "title": "Ethics and Technology",
       "hide": "",
@@ -20048,7 +20048,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "8796",
+      "key": "8794",
       "code": "STS-UY 2144",
       "title": "Ethics and Technology",
       "hide": "",
@@ -20067,7 +20067,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "8797",
+      "key": "8795",
       "code": "STS-UY 2144",
       "title": "Ethics and Technology",
       "hide": "",
@@ -20086,7 +20086,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "8798",
+      "key": "8796",
       "code": "STS-UY 2144",
       "title": "Ethics and Technology",
       "hide": "",
@@ -20105,7 +20105,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "8799",
+      "key": "8797",
       "code": "STS-UY 2144",
       "title": "Ethics and Technology",
       "hide": "",
@@ -20124,7 +20124,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "8800",
+      "key": "8798",
       "code": "STS-UY 2144",
       "title": "Ethics and Technology",
       "hide": "",
@@ -20143,7 +20143,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "8801",
+      "key": "8799",
       "code": "STS-UY 2144",
       "title": "Ethics and Technology",
       "hide": "",
@@ -20162,7 +20162,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "8802",
+      "key": "8800",
       "code": "STS-UY 2144",
       "title": "Ethics and Technology",
       "hide": "",
@@ -20257,7 +20257,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12758",
+      "key": "12755",
       "code": "STS-UY 2284",
       "title": "Introduction to FSTEM",
       "hide": "",
@@ -20333,7 +20333,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "13824",
+      "key": "13821",
       "code": "STS-UY 2914",
       "title": "Special Topics in Ethics: The Ethics of Dying",
       "hide": "",
@@ -20352,7 +20352,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "13825",
+      "key": "13822",
       "code": "STS-UY 2914",
       "title": "Special Topics in Ethics: The Nuremberg War Trials",
       "hide": "",
@@ -20390,7 +20390,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12771",
+      "key": "12768",
       "code": "STS-UY 4504",
       "title": "Advanced Seminar in Science and Technology: AI & Society",
       "hide": "",
@@ -20409,7 +20409,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12767",
+      "key": "12764",
       "code": "STS-UY 4504",
       "title": "Advanced Seminar in Science and Technology: Entropy",
       "hide": "",
@@ -20428,7 +20428,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12772",
+      "key": "12769",
       "code": "STS-UY 4504",
       "title": "Advanced Seminar in Science and Technology: Game Studies",
       "hide": "",
@@ -20447,7 +20447,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12774",
+      "key": "12771",
       "code": "STS-UY 4504",
       "title": "Advanced Seminar in Science and Technology: Magic Bullets & Wonder Pills",
       "hide": "",
@@ -20466,7 +20466,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12769",
+      "key": "12766",
       "code": "STS-UY 4504",
       "title": "Advanced Seminar in Science and Technology: Media and Mental Health",
       "hide": "",
@@ -20485,7 +20485,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12776",
+      "key": "12773",
       "code": "STS-UY 4504",
       "title": "Advanced Seminar in Science and Technology: Queer Studies in Technoscience",
       "hide": "",
@@ -20504,7 +20504,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12773",
+      "key": "12770",
       "code": "STS-UY 4504",
       "title": "Advanced Seminar in Science and Technology: Science Communication",
       "hide": "",
@@ -20523,7 +20523,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12768",
+      "key": "12765",
       "code": "STS-UY 4504",
       "title": "Advanced Seminar in Science and Technology: Technologies and Social Movements",
       "hide": "",
@@ -20542,7 +20542,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12770",
+      "key": "12767",
       "code": "STS-UY 4504",
       "title": "Advanced Seminar in Science and Technology: The AIDS Crisis",
       "hide": "",
@@ -20561,7 +20561,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12775",
+      "key": "12772",
       "code": "STS-UY 4504",
       "title": "Advanced Seminar in Science and Technology: Workers in the Digital Economy",
       "hide": "",
@@ -20580,7 +20580,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "13298",
+      "key": "13295",
       "code": "TCS-UY 4504",
       "title": "Advanced Seminar in Technology, Culture, and Society: Our Archives, Ourselves",
       "hide": "",
@@ -20599,7 +20599,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12998",
+      "key": "12995",
       "code": "UGA-UY 2000",
       "title": "Global Leaders and Scholars in STEM (GLASS) Sophomore Seminar",
       "hide": "",
@@ -20618,7 +20618,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "13302",
+      "key": "13299",
       "code": "UGA-UY 3000",
       "title": "Global Leaders and Scholars in STEM (GLASS) Junior Seminar",
       "hide": "",
@@ -20637,7 +20637,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "13303",
+      "key": "13300",
       "code": "UGA-UY 3000",
       "title": "Global Leaders and Scholars in STEM (GLASS) Junior Seminar",
       "hide": "",
@@ -20656,7 +20656,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "13690",
+      "key": "13687",
       "code": "UGA-UY 4000",
       "title": "Global Leaders and Scholars in STEM (GLASS) Senior Seminar",
       "hide": "",
@@ -20732,7 +20732,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12779",
+      "key": "12776",
       "code": "URB-UY 4504",
       "title": "Advanced Seminar in Urban Studies: Affordable Sustainable Housing",
       "hide": "",
@@ -20751,7 +20751,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12777",
+      "key": "12774",
       "code": "URB-UY 4504",
       "title": "Advanced Seminar in Urban Studies: Participatory Community Design",
       "hide": "",
@@ -20770,7 +20770,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12778",
+      "key": "12775",
       "code": "URB-UY 4504",
       "title": "Advanced Seminar in Urban Studies: Urban Waterfront Development",
       "hide": "",
@@ -20789,7 +20789,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12866",
+      "key": "12863",
       "code": "VIP-UY 3000",
       "title": "Vertically Integrated Projects: A. Concrete Canoe",
       "hide": "",
@@ -20808,7 +20808,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12867",
+      "key": "12864",
       "code": "VIP-UY 3000",
       "title": "Vertically Integrated Projects: AB. NYU Robotic Design Team",
       "hide": "",
@@ -20827,7 +20827,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12868",
+      "key": "12865",
       "code": "VIP-UY 3000",
       "title": "Vertically Integrated Projects: AE. AGPHI (Applied Global Public Health Initiative",
       "hide": "",
@@ -20846,7 +20846,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12869",
+      "key": "12866",
       "code": "VIP-UY 3000",
       "title": "Vertically Integrated Projects: AF. Steel Bridge",
       "hide": "",
@@ -20865,7 +20865,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12902",
+      "key": "12899",
       "code": "VIP-UY 3000",
       "title": "Vertically Integrated Projects: AH. Construction Management & Engineering",
       "hide": "",
@@ -20884,7 +20884,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12870",
+      "key": "12867",
       "code": "VIP-UY 3000",
       "title": "Vertically Integrated Projects: AJ. NYU Robomaster Ultraviolet",
       "hide": "",
@@ -20903,7 +20903,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12871",
+      "key": "12868",
       "code": "VIP-UY 3000",
       "title": "Vertically Integrated Projects: AN. High-Speed Research Network",
       "hide": "",
@@ -20922,7 +20922,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12872",
+      "key": "12869",
       "code": "VIP-UY 3000",
       "title": "Vertically Integrated Projects: AS. Sixth Sense",
       "hide": "",
@@ -20941,7 +20941,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12873",
+      "key": "12870",
       "code": "VIP-UY 3000",
       "title": "Vertically Integrated Projects: AW. NYU Robosub",
       "hide": "",
@@ -20960,7 +20960,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12874",
+      "key": "12871",
       "code": "VIP-UY 3000",
       "title": "Vertically Integrated Projects: AY. AR/VR Work in AE",
       "hide": "",
@@ -20979,7 +20979,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12875",
+      "key": "12872",
       "code": "VIP-UY 3000",
       "title": "Vertically Integrated Projects: BC. Flexible AI-Enabled Mechatronic Sys Lab (FAMS)",
       "hide": "",
@@ -20998,7 +20998,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12876",
+      "key": "12873",
       "code": "VIP-UY 3000",
       "title": "Vertically Integrated Projects: BF. Defining Accessibility within XR",
       "hide": "",
@@ -21017,7 +21017,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12877",
+      "key": "12874",
       "code": "VIP-UY 3000",
       "title": "Vertically Integrated Projects: BH. Stroke-Based Art Therapy",
       "hide": "",
@@ -21036,7 +21036,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12878",
+      "key": "12875",
       "code": "VIP-UY 3000",
       "title": "Vertically Integrated Projects: BI. Community Science Design Lab",
       "hide": "",
@@ -21055,7 +21055,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12879",
+      "key": "12876",
       "code": "VIP-UY 3000",
       "title": "Vertically Integrated Projects: BJ: NYU Digital Media Intellect",
       "hide": "",
@@ -21074,7 +21074,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12880",
+      "key": "12877",
       "code": "VIP-UY 3000",
       "title": "Vertically Integrated Projects: BK: Metaverse for Education",
       "hide": "",
@@ -21093,7 +21093,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12881",
+      "key": "12878",
       "code": "VIP-UY 3000",
       "title": "Vertically Integrated Projects: BL. Earthquake Engineering Research Institute (EER",
       "hide": "",
@@ -21112,7 +21112,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12882",
+      "key": "12879",
       "code": "VIP-UY 3000",
       "title": "Vertically Integrated Projects: BM. NYU Processor Design",
       "hide": "",
@@ -21131,7 +21131,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12883",
+      "key": "12880",
       "code": "VIP-UY 3000",
       "title": "Vertically Integrated Projects: BN. Chem-E Car",
       "hide": "",
@@ -21150,7 +21150,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12884",
+      "key": "12881",
       "code": "VIP-UY 3000",
       "title": "Vertically Integrated Projects: BO. Project MJOLNIR",
       "hide": "",
@@ -21169,7 +21169,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12885",
+      "key": "12882",
       "code": "VIP-UY 3000",
       "title": "Vertically Integrated Projects: BS. High Performance Computing",
       "hide": "",
@@ -21188,7 +21188,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12886",
+      "key": "12883",
       "code": "VIP-UY 3000",
       "title": "Vertically Integrated Projects: BV. Feminism and STEM",
       "hide": "",
@@ -21207,7 +21207,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12887",
+      "key": "12884",
       "code": "VIP-UY 3000",
       "title": "Vertically Integrated Projects: BW. Smart Microphysiological System for Precision",
       "hide": "",
@@ -21226,7 +21226,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12888",
+      "key": "12885",
       "code": "VIP-UY 3000",
       "title": "Vertically Integrated Projects: BX. Wireless-6G",
       "hide": "",
@@ -21245,7 +21245,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12889",
+      "key": "12886",
       "code": "VIP-UY 3000",
       "title": "Vertically Integrated Projects: BY. Wearable Art & Design",
       "hide": "",
@@ -21264,7 +21264,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12890",
+      "key": "12887",
       "code": "VIP-UY 3000",
       "title": "Vertically Integrated Projects: BZ. Sustainable Engineering Education",
       "hide": "",
@@ -21283,7 +21283,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12891",
+      "key": "12888",
       "code": "VIP-UY 3000",
       "title": "Vertically Integrated Projects: CA: Hack3D: Digital Manufacturing Cybersecurity",
       "hide": "",
@@ -21302,7 +21302,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12892",
+      "key": "12889",
       "code": "VIP-UY 3000",
       "title": "Vertically Integrated Projects: CB: Project Step",
       "hide": "",
@@ -21321,7 +21321,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12903",
+      "key": "12900",
       "code": "VIP-UY 3000",
       "title": "Vertically Integrated Projects: CC. Offshore Wind Platforms & Research",
       "hide": "",
@@ -21340,7 +21340,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12904",
+      "key": "12901",
       "code": "VIP-UY 3000",
       "title": "Vertically Integrated Projects: CD. Democracy Research Initiative",
       "hide": "",
@@ -21359,7 +21359,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12905",
+      "key": "12902",
       "code": "VIP-UY 3000",
       "title": "Vertically Integrated Projects: CE. Smart Chemical Emission Navigation Tracker (SC",
       "hide": "",
@@ -21378,7 +21378,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12906",
+      "key": "12903",
       "code": "VIP-UY 3000",
       "title": "Vertically Integrated Projects: CF. Creative Accessibility in Design",
       "hide": "",
@@ -21397,7 +21397,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12907",
+      "key": "12904",
       "code": "VIP-UY 3000",
       "title": "Vertically Integrated Projects: CG. Technology Innovation Catalysts",
       "hide": "",
@@ -21416,7 +21416,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12908",
+      "key": "12905",
       "code": "VIP-UY 3000",
       "title": "Vertically Integrated Projects: CH. AI in Education",
       "hide": "",
@@ -21435,7 +21435,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12909",
+      "key": "12906",
       "code": "VIP-UY 3000",
       "title": "Vertically Integrated Projects: CI. OptiReality: The Optimal AI Solution for Virtu",
       "hide": "",
@@ -21454,7 +21454,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12910",
+      "key": "12907",
       "code": "VIP-UY 3000",
       "title": "Vertically Integrated Projects: CJ. Making Fashion Accessible",
       "hide": "",
@@ -21473,7 +21473,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12911",
+      "key": "12908",
       "code": "VIP-UY 3000",
       "title": "Vertically Integrated Projects: CK. Desire Path",
       "hide": "",
@@ -21492,7 +21492,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12912",
+      "key": "12909",
       "code": "VIP-UY 3000",
       "title": "Vertically Integrated Projects: CL. AI-Powered Intelligent Surgical Robotics",
       "hide": "",
@@ -21511,7 +21511,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12913",
+      "key": "12910",
       "code": "VIP-UY 3000",
       "title": "Vertically Integrated Projects: CM. The Tandon Zine",
       "hide": "",
@@ -21530,7 +21530,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12893",
+      "key": "12890",
       "code": "VIP-UY 3000",
       "title": "Vertically Integrated Projects: D. RePrint Bot",
       "hide": "",
@@ -21549,7 +21549,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12894",
+      "key": "12891",
       "code": "VIP-UY 3000",
       "title": "Vertically Integrated Projects: I. Vertical Farming",
       "hide": "",
@@ -21568,7 +21568,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12895",
+      "key": "12892",
       "code": "VIP-UY 3000",
       "title": "Vertically Integrated Projects: J. Urban Remote Sensing",
       "hide": "",
@@ -21587,7 +21587,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12896",
+      "key": "12893",
       "code": "VIP-UY 3000",
       "title": "Vertically Integrated Projects: N. Rogue Aerospace",
       "hide": "",
@@ -21606,7 +21606,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12897",
+      "key": "12894",
       "code": "VIP-UY 3000",
       "title": "Vertically Integrated Projects: O. NYU Motorsports",
       "hide": "",
@@ -21625,7 +21625,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12898",
+      "key": "12895",
       "code": "VIP-UY 3000",
       "title": "Vertically Integrated Projects: Q. Hyperloop",
       "hide": "",
@@ -21644,7 +21644,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12899",
+      "key": "12896",
       "code": "VIP-UY 3000",
       "title": "Vertically Integrated Projects: R. iGEM",
       "hide": "",
@@ -21663,7 +21663,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12900",
+      "key": "12897",
       "code": "VIP-UY 3000",
       "title": "Vertically Integrated Projects: T. NYU Self-Drive",
       "hide": "",
@@ -21682,7 +21682,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12901",
+      "key": "12898",
       "code": "VIP-UY 3000",
       "title": "Vertically Integrated Projects: Y. College Students Studying College",
       "hide": "",
@@ -21701,7 +21701,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12038",
+      "key": "12035",
       "code": "VIP-UY 300X",
       "title": "Vertically Integrated Projects: A. Concrete Canoe",
       "hide": "",
@@ -21720,7 +21720,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12039",
+      "key": "12036",
       "code": "VIP-UY 300X",
       "title": "Vertically Integrated Projects: AB. NYU Robotic Design Team",
       "hide": "",
@@ -21739,7 +21739,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12040",
+      "key": "12037",
       "code": "VIP-UY 300X",
       "title": "Vertically Integrated Projects: AE. AGPHI (Applied Global Public Health Initiative",
       "hide": "",
@@ -21758,7 +21758,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12041",
+      "key": "12038",
       "code": "VIP-UY 300X",
       "title": "Vertically Integrated Projects: AF. Steel Bridge",
       "hide": "",
@@ -21777,7 +21777,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12074",
+      "key": "12071",
       "code": "VIP-UY 300X",
       "title": "Vertically Integrated Projects: AH. Construction Management & Engineering",
       "hide": "",
@@ -21796,7 +21796,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12042",
+      "key": "12039",
       "code": "VIP-UY 300X",
       "title": "Vertically Integrated Projects: AJ. NYU Robomaster Ultraviolet",
       "hide": "",
@@ -21815,7 +21815,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12043",
+      "key": "12040",
       "code": "VIP-UY 300X",
       "title": "Vertically Integrated Projects: AN. High-Speed Research Network",
       "hide": "",
@@ -21834,7 +21834,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12044",
+      "key": "12041",
       "code": "VIP-UY 300X",
       "title": "Vertically Integrated Projects: AS. Sixth Sense",
       "hide": "",
@@ -21853,7 +21853,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12045",
+      "key": "12042",
       "code": "VIP-UY 300X",
       "title": "Vertically Integrated Projects: AW. NYU Robosub",
       "hide": "",
@@ -21872,7 +21872,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12046",
+      "key": "12043",
       "code": "VIP-UY 300X",
       "title": "Vertically Integrated Projects: AY. AR/VR Work in AE",
       "hide": "",
@@ -21891,7 +21891,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12047",
+      "key": "12044",
       "code": "VIP-UY 300X",
       "title": "Vertically Integrated Projects: BC. Flexible AI-Enabled Mechatronic Sys Lab (FAMS)",
       "hide": "",
@@ -21910,7 +21910,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12048",
+      "key": "12045",
       "code": "VIP-UY 300X",
       "title": "Vertically Integrated Projects: BF. Defining Accessibility within XR",
       "hide": "",
@@ -21929,7 +21929,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12049",
+      "key": "12046",
       "code": "VIP-UY 300X",
       "title": "Vertically Integrated Projects: BH. Stroke-Based Art Therapy",
       "hide": "",
@@ -21948,7 +21948,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12050",
+      "key": "12047",
       "code": "VIP-UY 300X",
       "title": "Vertically Integrated Projects: BI. Community Science Design Lab",
       "hide": "",
@@ -21967,7 +21967,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12051",
+      "key": "12048",
       "code": "VIP-UY 300X",
       "title": "Vertically Integrated Projects: BJ: NYU Digital Media Intellect",
       "hide": "",
@@ -21986,7 +21986,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12052",
+      "key": "12049",
       "code": "VIP-UY 300X",
       "title": "Vertically Integrated Projects: BK: Metaverse for Education",
       "hide": "",
@@ -22005,7 +22005,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12053",
+      "key": "12050",
       "code": "VIP-UY 300X",
       "title": "Vertically Integrated Projects: BL. Earthquake Engineering Research Institute (EER",
       "hide": "",
@@ -22024,7 +22024,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12054",
+      "key": "12051",
       "code": "VIP-UY 300X",
       "title": "Vertically Integrated Projects: BM. NYU Processor Design",
       "hide": "",
@@ -22043,7 +22043,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12055",
+      "key": "12052",
       "code": "VIP-UY 300X",
       "title": "Vertically Integrated Projects: BN. Chem-E Car",
       "hide": "",
@@ -22062,7 +22062,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12056",
+      "key": "12053",
       "code": "VIP-UY 300X",
       "title": "Vertically Integrated Projects: BO. Project MJOLNIR",
       "hide": "",
@@ -22081,7 +22081,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12057",
+      "key": "12054",
       "code": "VIP-UY 300X",
       "title": "Vertically Integrated Projects: BS. High Performance Computing",
       "hide": "",
@@ -22100,7 +22100,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12058",
+      "key": "12055",
       "code": "VIP-UY 300X",
       "title": "Vertically Integrated Projects: BV. Feminism and STEM",
       "hide": "",
@@ -22119,7 +22119,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12059",
+      "key": "12056",
       "code": "VIP-UY 300X",
       "title": "Vertically Integrated Projects: BW. Smart Microphysiological System for Precision",
       "hide": "",
@@ -22138,7 +22138,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12060",
+      "key": "12057",
       "code": "VIP-UY 300X",
       "title": "Vertically Integrated Projects: BX. Wireless-6G",
       "hide": "",
@@ -22157,7 +22157,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12061",
+      "key": "12058",
       "code": "VIP-UY 300X",
       "title": "Vertically Integrated Projects: BY. Wearable Art & Design",
       "hide": "",
@@ -22176,7 +22176,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12062",
+      "key": "12059",
       "code": "VIP-UY 300X",
       "title": "Vertically Integrated Projects: BZ. Sustainable Engineering Education",
       "hide": "",
@@ -22195,7 +22195,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12063",
+      "key": "12060",
       "code": "VIP-UY 300X",
       "title": "Vertically Integrated Projects: CA: Hack3D: Digital Manufacturing Cybersecurity",
       "hide": "",
@@ -22214,7 +22214,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12064",
+      "key": "12061",
       "code": "VIP-UY 300X",
       "title": "Vertically Integrated Projects: CB: Project Step",
       "hide": "",
@@ -22233,7 +22233,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12075",
+      "key": "12072",
       "code": "VIP-UY 300X",
       "title": "Vertically Integrated Projects: CC. Offshore Wind Platforms & Research",
       "hide": "",
@@ -22252,7 +22252,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12076",
+      "key": "12073",
       "code": "VIP-UY 300X",
       "title": "Vertically Integrated Projects: CD. Democracy Research Initiative",
       "hide": "",
@@ -22271,7 +22271,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12077",
+      "key": "12074",
       "code": "VIP-UY 300X",
       "title": "Vertically Integrated Projects: CE. Smart Chemical Emission Navigation Tracker (SC",
       "hide": "",
@@ -22290,7 +22290,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12078",
+      "key": "12075",
       "code": "VIP-UY 300X",
       "title": "Vertically Integrated Projects: CF. Creative Accessibility in Design",
       "hide": "",
@@ -22309,7 +22309,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12079",
+      "key": "12076",
       "code": "VIP-UY 300X",
       "title": "Vertically Integrated Projects: CG. Technology Innovation Catalysts",
       "hide": "",
@@ -22328,7 +22328,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12080",
+      "key": "12077",
       "code": "VIP-UY 300X",
       "title": "Vertically Integrated Projects: CH. AI in Education",
       "hide": "",
@@ -22347,7 +22347,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12081",
+      "key": "12078",
       "code": "VIP-UY 300X",
       "title": "Vertically Integrated Projects: CI. OptiReality: The Optimal AI Solution for Virtu",
       "hide": "",
@@ -22366,7 +22366,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12082",
+      "key": "12079",
       "code": "VIP-UY 300X",
       "title": "Vertically Integrated Projects: CJ. Making Fashion Accessible",
       "hide": "",
@@ -22385,7 +22385,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12083",
+      "key": "12080",
       "code": "VIP-UY 300X",
       "title": "Vertically Integrated Projects: CK. Desire Path",
       "hide": "",
@@ -22404,7 +22404,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12084",
+      "key": "12081",
       "code": "VIP-UY 300X",
       "title": "Vertically Integrated Projects: CL. AI-Powered Intelligent Surgical Robotics",
       "hide": "",
@@ -22423,7 +22423,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12085",
+      "key": "12082",
       "code": "VIP-UY 300X",
       "title": "Vertically Integrated Projects: CM. The Tandon Zine",
       "hide": "",
@@ -22442,7 +22442,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12065",
+      "key": "12062",
       "code": "VIP-UY 300X",
       "title": "Vertically Integrated Projects: D. RePrint Bot",
       "hide": "",
@@ -22461,7 +22461,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12066",
+      "key": "12063",
       "code": "VIP-UY 300X",
       "title": "Vertically Integrated Projects: I. Vertical Farming",
       "hide": "",
@@ -22480,7 +22480,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12067",
+      "key": "12064",
       "code": "VIP-UY 300X",
       "title": "Vertically Integrated Projects: J. Urban Remote Sensing",
       "hide": "",
@@ -22499,7 +22499,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12068",
+      "key": "12065",
       "code": "VIP-UY 300X",
       "title": "Vertically Integrated Projects: N. Rogue Aerospace",
       "hide": "",
@@ -22518,7 +22518,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12069",
+      "key": "12066",
       "code": "VIP-UY 300X",
       "title": "Vertically Integrated Projects: O. NYU Motorsports",
       "hide": "",
@@ -22537,7 +22537,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12070",
+      "key": "12067",
       "code": "VIP-UY 300X",
       "title": "Vertically Integrated Projects: Q. Hyperloop",
       "hide": "",
@@ -22556,7 +22556,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12071",
+      "key": "12068",
       "code": "VIP-UY 300X",
       "title": "Vertically Integrated Projects: R. iGEM",
       "hide": "",
@@ -22575,7 +22575,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12072",
+      "key": "12069",
       "code": "VIP-UY 300X",
       "title": "Vertically Integrated Projects: T. NYU Self-Drive",
       "hide": "",
@@ -22594,7 +22594,7 @@
       "srcdb": "1264"
     },
     {
-      "key": "12073",
+      "key": "12070",
       "code": "VIP-UY 300X",
       "title": "Vertically Integrated Projects: Y. College Students Studying College",
       "hide": "",
