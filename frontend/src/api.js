@@ -19,8 +19,12 @@ export const searchCourses = async (filters) => {
     return await response.json();
 };
 
-export const updateDatabase = async () => {
-    const response = await fetch(`${API_BASE_URL}/update-database-simple`, {
+export const updateDatabase = async (force = false) => {
+    const url = force 
+        ? `${API_BASE_URL}/update-database?force=true`
+        : `${API_BASE_URL}/update-database`;
+    
+    const response = await fetch(url, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

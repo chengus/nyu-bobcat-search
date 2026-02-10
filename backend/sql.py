@@ -13,17 +13,20 @@ LOCAL_DB = "nyu_courses.db"  # Local replica database file
 
 
 def get_conn():
-    """Get Turso database connection with local replica"""
+    """Get database connection - uses Turso if credentials available, otherwise local SQLite"""
     url = os.getenv("TURSO_DATABASE_URL")
     auth_token = os.getenv("TURSO_AUTH_TOKEN")
     
-    if not url or not auth_token:
-        raise ValueError("TURSO_DATABASE_URL and TURSO_AUTH_TOKEN must be set in .env file")
-    
-    # Use libsql.connect with local replica and sync_url
-    conn = libsql.connect(LOCAL_DB, sync_url=url, auth_token=auth_token)
-    conn.sync()  # Sync with remote Turso database
-    return conn
+    if url and auth_token:
+        # Use libsql with Turso sync
+        conn = libsql.connect(LOCAL_DB, sync_url=url, auth_token=auth_token)
+        conn.sync()  # Sync with remote Turso database
+        return conn
+    else:
+        # Fallback to local SQLite only
+        print("Warning: TURSO credentials not found, using local SQLite database only")
+        conn = libsql.connect(LOCAL_DB)
+        return conn
 
 
 def init_schema(conn) -> None:
@@ -99,7 +102,40 @@ def init_schema(conn) -> None:
     );
     """)
     
+    # Metadata table for tracking last update time
+    conn.execute("""
+    CREATE TABLE IF NOT EXISTS metadata (
+      key            TEXT PRIMARY KEY,
+      value          TEXT,
+      updated_at     TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    );
+    """)
+    
     # Note: Turso automatically handles schema, no need for ALTER TABLE migrations
+    conn.commit()
+
+
+def get_last_update_time(conn) -> Optional[str]:
+    """Get the last update timestamp from metadata table"""
+    result = conn.execute(
+        "SELECT value FROM metadata WHERE key = 'last_update'"
+    ).fetchone()
+    return result[0] if result else None
+
+
+def set_last_update_time(conn) -> None:
+    """Set the last update timestamp to current time"""
+    conn.execute(
+        """INSERT OR REPLACE INTO metadata (key, value, updated_at) 
+           VALUES ('last_update', datetime('now'), datetime('now'))"""
+    )
+    conn.commit()
+
+
+def clear_all_data(conn) -> None:
+    """Delete all courses and sections data for a fresh update"""
+    conn.execute("DELETE FROM sections")
+    conn.execute("DELETE FROM courses")
     conn.commit()
 
 
@@ -196,34 +232,93 @@ def insert_section(
     ])
 
 
-def process_json_file(
-    conn,
+def prepare_json_data(
     json_path: Path,
     campus_group: str
-) -> None:
+) -> Tuple[List[Tuple], List[List]]:
     """
-    Load a JSON file (wsq.json or brooklyn.json) and populate courses+sections.
+    Load a JSON file and prepare course and section data for insertion.
+    Returns (courses_data, sections_data) without modifying the database.
     """
     with json_path.open("r", encoding="utf-8") as f:
         data = json.load(f)
 
     results: List[Dict[str, Any]] = data.get("results", [])
-    print(f"Processing {json_path} ({campus_group}) with {len(results)} records")
+    print(f"Processing {json_path} ({campus_group}) with {len(results)} records", flush=True)
 
-    for record in results:
+    # Prepare bulk data
+    courses_data = []
+    sections_data = []
+    
+    for i, record in enumerate(results):
+        # Progress indicator every 1000 records
+        if i > 0 and i % 1000 == 0:
+            print(f"  Prepared {i}/{len(results)} records...", flush=True)
+        
         code = record.get("code", "")
         title = record.get("title", "")
         if not code or not title:
             continue
 
-        # Ensure course exists
-        upsert_course(conn, code, title)
+        # Prepare course data
+        subject, catalog = split_code(code)
+        courses_data.append((code, subject, catalog, title))
+        
+        # Prepare section data
+        sections_data.append([
+            code,  # course_code FK
+            record.get("key"),
+            record.get("code"),
+            record.get("title"),
+            record.get("hide"),
+            record.get("crn"),
+            record.get("no"),
+            to_int_or_none(record.get("total")),
+            record.get("schd"),
+            record.get("stat"),
+            record.get("isCancelled"),
+            record.get("meets"),
+            record.get("mpkey"),
+            record.get("meetingTimes"),
+            record.get("instr"),
+            record.get("start_date"),
+            record.get("end_date"),
+            record.get("srcdb"),
+            campus_group,
+        ])
+    
+    print(f"  Data preparation complete. Prepared {len(courses_data)} courses and {len(sections_data)} sections", flush=True)
+    return courses_data, sections_data
 
-        # Insert section
-        insert_section(conn, record, campus_group)
 
+def insert_prepared_data(
+    conn,
+    courses_data: List[Tuple],
+    sections_data: List[List]
+) -> None:
+    """
+    Insert prepared course and section data into the database.
+    This should be called from the API endpoint that manages Turso updates.
+    """
+    # Bulk insert courses (ignore duplicates)
+    print(f"  Inserting {len(courses_data)} courses...", flush=True)
+    conn.executemany("""
+        INSERT OR IGNORE INTO courses (code, subject, catalog_number, title)
+        VALUES (?, ?, ?, ?)
+    """, courses_data)
+    
+    # Bulk insert sections
+    print(f"  Inserting {len(sections_data)} sections...", flush=True)
+    conn.executemany("""
+        INSERT INTO sections (
+          course_code, key, code, title, hide, crn, no, total,
+          schd, stat, isCancelled, meets, mpkey, meetingTimes,
+          instr, start_date, end_date, srcdb, campus_group
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+    """, sections_data)
+    
     conn.commit()
-    print(f"Done {json_path}")
+    print(f"  Database insert complete")
 
 
 def main() -> None:
@@ -235,15 +330,26 @@ def main() -> None:
     wsq_path = base_dir / WSQ_FILE
     brooklyn_path = base_dir / BROOKLYN_FILE
 
+    all_courses = []
+    all_sections = []
+    
     if wsq_path.exists():
-        process_json_file(conn, wsq_path, campus_group="WSQ")
+        courses, sections = prepare_json_data(wsq_path, campus_group="WSQ")
+        all_courses.extend(courses)
+        all_sections.extend(sections)
     else:
         print(f"Skipping {wsq_path}, file not found.")
 
     if brooklyn_path.exists():
-        process_json_file(conn, brooklyn_path, campus_group="BROOKLYN")
+        courses, sections = prepare_json_data(brooklyn_path, campus_group="BROOKLYN")
+        all_courses.extend(courses)
+        all_sections.extend(sections)
     else:
         print(f"Skipping {brooklyn_path}, file not found.")
+    
+    # Insert all prepared data
+    if all_courses or all_sections:
+        insert_prepared_data(conn, all_courses, all_sections)
 
     conn.close()
     print("All done. Database updated.")

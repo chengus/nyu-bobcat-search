@@ -2,9 +2,13 @@ from typing import List, Optional, Dict, Any
 import requests
 import json
 import re
+from pathlib import Path
+from datetime import datetime, timedelta
 
 from fastapi import FastAPI, HTTPException, Query, Body
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
 from pydantic import BaseModel
 
 import scraper
@@ -45,15 +49,22 @@ app = FastAPI(title="NYU Course Search API")
 # Allow the React dev server (and other local origins) to call this API during development
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "http://127.0.0.1:3000"],
+    allow_origins=["http://localhost:3000", "http://127.0.0.1:3000", "*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
+# Check if frontend build exists (for production) and mount static files
+frontend_build = Path("../frontend/build")
+if frontend_build.exists():
+    app.mount("/static", StaticFiles(directory=str(frontend_build / "static")), name="static")
+
 @app.get("/")
 async def root():
-    """API root - returns basic information about the API"""
+    """API root - returns basic information about the API or serves frontend"""
+    if frontend_build.exists():
+        return FileResponse(str(frontend_build / "index.html"))
     return {
         "name": "NYU Course Search API",
         "version": "1.0",
@@ -281,21 +292,57 @@ async def get_course_details(request: CourseDetailsRequest = Body(...)):
 
 
 @app.post("/update-database", response_model=UpdateResponse)
-async def update_database(request: UpdateRequest = None):
+async def update_database(request: UpdateRequest = None, force: bool = Query(False, description="Force update even if less than 1 day old")):
     """
     Scrape course data from NYU's API and update the database.
-    Only updates if the database is more than 1 day old.
+    Only updates if the database is more than 1 day old (unless force=True).
+    When updating, deletes all existing data and repopulates with fresh data.
     
     Parameters:
     - srcdb: Term code (e.g., "1264" for Spring 2026)
     - career: Career type (e.g., "UGRD" for undergraduate)
     - camps: List of campus codes to scrape
+    - force: Force update even if less than 1 day old (query param)
     """
     if request is None:
         request = UpdateRequest()
     
-    # For Turso, check last scrape time from a metadata table or skip time check
-    # Since Turso is remote, file-based checking doesn't apply
+    # Check last update time
+    conn = None
+    try:
+        conn = sql.get_conn()
+        sql.init_schema(conn)
+        
+        last_update = sql.get_last_update_time(conn)
+        
+        if last_update and not force:
+            # Parse the last update time (SQLite datetime format)
+            last_update_dt = datetime.fromisoformat(last_update.replace('Z', '+00:00'))
+            time_since_update = datetime.now() - last_update_dt.replace(tzinfo=None)
+            
+            if time_since_update < timedelta(days=1):
+                hours_left = 24 - (time_since_update.total_seconds() / 3600)
+                return UpdateResponse(
+                    status="skipped",
+                    message=f"Database was updated {time_since_update.total_seconds() / 3600:.1f} hours ago. Will update in {hours_left:.1f} hours. Use force=true to update now.",
+                    files_downloaded=[],
+                    records_processed=0
+                )
+        
+        # Delete all existing data for fresh update
+        print("Clearing all existing data...")
+        sql.clear_all_data(conn)
+        
+    except Exception as e:
+        if conn:
+            conn.close()
+        raise HTTPException(
+            status_code=500,
+            detail=f"Failed to check update status: {str(e)}"
+        )
+    finally:
+        if conn:
+            conn.close()
     
     try:
         files_downloaded = []
@@ -318,24 +365,19 @@ async def update_database(request: UpdateRequest = None):
                 else:
                     campus_group = "WSQ"
                 
-                # Process the JSON file and update database
+                # Prepare data from JSON file (no DB operations yet)
+                courses_data, sections_data = sql.prepare_json_data(file_path, campus_group)
+                
+                # Update Turso database with prepared data
                 conn = sql.get_conn()
                 try:
                     sql.init_schema(conn)
-                    
-                    # Clear existing data for this campus group and srcdb to prevent duplicates
-                    conn.execute(
-                        "DELETE FROM sections WHERE campus_group = ? AND srcdb = ?",
-                        [campus_group, request.srcdb]
-                    )
-                    conn.commit()
-                    
-                    sql.process_json_file(conn, file_path, campus_group)
+                    sql.insert_prepared_data(conn, courses_data, sections_data)
                     
                     # Count records from this file
                     results = conn.execute("SELECT COUNT(*) FROM sections WHERE campus_group = ?", [campus_group])
                     count = results.fetchone()[0]
-                    total_records = count
+                    total_records += count
                     
                 finally:
                     conn.close()
@@ -348,9 +390,16 @@ async def update_database(request: UpdateRequest = None):
                     records_processed=total_records
                 )
         
+        # Update last update timestamp
+        conn = sql.get_conn()
+        try:
+            sql.set_last_update_time(conn)
+        finally:
+            conn.close()
+        
         return UpdateResponse(
             status="success",
-            message=f"Successfully updated database with data from {len(files_downloaded)} campus groups",
+            message=f"Successfully updated database with {total_records} records from {len(files_downloaded)} campus groups",
             files_downloaded=files_downloaded,
             records_processed=total_records
         )
@@ -398,15 +447,6 @@ def get_database_status():
             status_code=500,
             detail=f"Failed to get database status: {str(e)}"
         )
-
-
-@app.post("/update-database-simple")
-async def update_database_simple():
-    """
-    Simple endpoint to update database with default parameters (Spring 2026, all campuses).
-    """
-    request = UpdateRequest()
-    return await update_database(request)
 
 
 @app.get("/search", response_model=list[SectionResult])
@@ -511,6 +551,13 @@ def search_sections(
         break  # exit generator loop after one use
 
     return results
+
+# Catch-all route for React client-side routing (must be defined last)
+if frontend_build.exists():
+    @app.get("/{full_path:path}")
+    async def serve_spa(full_path: str):
+        """Serve React app for all unmatched routes (client-side routing)"""
+        return FileResponse(str(frontend_build / "index.html"))
 
 if __name__ == "__main__":
     # Run with: python backend.py (for quick local testing)

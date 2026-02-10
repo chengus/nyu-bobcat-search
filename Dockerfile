@@ -6,7 +6,7 @@ WORKDIR /app/frontend
 
 # Copy package files and install dependencies
 COPY frontend/package*.json ./
-RUN npm ci
+RUN npm install
 
 # Copy frontend source and build
 COPY frontend/ ./
@@ -17,14 +17,17 @@ FROM python:3.13-slim
 
 WORKDIR /app
 
-# Install system dependencies
+# Install system dependencies including Rust for libsql
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
     curl \
+    build-essential \
+    pkg-config \
+    libssl-dev \
+    cmake \
+    && curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y \
     && rm -rf /var/lib/apt/lists/*
 
-# Install uv for Python package management
-RUN curl -LsSf https://astral.sh/uv/install.sh | sh
 ENV PATH="/root/.cargo/bin:$PATH"
 
 # Copy backend files
@@ -33,7 +36,7 @@ COPY backend/pyproject.toml ./backend/
 
 # Install Python dependencies
 WORKDIR /app/backend
-RUN uv pip install --system -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the rest of the backend code
 COPY backend/ ./
