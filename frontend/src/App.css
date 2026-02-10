@@ -591,6 +591,31 @@ h2 {
     font-size: 1.4em;
 }
 
+.calendar-header-buttons {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.download-ics-btn {
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+    font-size: 0.95em;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.download-ics-btn:hover {
+    background-color: #218838;
+}
+
 .close-calendar-btn {
     background: #57068c;
     color: white;
@@ -677,10 +702,17 @@ h2 {
 }
 
 .rbc-event {
-    background-color: #57068c !important;
+    background-color: #57068c;
     border: none !important;
 }
 
 .rbc-event:hover {
-    background-color: #330852 !important;
+    background-color: #330852;
 }
+
+/* Conflicting events - red color will be applied via eventPropGetter */
+.rbc-event[style*="background-color: rgb(220, 53, 69)"]:hover,
+.rbc-event[style*="backgroundColor: rgb(220, 53, 69)"]:hover {
+    background-color: #bd2130 !important;
+}
+

@@ -243,8 +243,94 @@ function App() {
     };
 
     const calendarEvents = useMemo(() => {
-        return stagedCourses.flatMap(course => parseMeetsString(course));
+        const events = stagedCourses.flatMap(course => parseMeetsString(course));
+        
+        // Detect time conflicts
+        events.forEach((event, index) => {
+            event.hasConflict = false;
+            for (let i = 0; i < events.length; i++) {
+                if (i === index) continue;
+                const other = events[i];
+                
+                // Check if events overlap
+                if (event.start < other.end && event.end > other.start) {
+                    event.hasConflict = true;
+                    break;
+                }
+            }
+        });
+        
+        return events;
     }, [stagedCourses]);
+
+    const eventStyleGetter = (event) => {
+        if (event.hasConflict) {
+            return {
+                style: {
+                    backgroundColor: '#dc3545',
+                    borderColor: '#dc3545',
+                    color: 'white'
+                }
+            };
+        }
+        return {
+            style: {
+                backgroundColor: '#57068c',
+                borderColor: '#57068c',
+                color: 'white'
+            }
+        };
+    };
+
+    const handleDownloadICS = () => {
+        if (calendarEvents.length === 0) {
+            alert('No courses to export. Please add courses to your schedule first.');
+            return;
+        }
+
+        // Generate ICS file content
+        const formatICSDate = (date) => {
+            const d = new Date(date);
+            return d.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
+        };
+
+        let icsContent = [
+            'BEGIN:VCALENDAR',
+            'VERSION:2.0',
+            'PRODID:-//NYU Course Scheduler//EN',
+            'CALSCALE:GREGORIAN',
+            'METHOD:PUBLISH',
+            'X-WR-CALNAME:NYU Course Schedule',
+            'X-WR-TIMEZONE:America/New_York'
+        ];
+
+        calendarEvents.forEach((event, index) => {
+            const uid = `${formatICSDate(event.start)}-${index}@nyu-course-scheduler`;
+            icsContent.push(
+                'BEGIN:VEVENT',
+                `UID:${uid}`,
+                `DTSTAMP:${formatICSDate(new Date())}`,
+                `DTSTART:${formatICSDate(event.start)}`,
+                `DTEND:${formatICSDate(event.end)}`,
+                `SUMMARY:${event.title}`,
+                'STATUS:CONFIRMED',
+                'END:VEVENT'
+            );
+        });
+
+        icsContent.push('END:VCALENDAR');
+
+        // Create and download file
+        const blob = new Blob([icsContent.join('\r\n')], { type: 'text/calendar;charset=utf-8' });
+        const url = window.URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = 'nyu-course-schedule.ics';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        window.URL.revokeObjectURL(url);
+    };
 
 
     return (
@@ -460,15 +546,24 @@ function App() {
                     <div className="calendar-modal">
                         <div className="calendar-modal-header">
                             <h2>My Schedule Calendar</h2>
-                            <button 
-                                className="close-calendar-btn" 
-                                onClick={(e) => {
-                                    e.stopPropagation();
-                                    setShowCalendar(false);
-                                }}
-                            >
-                                ✕
-                            </button>
+                            <div className="calendar-header-buttons">
+                                <button 
+                                    className="download-ics-btn"
+                                    onClick={handleDownloadICS}
+                                    title="Download schedule as ICS file"
+                                >
+                                    📅 Download ICS
+                                </button>
+                                <button 
+                                    className="close-calendar-btn" 
+                                    onClick={(e) => {
+                                        e.stopPropagation();
+                                        setShowCalendar(false);
+                                    }}
+                                >
+                                    ✕
+                                </button>
+                            </div>
                         </div>
                         <div className="calendar-container">
                             <Calendar
@@ -482,6 +577,7 @@ function App() {
                                 date={currentDate}
                                 onNavigate={(date) => setCurrentDate(date)}
                                 min={new Date(1970, 1, 1, 8, 0, 0)}
+                                eventPropGetter={eventStyleGetter}
                             />
                         </div>
                     </div>
