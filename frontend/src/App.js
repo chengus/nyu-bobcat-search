@@ -24,8 +24,11 @@ const parseMeetsString = (course) => {
     };
 
     if (!course.meets || course.meets.trim() === '') {
+        console.warn('No meets data for course:', course.course_code);
         return events;
     }
+
+    console.log('Meets string:', course.meets);
 
     // Use course-specific dates, fallback to defaults if not available
     const startDate = course.start_date || course.courseDetails?.meet_start_date;
@@ -73,19 +76,35 @@ const parseMeetsString = (course) => {
     // Example meets string: "TR 12:30-1:45p" or "M 9:30-10:45a, W 9:30-10:45a"
     const parts = course.meets.split(',').map(part => part.trim());
 
+    console.log('Parsed meets parts:', parts);
+
     parts.forEach(part => {
         const dayMatch = part.match(/^([MTWRFSU]+)\s(.+)$/);
-        if (!dayMatch) return;
+        if (!dayMatch) {
+            console.warn('No day match for:', part);
+            return;
+        }
 
         const days = dayMatch[1];
         const timeRange = dayMatch[2];
 
-        const timeMatch = timeRange.match(/(\d{1,2}):(\d{2})([ap])?-(\d{1,2}):(\d{2})([ap])?/);
-        if (!timeMatch) return;
+        console.log('Days:', days, 'Time range:', timeRange);
+
+        // Match times with optional minutes for start time: "8-9:15a" or "8:00-9:15a"
+        const timeMatch = timeRange.match(/(\d{1,2})(?::(\d{2}))?([ap])?-(\d{1,2}):(\d{2})([ap])?/);
+        if (!timeMatch) {
+            console.warn('No time match for:', timeRange);
+            return;
+        }
 
         let [, startHourStr, startMinute, startAmPm, endHourStr, endMinute, endAmPm] = timeMatch;
 
+        // Default to :00 if minutes not provided for start time
+        if (!startMinute) startMinute = '00';
+
         let startHour = parseInt(startHourStr);
+        // If no am/pm specified for start time, inherit from end time
+        if (!startAmPm) startAmPm = endAmPm;
         if (startAmPm === 'p' && startHour !== 12) startHour += 12;
         if (startAmPm === 'a' && startHour === 12) startHour = 0; // Midnight
 
@@ -97,26 +116,38 @@ const parseMeetsString = (course) => {
         // Iterate through each day in the days string (e.g., "TR")
         days.split('').forEach(dayChar => {
             const dayOfWeek = daysMap[dayChar];
-            if (dayOfWeek === undefined) return;
+            if (dayOfWeek === undefined) {
+                console.warn('Unknown day character:', dayChar);
+                return;
+            }
+
+            console.log(`Processing ${dayChar} (${dayOfWeek}) from ${SEMESTER_START_DATE.format('YYYY-MM-DD')} to ${SEMESTER_END_DATE.format('YYYY-MM-DD')}`);
 
             let currentDay = SEMESTER_START_DATE.clone();
+            let eventCount = 0;
             while (currentDay.isSameOrBefore(SEMESTER_END_DATE, 'day')) {
                 if (currentDay.day() === dayOfWeek) {
                     const start = currentDay.clone().hour(startHour).minute(parseInt(startMinute)).toDate();
                     const end = currentDay.clone().hour(endHour).minute(parseInt(endMinute)).toDate();
 
+                    const title = `${course.course_code} - ${course.title || course.course_title || 'Course'}`;
+                    
                     events.push({
-                        title: `${course.course_code} - ${course.title}`,
+                        title: title,
                         start,
                         end,
                         allDay: false,
                         resource: course // Attach the full course object if needed
                     });
+                    eventCount++;
                 }
                 currentDay.add(1, 'day');
             }
+            console.log(`Created ${eventCount} events for ${dayChar}`);
         });
     });
+    
+    console.log(`Generated ${events.length} events for ${course.course_code}`);
     return events;
 };
 
@@ -243,7 +274,9 @@ function App() {
     };
 
     const calendarEvents = useMemo(() => {
+        console.log('Generating calendar events for', stagedCourses.length, 'courses');
         const events = stagedCourses.flatMap(course => parseMeetsString(course));
+        console.log('Generated', events.length, 'total events');
         
         // Detect time conflicts
         events.forEach((event, index) => {
@@ -260,6 +293,7 @@ function App() {
             }
         });
         
+        console.log('Events with conflicts:', events.filter(e => e.hasConflict).length);
         return events;
     }, [stagedCourses]);
 
