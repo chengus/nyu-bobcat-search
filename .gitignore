@@ -14,3 +14,5 @@ wheels/
 
 # Old SQLite database (if migrating to Turso)
 *.db
+.vercel
+.env*.local
