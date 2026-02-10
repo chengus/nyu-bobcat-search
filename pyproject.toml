@@ -16,3 +16,6 @@ dependencies = [
 members = [
     "backend",
 ]
+
+[project.scripts]
+app = "backend.app:app"
