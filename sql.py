@@ -61,6 +61,50 @@ def init_schema(conn: sqlite3.Connection) -> None:
     );
     """)
 
+    # Course details cache table
+    cur.execute("""
+    CREATE TABLE IF NOT EXISTS course_details_cache (
+      id             INTEGER PRIMARY KEY AUTOINCREMENT,
+      group_key      TEXT NOT NULL,
+      crn_key        TEXT NOT NULL,
+      srcdb          TEXT NOT NULL,
+      
+      description    TEXT,
+      clssnotes      TEXT,
+      hours_html     TEXT,
+      status         TEXT,
+      component      TEXT,
+      instructional_method TEXT,
+      campus_location TEXT,
+      registration_restrictions TEXT,
+      meeting_html   TEXT,
+      meet_pattern   TEXT,
+      meet_start_date TEXT,
+      meet_end_date  TEXT,
+      dates_html     TEXT,
+      all_sections   TEXT,
+      
+      details_json   TEXT NOT NULL,
+      cached_at      TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+      
+      UNIQUE(group_key, crn_key, srcdb)
+    );
+    """)
+    
+    # Migrate existing cache table if needed (add new columns)
+    try:
+        cur.execute("SELECT description FROM course_details_cache LIMIT 1")
+    except sqlite3.OperationalError:
+        # Columns don't exist, add them
+        for col in ['description', 'clssnotes', 'hours_html', 'status', 'component',
+                    'instructional_method', 'campus_location', 'registration_restrictions',
+                    'meeting_html', 'meet_pattern', 'meet_start_date', 'meet_end_date',
+                    'dates_html', 'all_sections']:
+            try:
+                cur.execute(f"ALTER TABLE course_details_cache ADD COLUMN {col} TEXT")
+            except sqlite3.OperationalError:
+                pass  # Column already exists
+
     conn.commit()
 
 

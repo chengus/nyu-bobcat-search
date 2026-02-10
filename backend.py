@@ -1,12 +1,60 @@
-from typing import List, Optional
+from typing import List, Optional, Dict, Any
+import asyncio
+from pathlib import Path
+import requests
+import json
+import re
 
 import sqlite3
-from fastapi import FastAPI, HTTPException, Query
+from fastapi import FastAPI, HTTPException, Query, Body
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
+
+import scraper
+import sql
 
 DB_PATH = "nyu_courses.db"
 
+
+def parse_meeting_html(meeting_html: str) -> tuple[str, str, str]:
+    """
+    Parse meeting_html to extract meeting pattern, start date, and end date.
+    
+    Example input:
+    <div class="meet">TR 9:30am-10:45am<span class="meet-dates"> (1/20 to 5/5)</span></div>
+    
+    Returns:
+    (meet_pattern, start_date, end_date)
+    Example: ("TR 9:30am-10:45am", "1/20", "5/5")
+    """
+    if not meeting_html:
+        return "", "", ""
+    
+    # Extract meeting pattern (text before <span> tag)
+    pattern_match = re.search(r'<div[^>]*class="meet"[^>]*>([^<]+)', meeting_html)
+    meet_pattern = pattern_match.group(1).strip() if pattern_match else ""
+    
+    # Extract dates from (START to END) format
+    dates_match = re.search(r'\((\d+/\d+)\s+to\s+(\d+/\d+)\)', meeting_html)
+    if dates_match:
+        start_date = dates_match.group(1).strip()
+        end_date = dates_match.group(2).strip()
+    else:
+        start_date = ""
+        end_date = ""
+    
+    return meet_pattern, start_date, end_date
+
 app = FastAPI(title="NYU Course Search API")
+
+# Allow the React dev server (and other local origins) to call this API during development
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:3000", "http://127.0.0.1:3000"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 
 def get_db():
@@ -41,6 +89,316 @@ class SectionResult(BaseModel):
     end_date: str | None
     srcdb: str | None
     campus_group: str | None
+
+
+class UpdateRequest(BaseModel):
+    srcdb: str = "1264"
+    career: str = "UGRD"
+    camps: List[str] = ["WS@BRKLN,WS@INDUS", "AD@GLOBAL-WS,AD@WS,SH@GLOBAL-WS,WS*,WS@2BRD,WS@JD,WS@MT,WS@OC,WS@PU,WS@WS,WS@WW"]
+    
+    class Config:
+        schema_extra = {
+            "example": {
+                "srcdb": "1264",
+                "career": "UGRD",
+                "camps": ["WS@BRKLN,WS@INDUS", "AD@GLOBAL-WS,AD@WS,SH@GLOBAL-WS,WS*,WS@2BRD,WS@JD,WS@MT,WS@OC,WS@PU,WS@WS,WS@WW"]
+            }
+        }
+
+
+class UpdateResponse(BaseModel):
+    status: str
+    message: str
+    files_downloaded: List[str]
+    records_processed: int
+
+
+class CourseDetailsRequest(BaseModel):
+    group: str
+    key: str
+    srcdb: str
+    matched: str
+    
+    class Config:
+        schema_extra = {
+            "example": {
+                "group": "code:BIOL-UA 123",
+                "key": "crn:8807",
+                "srcdb": "1264",
+                "matched": "crn:8807,8808,8809,8810,8811,8812,8813,8814,8815,8816,8817,8818,8819,8820,8821,8822,8823,8824,8825,8826"
+            }
+        }
+
+
+@app.post("/course-details")
+async def get_course_details(request: CourseDetailsRequest = Body(...)):
+    """
+    Get detailed information for a specific course from NYU's API.
+    Caches results in the database to avoid repeated API calls.
+    
+    Parameters:
+    - group: Course code identifier (e.g., "code:BIOL-UA 123")
+    - key: CRN key (e.g., "crn:8807")
+    - srcdb: Term code (e.g., "1264")
+    - matched: Comma-separated list of matched CRNs
+    """
+    conn = None
+    try:
+        # Get database connection
+        conn = sql.get_conn(DB_PATH)
+        sql.init_schema(conn)  # Ensure schema exists
+        
+        cur = conn.cursor()
+        cur.execute(
+            """SELECT description, clssnotes, hours_html, status, component,
+                      instructional_method, campus_location, registration_restrictions,
+                      meeting_html, meet_pattern, meet_start_date, meet_end_date,
+                      dates_html, all_sections, details_json
+               FROM course_details_cache 
+               WHERE group_key = ? AND crn_key = ? AND srcdb = ?""",
+            (request.group, request.key, request.srcdb)
+        )
+        cached = cur.fetchone()
+        
+        if cached:
+            # Return cached data with parsed fields
+            return {
+                "description": cached[0],
+                "clssnotes": cached[1],
+                "hours_html": cached[2],
+                "status": cached[3],
+                "component": cached[4],
+                "instructional_method": cached[5],
+                "campus_location": cached[6],
+                "registration_restrictions": cached[7],
+                "meeting_html": cached[8],
+                "meet_pattern": cached[9],
+                "meet_start_date": cached[10],
+                "meet_end_date": cached[11],
+                "dates_html": cached[12],
+                "all_sections": json.loads(cached[13]) if cached[13] else [],
+                "raw": json.loads(cached[14]) if cached[14] else {}
+            }
+        
+        # Not in cache, fetch from API
+        url = "https://bulletins.nyu.edu/class-search/api/"
+        params = {
+            "page": "fose",
+            "route": "details"
+        }
+        
+        payload = {
+            "group": request.group,
+            "key": request.key,
+            "srcdb": request.srcdb,
+            "matched": request.matched
+        }
+        
+        headers = {
+            "Accept": "application/json, text/javascript, */*; q=0.01",
+            "Content-Type": "application/json",
+            "Origin": "https://bulletins.nyu.edu",
+            "Referer": "https://bulletins.nyu.edu/class-search/",
+            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
+        }
+        
+        response = requests.post(url, params=params, json=payload, headers=headers, timeout=30)
+        response.raise_for_status()
+        
+        result = response.json()
+        
+        # Parse fields from result
+        description = result.get('description', '')
+        clssnotes = result.get('clssnotes', '')
+        hours_html = result.get('hours_html', '')
+        status = result.get('status', '')
+        component = result.get('component', '')
+        instructional_method = result.get('instructional_method', '')
+        campus_location = result.get('campus_location', '')
+        registration_restrictions = result.get('registration_restrictions', '')
+        meeting_html = result.get('meeting_html', '')
+        dates_html = result.get('dates_html', '')
+        all_sections = json.dumps(result.get('allInGroup', []))
+        
+        # Parse meeting information
+        meet_pattern, meet_start_date, meet_end_date = parse_meeting_html(meeting_html)
+        
+        # Cache the result with parsed fields
+        cur.execute(
+            """INSERT OR REPLACE INTO course_details_cache 
+               (group_key, crn_key, srcdb, description, clssnotes, hours_html, status,
+                component, instructional_method, campus_location, registration_restrictions,
+                meeting_html, meet_pattern, meet_start_date, meet_end_date,
+                dates_html, all_sections, details_json)
+               VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
+            (request.group, request.key, request.srcdb, description, clssnotes, hours_html,
+             status, component, instructional_method, campus_location, registration_restrictions,
+             meeting_html, meet_pattern, meet_start_date, meet_end_date,
+             dates_html, all_sections, json.dumps(result))
+        )
+        conn.commit()
+        
+        # Return parsed fields in consistent format
+        return {
+            "description": description,
+            "clssnotes": clssnotes,
+            "hours_html": hours_html,
+            "status": status,
+            "component": component,
+            "instructional_method": instructional_method,
+            "campus_location": campus_location,
+            "registration_restrictions": registration_restrictions,
+            "meeting_html": meeting_html,
+            "meet_pattern": meet_pattern,
+            "meet_start_date": meet_start_date,
+            "meet_end_date": meet_end_date,
+            "dates_html": dates_html,
+            "all_sections": result.get('allInGroup', []),
+            "raw": result
+        }
+        
+    except requests.RequestException as e:
+        raise HTTPException(
+            status_code=500,
+            detail=f"Failed to fetch course details: {str(e)}"
+        )
+    except Exception as e:
+        raise HTTPException(
+            status_code=500,
+            detail=f"Error processing course details: {str(e)}"
+        )
+    finally:
+        if conn:
+            conn.close()
+
+
+@app.post("/update-database", response_model=UpdateResponse)
+async def update_database(request: UpdateRequest = None):
+    """
+    Scrape course data from NYU's API and update the database.
+    
+    Parameters:
+    - srcdb: Term code (e.g., "1264" for Spring 2026)
+    - career: Career type (e.g., "UGRD" for undergraduate)
+    - camps: List of campus codes to scrape
+    """
+    if request is None:
+        request = UpdateRequest()
+    
+    try:
+        files_downloaded = []
+        total_records = 0
+        
+        # Scrape data for each campus
+        for camp in request.camps:
+            try:
+                # Fetch and save raw JSON data
+                file_path = scraper.scrape_and_save(
+                    srcdb=request.srcdb,
+                    career=request.career,
+                    camp=camp
+                )
+                files_downloaded.append(str(file_path))
+                
+                # Determine campus group name for database
+                if "BRKLN" in camp or "INDUS" in camp:
+                    campus_group = "BROOKLYN"
+                else:
+                    campus_group = "WSQ"
+                
+                # Process the JSON file and update database
+                conn = sql.get_conn(DB_PATH)
+                try:
+                    sql.init_schema(conn)
+                    
+                    # Clear existing data for this campus group and srcdb to prevent duplicates
+                    cur = conn.cursor()
+                    cur.execute(
+                        "DELETE FROM sections WHERE campus_group = ? AND srcdb = ?",
+                        (campus_group, request.srcdb)
+                    )
+                    conn.commit()
+                    
+                    sql.process_json_file(conn, file_path, campus_group)
+                    
+                    # Count records from this file
+                    cur = conn.cursor()
+                    cur.execute("SELECT COUNT(*) FROM sections WHERE campus_group = ?", (campus_group,))
+                    count = cur.fetchone()[0]
+                    total_records = count
+                    
+                finally:
+                    conn.close()
+                    
+            except Exception as e:
+                return UpdateResponse(
+                    status="error",
+                    message=f"Failed to process campus {camp}: {str(e)}",
+                    files_downloaded=files_downloaded,
+                    records_processed=total_records
+                )
+        
+        return UpdateResponse(
+            status="success",
+            message=f"Successfully updated database with data from {len(files_downloaded)} campus groups",
+            files_downloaded=files_downloaded,
+            records_processed=total_records
+        )
+        
+    except Exception as e:
+        raise HTTPException(
+            status_code=500,
+            detail=f"Database update failed: {str(e)}"
+        )
+
+
+class DatabaseStatus(BaseModel):
+    total_courses: int
+    total_sections: int
+    campus_groups: dict
+
+
+@app.get("/database-status", response_model=DatabaseStatus)
+def get_database_status():
+    """
+    Get current database statistics.
+    """
+    try:
+        for conn in get_db():
+            cur = conn.cursor()
+            
+            # Count courses
+            cur.execute("SELECT COUNT(*) FROM courses")
+            total_courses = cur.fetchone()[0]
+            
+            # Count sections
+            cur.execute("SELECT COUNT(*) FROM sections")
+            total_sections = cur.fetchone()[0]
+            
+            # Count by campus group
+            cur.execute("SELECT campus_group, COUNT(*) FROM sections GROUP BY campus_group")
+            campus_groups = {row[0]: row[1] for row in cur.fetchall()}
+            
+            return DatabaseStatus(
+                total_courses=total_courses,
+                total_sections=total_sections,
+                campus_groups=campus_groups
+            )
+            
+    except Exception as e:
+        raise HTTPException(
+            status_code=500,
+            detail=f"Failed to get database status: {str(e)}"
+        )
+
+
+@app.post("/update-database-simple")
+async def update_database_simple():
+    """
+    Simple endpoint to update database with default parameters (Spring 2026, all campuses).
+    """
+    request = UpdateRequest()
+    return await update_database(request)
 
 
 @app.get("/search", response_model=list[SectionResult])
@@ -123,3 +481,16 @@ def search_sections(
         break  # exit generator loop after one use
 
     return results
+
+
+if __name__ == "__main__":
+    # Run with: python backend.py (for quick local testing)
+    # Or use: fastapi run backend.py (FastAPI CLI with auto-reload)
+    # Or use: uvicorn backend:app --reload --port 8000
+    try:
+        import uvicorn
+
+        uvicorn.run("backend:app", host="127.0.0.1", port=8000, reload=True)
+    except Exception:
+        # uvicorn not installed; fallback to direct import (FastAPI requires ASGI server)
+        print("Start the API with: fastapi run backend.py")
