@@ -3,6 +3,9 @@
 Development startup
 ---------------
 
+## Docker
+`docker-compose up --build`
+
 ## Backend (FastAPI)
 
 ```bash
