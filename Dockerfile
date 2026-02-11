@@ -23,9 +23,8 @@ COPY . .
 
 EXPOSE 8000 3000
 
-# MODIFIED CMD:
-# 1. Groups the frontend commands in parentheses (cd -> install -> start)
-# 2. Groups the backend commands in parentheses (cd -> uv run)
-# 3. Uses '&' to put the first group in the background so both run at once
-# 4. Added --host 0.0.0.0 to fastapi so it is accessible outside the container
-CMD ["sh", "-c", "(cd frontend && npm install && npm start) & (cd backend && uv run fastapi dev app.py --host 0.0.0.0 --port 8000)"]
+# Build the frontend
+RUN cd frontend && npm run build
+
+# Only run FastAPI (It will serve the frontend files)
+CMD ["uv", "run", "fastapi", "run", "backend/app.py", "--host", "0.0.0.0", "--port", "8000"]

@@ -2,14 +2,15 @@ from typing import List, Optional, Dict, Any
 import requests
 import json
 import re
+import os 
 from pathlib import Path
 from datetime import datetime, timedelta
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 from fastapi import FastAPI, HTTPException, Query, Body
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.staticfiles import StaticFiles
-from fastapi.responses import FileResponse
+from fastapi.staticfiles import StaticFiles  # <--- Added
+from fastapi.responses import FileResponse   # <--- Added
 from pydantic import BaseModel
 
 import backend.scraper as scraper
@@ -19,13 +20,6 @@ import backend.sql as sql
 def parse_meeting_html(meeting_html: str) -> tuple[str, str, str]:
     """
     Parse meeting_html to extract meeting pattern, start date, and end date.
-    
-    Example input:
-    <div class="meet">TR 9:30am-10:45am<span class="meet-dates"> (1/20 to 5/5)</span></div>
-    
-    Returns:
-    (meet_pattern, start_date, end_date)
-    Example: ("TR 9:30am-10:45am", "1/20", "5/5")
     """
     if not meeting_html:
         return "", "", ""
@@ -55,9 +49,11 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-@app.get("/")
-async def root():
-    """API root - returns basic information about the API or serves frontend"""
+# --- API ROUTES START HERE ---
+
+@app.get("/api-info")  # Renamed from root "/" to avoid conflict with React
+async def api_info():
+    """Returns basic information about the API"""
     return {
         "name": "NYU Course Search API",
         "version": "1.0",
@@ -69,8 +65,6 @@ async def root():
         }
     }
 
-
-
 def get_db():
     conn = sql.get_conn()
     try:
@@ -78,6 +72,10 @@ def get_db():
     finally:
         conn.close()
 
+class DatabaseStatus(BaseModel):
+    total_courses: int
+    total_sections: int
+    campus_groups: dict
 
 class SectionResult(BaseModel):
     section_id: int
@@ -147,13 +145,6 @@ class CourseDetailsRequest(BaseModel):
 async def get_course_details(request: CourseDetailsRequest = Body(...)):
     """
     Get detailed information for a specific course from NYU's API.
-    Caches results in the database to avoid repeated API calls.
-    
-    Parameters:
-    - group: Course code identifier (e.g., "code:BIOL-UA 123")
-    - key: CRN key (e.g., "crn:8807")
-    - srcdb: Term code (e.g., "1264")
-    - matched: Comma-separated list of matched CRNs
     """
     conn = None
     try:
@@ -288,14 +279,6 @@ async def get_course_details(request: CourseDetailsRequest = Body(...)):
 async def update_database(request: UpdateRequest = None, force: bool = Query(False, description="Force update even if less than 1 day old")):
     """
     Scrape course data from NYU's API and update the database.
-    Only updates if the database is more than 1 day old (unless force=True).
-    When updating, deletes all existing data and repopulates with fresh data.
-    
-    Parameters:
-    - srcdb: Term code (e.g., "1264" for Spring 2026)
-    - career: Career type (e.g., "UGRD" for undergraduate)
-    - camps: List of campus codes to scrape
-    - force: Force update even if less than 1 day old (query param)
     """
     if request is None:
         request = UpdateRequest()
@@ -309,9 +292,7 @@ async def update_database(request: UpdateRequest = None, force: bool = Query(Fal
         last_update = sql.get_last_update_time(conn)
         if last_update and not force:
             last_update_dt = datetime.fromisoformat(last_update.replace('Z', '+00:00'))
-            # SQLite datetime('now') is UTC; use utcnow for consistent comparison
             time_since_update = datetime.utcnow() - last_update_dt.replace(tzinfo=None)
-            # Guard against negative drift if clocks differ
             hours_since = max(time_since_update.total_seconds() / 3600, 0)
             hours_left = max(24 - hours_since, 0)
             if time_since_update < timedelta(days=1):
@@ -371,12 +352,6 @@ async def update_database(request: UpdateRequest = None, force: bool = Query(Fal
         )
     finally:
         conn.close()
-
-
-class DatabaseStatus(BaseModel):
-    total_courses: int
-    total_sections: int
-    campus_groups: dict
 
 
 @app.get("/database-status", response_model=DatabaseStatus)
@@ -460,13 +435,10 @@ def search_sections(
     params = []
 
     # Simple matching behavior:
-    # - code/title: partial match (LIKE)
-    # - crn/schd/campus_group: exact match
     if code:
         conditions.append("AND s.code LIKE ?")
         params.append(f"%{code}%")
     if title:
-        # Search either section.title or course.title
         conditions.append("AND (s.title LIKE ? OR c.title LIKE ?)")
         params.extend([f"%{title}%", f"%{title}%"])
     if crn:
@@ -486,7 +458,6 @@ def search_sections(
         result_set = conn.execute(sql, params)
         rows = result_set.fetchall()
         for row in rows:
-            # Convert row tuple to dict manually
             results.append(SectionResult(
                 section_id=row[0],
                 course_code=row[1],
@@ -510,19 +481,43 @@ def search_sections(
                 srcdb=row[19],
                 campus_group=row[20]
             ))
-        break  # exit generator loop after one use
+        break
 
     return results
 
+# --- SERVE FRONTEND (Added for Option 2) ---
+
+# 1. Determine where the frontend build folder is
+# Note: In your Dockerfile, the frontend is at /app/frontend. 
+# Depending on your build tool (CRA vs Vite), the build output is "build" or "dist".
+# Assuming standard CRA (build) or Vite (dist).
+frontend_path = Path("frontend")
+build_dir = frontend_path / "build"  # Use "dist" if using Vite!
+
+if build_dir.exists():
+    # 2. Mount the static assets (CSS/JS)
+    # The first argument "/static" matches where your index.html looks for files
+    # Create a link from /static to the frontend build static folder
+    app.mount("/static", StaticFiles(directory=str(build_dir / "static")), name="static")
+
+    # 3. Catch-all route to serve index.html
+    # This must be the LAST route defined
+    @app.get("/{full_path:path}")
+    async def serve_react_app(full_path: str):
+        # Allow API calls to pass through if they weren't caught by specific routes above
+        if full_path.startswith("api"):
+            raise HTTPException(status_code=404, detail="API endpoint not found")
+        
+        return FileResponse(str(build_dir / "index.html"))
+
+else:
+    print(f"Warning: Frontend build directory not found at {build_dir}. Serving API only.")
+
 if __name__ == "__main__":
-    # Run with: python backend.py (for quick local testing)
-    # Or use: fastapi run backend/backend.py (FastAPI CLI with auto-reload from project root)
-    # Or use: uvicorn backend.backend:app --reload --port 8000 (from project root)
     try:
         import uvicorn
-
-        uvicorn.run("backend:app", host="127.0.0.1", port=8000, reload=True)
+        # Listen on 0.0.0.0 for Docker/Railway
+        uvicorn.run("backend:app", host="0.0.0.0", port=8000, reload=True)
     except Exception:
-        # uvicorn not installed; fallback to direct import (FastAPI requires ASGI server)
         print("Start the API with: cd backend && python backend.py")
         print("Or from project root: uvicorn backend.backend:app --reload --port 8000")
