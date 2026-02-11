@@ -1,22 +1,23 @@
-# --- Stage 1: Build React ---
-FROM node:20-slim AS builder
-WORKDIR /app
-COPY frontend/package*.json ./frontend/
-RUN cd frontend && npm install
-COPY frontend/ ./frontend/
-RUN cd frontend && npm run build
-
-# --- Stage 2: Run FastAPI ---
+# Dev-style single container running FastAPI dev + React dev server
 FROM ghcr.io/astral-sh/uv:python3.12-bookworm-slim
+
 WORKDIR /app
 
-# Copy python files
-COPY . .
-# Copy the BUILT frontend from the builder stage
-COPY --from=builder /app/frontend/build ./frontend/build
+RUN apt-get update \
+	&& apt-get install -y --no-install-recommends nodejs npm \
+	&& rm -rf /var/lib/apt/lists/*
 
-# Install dependencies
+# Python dependencies
+COPY pyproject.toml uv.lock ./
 RUN uv sync --frozen
 
-# Start the server
-CMD ["sh", "-c", "uv run uvicorn backend.app:app --host 0.0.0.0 --port ${PORT:-8000}"]
+# Frontend dependencies
+COPY frontend/package*.json ./frontend/
+RUN cd frontend && npm install
+
+# App source
+COPY . .
+
+EXPOSE 8000 3000
+
+CMD ["sh", "-c", "uv run fastapi dev backend/app.py --host 0.0.0.0 --port 8000 & cd frontend && npm start"]
