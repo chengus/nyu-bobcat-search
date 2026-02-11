@@ -50,22 +50,14 @@ app = FastAPI(title="NYU Course Search API")
 # Allow the React dev server (and other local origins) to call this API during development
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "http://127.0.0.1:3000", "*"],
-    allow_credentials=True,
+    allow_origins=["*"],
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-# Check if frontend build exists (for production) and mount static files
-frontend_build = (Path(__file__).resolve().parent / "../frontend/build").resolve()
-if frontend_build.exists():
-    app.mount("/static", StaticFiles(directory=str(frontend_build / "static")), name="static") 
-
 @app.get("/")
 async def root():
     """API root - returns basic information about the API or serves frontend"""
-    if frontend_build.exists():
-        return FileResponse(str(frontend_build / "index.html"))
     return {
         "name": "NYU Course Search API",
         "version": "1.0",
@@ -521,13 +513,6 @@ def search_sections(
         break  # exit generator loop after one use
 
     return results
-
-# Catch-all route for React client-side routing (must be defined last)
-if frontend_build.exists():
-    @app.get("/{full_path:path}")
-    async def serve_spa(full_path: str):
-        """Serve React app for all unmatched routes (client-side routing)"""
-        return FileResponse(str(frontend_build / "index.html"))
 
 if __name__ == "__main__":
     # Run with: python backend.py (for quick local testing)
