@@ -59,7 +59,7 @@ app.add_middleware(
 # Check if frontend build exists (for production) and mount static files
 frontend_build = (Path(__file__).resolve().parent / "../frontend/build").resolve()
 if frontend_build.exists():
-    app.mount("/static", StaticFiles(directory=str(frontend_build / "static")), name="static")
+    app.mount("/static", StaticFiles(directory=str(frontend_build / "static")), name="static") 
 
 @app.get("/")
 async def root():
