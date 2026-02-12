@@ -19,6 +19,8 @@ Development startup
 `docker build -t nyu-bobcat-search .`
 `docker run -p 8000:8000 -p 3000:3000 nyu-bobcat-search`
 `docker-compose up --build`
+`docker ps`
+`docker stop <container_id>`
 
 ### Backend (FastAPI)
 
@@ -50,10 +52,13 @@ API Endpoints
 
 Search for courses with optional filters:
 - `code`: Course code (e.g., "MATH-UA 325")
-- `title`: Course title (partial match)
+- `title`: Course title
 - `crn`: CRN number
 - `schd`: Schedule type (e.g., "LEC")
 - `campus_group`: Campus group (e.g., "WSQ" or "BROOKLYN")
+- `text_match_mode`: `prefix` (default, faster) or `contains` (FTS-backed)
+- `limit`: Number of rows to return (default 50, max 500)
+- `offset`: Rows to skip for pagination (default 0)
 
 Example: `http://127.0.0.1:8000/search?code=MATH&campus_group=WSQ`
 

@@ -97,6 +97,32 @@ def init_schema(conn) -> None:
       updated_at     TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     );
     """)
+
+    # Indexes for common search filters and sort paths
+    conn.execute("""CREATE INDEX IF NOT EXISTS idx_sections_crn ON sections(crn);""")
+    conn.execute("""CREATE INDEX IF NOT EXISTS idx_sections_schd ON sections(schd);""")
+    conn.execute("""CREATE INDEX IF NOT EXISTS idx_sections_campus_group ON sections(campus_group);""")
+    conn.execute("""CREATE INDEX IF NOT EXISTS idx_sections_course_code_no ON sections(course_code, no);""")
+    conn.execute("""CREATE INDEX IF NOT EXISTS idx_sections_campus_course_no ON sections(campus_group, course_code, no);""")
+
+    # Full-text search index for contains-style code/title lookup.
+    # We keep this as a separate table and rebuild it after bulk loads.
+    conn.execute("""
+    CREATE VIRTUAL TABLE IF NOT EXISTS sections_fts USING fts5(
+        section_id UNINDEXED,
+        code,
+        section_title,
+        course_title,
+        tokenize = 'unicode61'
+    );
+    """)
+
+    # Backfill FTS index once for existing databases created before FTS was added.
+    fts_count = conn.execute("SELECT COUNT(*) FROM sections_fts").fetchone()[0]
+    if fts_count == 0:
+        sections_count = conn.execute("SELECT COUNT(*) FROM sections").fetchone()[0]
+        if sections_count > 0:
+            rebuild_search_index(conn)
     
     # Note: Schema is managed locally; no migrations needed for this demo
     conn.commit()
@@ -123,7 +149,19 @@ def set_last_update_time(conn) -> None:
         """INSERT OR REPLACE INTO metadata (key, value, updated_at) 
            VALUES ('last_update', datetime('now'), datetime('now'))"""
     )
-    conn.commit()
+
+
+def rebuild_search_index(conn) -> None:
+    """Rebuild the FTS table from current sections/courses data."""
+    conn.execute("DELETE FROM sections_fts")
+    conn.execute(
+        """
+        INSERT INTO sections_fts(section_id, code, section_title, course_title)
+        SELECT s.id, s.code, COALESCE(s.title, ''), COALESCE(c.title, '')
+        FROM sections s
+        LEFT JOIN courses c ON s.course_code = c.code
+        """
+    )
 
 
 def clear_all_data(conn) -> None:
@@ -131,6 +169,7 @@ def clear_all_data(conn) -> None:
     conn.execute("DELETE FROM sections")
     conn.execute("DELETE FROM courses")
     conn.execute("DELETE FROM course_details_cache")
+    conn.execute("DELETE FROM sections_fts")
     conn.commit()
 
 

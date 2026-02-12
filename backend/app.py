@@ -1,4 +1,4 @@
-from typing import List, Optional, Dict, Any
+from typing import List, Optional, Dict, Any, Literal
 import requests
 import json
 import re
@@ -68,6 +68,7 @@ async def api_info():
 def get_db():
     conn = sql.get_conn()
     try:
+        sql.init_schema(conn)
         yield conn
     finally:
         conn.close()
@@ -139,6 +140,14 @@ class CourseDetailsRequest(BaseModel):
                 "matched": "crn:8807,8808,8809,8810,8811,8812,8813,8814,8815,8816,8817,8818,8819,8820,8821,8822,8823,8824,8825,8826"
             }
         }
+
+
+def to_fts_query(value: str) -> str:
+    """Convert user text into an FTS5 query requiring all tokens as prefixes."""
+    tokens = [token for token in re.split(r"\s+", value.strip()) if token]
+    if not tokens:
+        return ""
+    return " AND ".join([f'"{token.replace(chr(34), chr(34) * 2)}"*' for token in tokens])
 
 
 @app.post("/course-details")
@@ -333,6 +342,7 @@ async def update_database(request: UpdateRequest = None, force: bool = Query(Fal
                 sql.insert_prepared_data(conn, courses_data, sections_data, commit=False)
                 total_records += len(sections_data)
             sql.set_last_update_time(conn)
+            sql.rebuild_search_index(conn)
             conn.commit()
         except Exception:
             conn.rollback()
@@ -393,6 +403,12 @@ def search_sections(
     crn: Optional[str] = Query(None, description="CRN"),
     schd: Optional[str] = Query(None, description="Schedule type, e.g. 'LEC'"),
     campus_group: Optional[str] = Query(None, description="Campus group, e.g. 'WSQ' or 'BROOKLYN'"),
+    text_match_mode: Literal["prefix", "contains"] = Query(
+        "prefix",
+        description="Text matching mode for code/title: prefix uses LIKE 'term%', contains uses FTS.",
+    ),
+    limit: int = Query(50, ge=1, le=500, description="Max rows to return"),
+    offset: int = Query(0, ge=0, description="Rows to skip for pagination"),
 ):
     # Enforce at least one filter
     if not any([code, title, crn, schd, campus_group]):
@@ -428,6 +444,7 @@ def search_sections(
           s.campus_group
         FROM sections s
         LEFT JOIN courses c ON s.course_code = c.code
+        {fts_join}
         WHERE 1=1
     """
 
@@ -436,11 +453,23 @@ def search_sections(
 
     # Simple matching behavior:
     if code:
-        conditions.append("AND s.code LIKE ?")
-        params.append(f"%{code}%")
+        if text_match_mode == "contains":
+            fts_code = to_fts_query(code)
+            if fts_code:
+                conditions.append("AND fts.code MATCH ?")
+                params.append(fts_code)
+        else:
+            conditions.append("AND s.code LIKE ?")
+            params.append(f"{code}%")
     if title:
-        conditions.append("AND (s.title LIKE ? OR c.title LIKE ?)")
-        params.extend([f"%{title}%", f"%{title}%"])
+        if text_match_mode == "contains":
+            fts_title = to_fts_query(title)
+            if fts_title:
+                conditions.append("AND (fts.section_title MATCH ? OR fts.course_title MATCH ?)")
+                params.extend([fts_title, fts_title])
+        else:
+            conditions.append("AND (s.title LIKE ? OR c.title LIKE ?)")
+            params.extend([f"{title}%", f"{title}%"])
     if crn:
         conditions.append("AND s.crn = ?")
         params.append(crn)
@@ -451,11 +480,17 @@ def search_sections(
         conditions.append("AND s.campus_group = ?")
         params.append(campus_group)
 
-    sql = base_query + "\n".join(conditions) + "\nORDER BY s.course_code, s.no"
+    fts_join = "JOIN sections_fts fts ON fts.section_id = s.id" if text_match_mode == "contains" and (code or title) else ""
+    query_sql = (
+        base_query.format(fts_join=fts_join)
+        + "\n".join(conditions)
+        + "\nORDER BY s.course_code, s.no LIMIT ? OFFSET ?"
+    )
+    params.extend([limit, offset])
 
     results: List[SectionResult] = []
     for conn in get_db():
-        result_set = conn.execute(sql, params)
+        result_set = conn.execute(query_sql, params)
         rows = result_set.fetchall()
         for row in rows:
             results.append(SectionResult(
